@@ -151,28 +151,36 @@
         >
           <h2 class="text-2xl font-semibold sm:text-[26px]">پیام خود را بنویسید</h2>
           <div class="mt-5 space-y-4 md:mt-7 md:space-y-5">
+            <label class="sr-only" for="contact-name">نام و نام خانوادگی</label>
             <input
               class="focus:border-brand-700 h-12.5 w-full rounded-xl border border-[#1916161F] bg-white px-5 text-right text-base text-[#19161699] transition outline-none placeholder:text-[#19161699] md:h-15"
               type="text"
               name="name"
+              id="contact-name"
               placeholder="نام و نام خانوادگی"
             />
+            <label class="sr-only" for="contact-email">ایمیل</label>
             <input
               class="focus:border-brand-700 h-12.5 w-full rounded-xl border border-[#1916161F] bg-white px-5 text-right text-base text-[#19161699] transition outline-none placeholder:text-[#19161699] md:h-15"
               type="email"
               name="email"
+              id="contact-email"
               placeholder="ایمیل"
               dir="rtl"
             />
+            <label class="sr-only" for="contact-phone">شماره تماس</label>
             <input
               class="focus:border-brand-700 h-12.5 w-full rounded-xl border border-[#1916161F] bg-white px-5 text-right text-base text-[#19161699] transition outline-none placeholder:text-[#19161699] md:h-15"
               type="tel"
               name="phone"
+              id="contact-phone"
               placeholder="شماره تماس"
             />
+            <label class="sr-only" for="contact-message">نظر شما</label>
             <textarea
               class="focus:border-brand-700 min-h-36.25 w-full resize-y rounded-xl border border-[#1916161F] bg-white px-5 py-4 text-right text-base transition outline-none placeholder:text-[#19161699]"
               name="message"
+              id="contact-message"
               placeholder="نظر شما"
             ></textarea>
           </div>
@@ -205,9 +213,11 @@
             class="mt-8 flex h-15 w-full max-w-100.5 rounded-xl border border-[#FFFFFF1F] bg-white py-1 ps-4 pe-1 md:mt-0"
           >
             <input
+              id="contact-newsletter-email"
               placeholder="ایمیل خود را وارد کنید..."
               class="text-muted placeholder-muted flex flex-1 text-sm outline-0"
               type="text"
+              aria-label="ایمیل عضویت در خبرنامه"
             />
             <button class="bg-brand-700 h-full rounded-lg px-5 text-white" type="submit">
               عضویت

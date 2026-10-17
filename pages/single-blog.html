@@ -498,11 +498,12 @@
               شوید.
             </p>
             <input
+              id="single-blog-newsletter-email"
               placeholder="ایمیل خود را وارد کنید..."
               class="focus:border-brand-700 mt-6 w-full rounded-xl border border-[#1916161F] px-4 py-[19.5px] text-sm placeholder-[#19161699] outline-none md:text-base"
               type="text"
-              name=""
-              id=""
+              name="email"
+              aria-label="ایمیل عضویت در خبرنامه"
             />
             <button
               class="bg-brand-700 hover:bg-brand-800 mt-6 w-full rounded-xl py-4.5 text-sm text-white md:py-[15.5px] md:text-base"
@@ -668,13 +669,15 @@
         </div>
         <div class="order-1 mb-5 rounded-2xl bg-white p-8 md:order-2 md:rounded-[20px]">
           <p class="pb-6 text-lg font-semibold md:text-2xl">نظر خود را بنویسید</p>
+          <label class="sr-only" for="commenter-name">نام و نام خانوادگی</label>
           <input
             placeholder="نام و نام خانوادگی"
             class="focus:border-brand-700 w-full rounded-xl border border-[#1916161F] px-4 py-[19.5px] text-sm placeholder-[#19161699] outline-none md:text-base"
             type="text"
-            name=""
-            id=""
+            name="name"
+            id="commenter-name"
           />
+          <label class="sr-only" for="description">نظر شما</label>
           <textarea
             name="description"
             id="description"
@@ -711,9 +714,11 @@
             class="mt-8 flex h-15 w-full max-w-100.5 rounded-xl border border-[#FFFFFF1F] bg-white py-1 ps-4 pe-1 md:mt-0"
           >
             <input
+              id="single-blog-footer-newsletter-email"
               placeholder="ایمیل خود را وارد کنید..."
               class="text-muted placeholder-muted flex flex-1 text-sm outline-0"
               type="text"
+              aria-label="ایمیل عضویت در خبرنامه"
             />
             <button class="bg-brand-700 h-full rounded-lg px-5 text-white" type="submit">
               عضویت
