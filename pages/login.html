@@ -1,0 +1,68 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>ورود | تراک پاور</title>
+  </head>
+  <body class="bg-surface-bg">
+    <main>
+      <a class="flex items-center gap-2 px-5 pt-6" href="/">
+        <img src="../assets/icons/arrow-right-02-round.svg" alt="" />
+        <span class="text-sm md:text-base">برگشت به خانه</span>
+      </a>
+      <div class="flex h-dvh items-center justify-center gap-2 overflow-hidden px-5">
+        <div class="flex w-full flex-col items-start rounded-[20px] bg-white p-6 md:w-md md:p-10">
+          <span class="pb-2 text-lg font-semibold text-black md:pb-3 md:text-2xl">
+            ورود به حساب کاربری</span
+          >
+          <p class="text-muted text-sm leading-6 md:text-base">
+            شماره موبایل خود را وارد کنید تا کد تأیید برایتان پیامک شود.
+          </p>
+          <input
+            class="focus:border-brand-700 mt-10 h-12.5 w-full rounded-xl border border-[#1916161F] bg-white p-5 text-right text-base text-[#19161699] transition outline-none placeholder:text-[#19161699] md:h-15"
+            type="text"
+            name="name"
+            placeholder="نام و نام خانوادگی"
+          />
+          <button
+            type="submit"
+            class="bg-brand-700 hover:bg-brand-800 focus-visible:ring-brand-700 mt-4 items-start rounded-xl px-8 py-4 text-sm text-white transition focus-visible:ring-2 focus-visible:ring-offset-2 md:mt-5 md:text-base"
+          >
+            ورورد به حساب
+          </button>
+        </div>
+        <div class="flex w-full flex-col items-start rounded-[20px] bg-white p-6 md:w-md md:p-10">
+          <span class="pb-2 text-lg font-semibold text-black md:pb-3 md:text-2xl">
+            تأیید شماره موبایل</span
+          >
+          <p class="text-muted text-sm leading-6 md:text-base">
+            کد ۵ رقمی ارسال‌شده به شماره <strong class="text-primary">۰۹۱۲۳۴۵۶۷۸۹</strong> را وارد
+            کن.
+          </p>
+          <input
+            class="focus:border-brand-700 mt-10 h-12.5 w-full rounded-xl border border-[#1916161F] bg-white p-5 text-right text-base text-[#19161699] transition outline-none placeholder:text-[#19161699] md:h-15"
+            type="text"
+            name="name"
+            placeholder="کد تایید"
+          />
+          <p class="text-muted mt-4 text-sm leading-6 md:mt-5 md:text-base">
+            ارسال مجدد کد تا
+            <strong class="text-primary">۰۱:۲۰</strong>
+          </p>
+          <button
+            type="submit"
+            class="bg-brand-700 hover:bg-brand-800 focus-visible:ring-brand-700 mt-4 items-start rounded-xl px-8 py-4 text-sm text-white transition focus-visible:ring-2 focus-visible:ring-offset-2 md:mt-5 md:text-base"
+          >
+            ورورد به حساب
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- swiper config js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../src/js/swiper-config.js"></script>
+  </body>
+</html>
