@@ -144,6 +144,14 @@ body {
   }
 }
 
+@utility direction-ltr {
+  direction: ltr;
+}
+
+@utility direction-rtl {
+  direction: rtl;
+}
+
 @utility timer {
   & li {
     padding-inline: 10px;
