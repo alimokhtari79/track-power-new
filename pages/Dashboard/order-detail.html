@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../dist/output.css" />
     <title>جزئیات سفارش | تراک پاور</title>
   </head>
-  <body class="bg-surface-bg text-primary font-[Peyda,sans-serif]">
+  <body class="bg-surface-bg text-primary">
     <main class="container-custom mx-auto mt-5 flex w-full flex-col gap-6 px-5 md:flex-row">
       <aside
         class="order-2 flex w-full flex-col gap-2.5 self-start rounded-2xl p-5 md:order-1 md:w-60 md:border md:border-[#0000001F]"
@@ -228,13 +228,19 @@
       </aside>
       <section class="order-1 min-w-0 flex-1 md:order-2">
         <header class="mb-5 flex items-center justify-between">
-          <a class="text-brand-700 text-sm" href="#">مشاهده فاکتور　▤</a>
-          <h1 class="text-xl font-bold">جزئیات سفارش　‹</h1>
+          <h1 class="flex text-xl font-bold">
+            <img src="../../assets/icons/arrow-down-01-round.svg" alt="" />
+            جزئیات سفارش
+          </h1>
+          <a class="text-brand-700 flex items-center gap-2 text-sm" href="#">
+            <img src="../../assets/icons/invoice-01.svg" alt="" />
+            مشاهده فاکتور
+          </a>
         </header>
-        <section class="mb-5 rounded-2xl border border-black/10 p-6">
-          <h2 class="mb-6 text-lg font-bold">وضعیت سفارش</h2>
+        <section class="mb-5 rounded-2xl border border-black/10 p-8">
+          <h2 class="mb-6 text-lg font-semibold md:text-[20px]">وضعیت سفارش</h2>
           <div
-            class="relative flex justify-between before:absolute before:top-4 before:right-[7%] before:left-[7%] before:h-px before:bg-black/10 after:absolute after:top-4 after:right-[7%] after:h-px after:w-1/4 after:bg-brand-700"
+            class="after:bg-brand-700 relative flex justify-between before:absolute before:top-4 before:right-[7%] before:left-[7%] before:h-px before:bg-black/10 after:absolute after:top-4 after:right-[7%] after:h-px after:w-1/4"
           >
             <div class="z-10 flex w-1/4 flex-col items-center gap-2 text-center">
               <div
@@ -274,7 +280,7 @@
             </div>
             <div class="z-10 flex w-1/4 flex-col items-center gap-2 text-center">
               <div
-                class="flex size-12.5 shrink-0 items-center justify-center rounded-full border-2 border-brand-700 bg-white"
+                class="border-brand-700 flex size-12.5 shrink-0 items-center justify-center rounded-full border-2 bg-white"
               >
                 <svg
                   width="24"
@@ -389,119 +395,165 @@
             </div>
           </div>
         </section>
-        <section class="mb-5 rounded-2xl bg-white p-6">
-          <h2 class="mb-5 text-lg font-bold">مشخصات سفارش</h2>
-          <div class="grid grid-cols-2 gap-5 md:grid-cols-4">
-            <div class="flex flex-col gap-2">
-              <label class="text-muted text-xs">کد پیگیری سفارش</label
-              ><b class="text-sm font-medium">TLCP-3522997</b>
+        <section class="mb-5 rounded-[20px] bg-white p-8">
+          <h2 class="mb-5 text-lg font-semibold md:mb-6 md:text-xl">مشخصات سفارش</h2>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-4">
+            <div class="flex flex-row justify-between gap-2 md:flex-col">
+              <label class="text-muted text-xs md:text-base">کد پیگیری سفارش</label
+              ><b class="text-sm font-medium md:text-base">TLCP-3522997</b>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-muted text-xs">تاریخ ثبت سفارش</label
-              ><b class="text-sm font-medium">یکشنبه ۲۷ آذر ۱۴۰۵</b>
+            <div class="flex flex-row justify-between gap-2 md:flex-col">
+              <label class="text-muted text-xs md:text-base">تاریخ ثبت سفارش</label
+              ><b class="text-sm font-medium md:text-base">یکشنبه ۲۷ آذر ۱۴۰۵</b>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-muted text-xs">مبلغ کل</label
-              ><b class="text-sm font-medium">۹,۱۹۸,۰۰۰ تومان</b>
+            <div class="flex flex-row justify-between gap-2 md:flex-col">
+              <label class="text-muted text-xs md:text-base">مبلغ کل</label
+              ><b class="text-sm font-medium md:text-base">۹,۱۹۸,۰۰۰ تومان</b>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-muted text-xs">هزینه بسته‌بندی و ارسال</label
-              ><b class="text-sm font-medium">۱۷۹,۰۰۰ تومان</b>
-            </div>
-          </div>
-          <div class="border-border-light mt-6 flex gap-8 border-t pt-4 text-sm">
-            <span>مبلغ پرداخت شده</span><b>۹,۱۹۸,۰۰۰ تومان</b>
-          </div>
-        </section>
-        <section class="mb-5 rounded-2xl border border-black/10 p-6">
-          <h2 class="mb-5 text-lg font-bold">تاریخچه تراکنش‌ها</h2>
-          <div class="mb-3 flex items-center gap-4 rounded-xl bg-white p-4">
-            <span class="bg-success grid size-8 place-items-center rounded-full text-xl text-white"
-              >✓</span
-            >
-            <div class="flex-1">
-              <b class="block text-sm">مبلغ کالاهای سفارش</b
-              ><small class="text-muted text-xs"
-                ><em class="text-success not-italic">پرداخت موفق</em> · درگاه: پرداخت اینترنتی ·
-                شماره پیگیری: ۳۷۵۴۵۷۹۴۸۴</small
-              >
-            </div>
-            <div class="hidden flex-col gap-1 text-xs md:flex">
-              <label class="text-muted">تاریخ</label><span>یکشنبه ۲۷ آذر، ساعت ۲۲:۰۵:۵۸</span>
-            </div>
-            <div class="flex flex-col gap-1 text-xs">
-              <label class="text-muted">مبلغ</label><b>۹,۱۹۸,۰۰۰ تومان</b>
+            <div class="flex flex-row justify-between gap-2 md:flex-col">
+              <label class="text-muted text-xs md:text-base">هزینه بسته‌بندی و ارسال</label
+              ><b class="text-sm font-medium md:text-base">۱۷۹,۰۰۰ تومان</b>
             </div>
           </div>
-          <div class="flex items-center gap-4 rounded-xl bg-white p-4">
-            <span class="bg-error grid size-8 place-items-center rounded-full text-xl text-white"
-              >×</span
-            >
-            <div class="flex-1">
-              <b class="block text-sm">مبلغ کالاهای سفارش</b
-              ><small class="text-muted text-xs"
-                ><em class="text-error not-italic">پرداخت ناموفق</em> · درگاه: پرداخت
-                اینترنتی</small
-              >
-            </div>
-            <div class="hidden flex-col gap-1 text-xs md:flex">
-              <label class="text-muted">تاریخ</label><span>یکشنبه ۲۷ آذر، ساعت ۲۲:۰۶:۱۱</span>
-            </div>
-            <div class="flex flex-col gap-1 text-xs">
-              <label class="text-muted">مبلغ</label><b>۹,۱۹۸,۰۰۰ تومان</b>
-            </div>
+          <div
+            class="border-border-light mt-5 flex flex-row justify-between gap-2 border-t pt-4 text-sm md:mt-6 md:flex-col"
+          >
+            <label class="text-muted text-xs md:text-base">مبلغ پرداخت شده</label
+            ><b class="text-sm font-medium md:text-base">۹،۱۹۸،۰۰۰ تومان</b>
           </div>
         </section>
-        <section class="mb-5 rounded-2xl bg-white p-6">
-          <h2 class="mb-5 text-lg font-bold">مشخصات گیرنده</h2>
-          <div class="flex flex-wrap justify-between gap-4 text-sm">
-            <span>تحویل گیرنده: <b>امیرحسین باطنی</b></span
-            ><span>شماره تماس: <b>۰۹۱۹۳۰۸۷۲۳۰</b></span
-            ><span>کد تحویل: <b>۹۷۱۱</b> ◇</span>
+        <section class="mb-5 rounded-2xl border border-black/10 p-8 md:rounded-[20px]">
+          <h2 class="mb-5 text-lg font-semibold md:mb-6 md:text-xl">تاریخچه تراکنش‌ها</h2>
+          <div class="mb-3 flex flex-col items-center gap-4 rounded-xl bg-white p-4 md:flex-row">
+            <div class="flex flex-1 items-center gap-3">
+              <span
+                class="bg-success grid size-8 place-items-center rounded-full text-xl text-white"
+              >
+                <img class="size-6 object-cover" src="../../assets/icons/tick-02.svg" alt="" />
+              </span>
+              <div>
+                <b class="block pb-2 text-sm">مبلغ کالاهای سفارش</b>
+                <div class="text-muted flex flex-wrap items-center text-xs">
+                  <span class="text-success not-italic">پرداخت موفق</span>
+                  <span class="mx-2 inline-block size-1.5 rounded-full bg-[#1916161F]"></span>
+                  <div class="basis-full text-xs md:basis-auto">
+                    <span class="text-[#19161699]">درگاه:</span>
+                    <span class="text-primary">پرداخت اینترنتی</span>
+                    <span class="mx-2 inline-block size-1.5 rounded-full bg-[#1916161F]"></span>
+                    <span class="text-[#19161699]">شماره پیگیری:</span>
+                    <span class="text-primary">۳۷۲۵۴۷۹۸۴</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-full flex-col gap-6 md:w-[unset] md:flex-row">
+              <div class="flex justify-between gap-1 text-xs md:flex-col">
+                <label class="text-muted text-sm md:text-[13px]">تاریخ</label
+                ><span class="text-sm font-medium md:text-base">یکشنبه ۲۷ آذر، ساعت ۲۲:۰۵:۵۸</span>
+              </div>
+              <div class="flex justify-between gap-1 text-xs md:flex-col md:justify-baseline">
+                <label class="text-muted text-sm md:text-[13px]">مبلغ</label
+                ><span class="text-sm font-medium md:text-base">۹٬۱۹۸٬۰۰۰ تومان</span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 flex flex-col items-center gap-4 rounded-xl bg-white p-4 md:flex-row">
+            <div class="flex flex-1 items-center gap-3">
+              <span class="bg-error grid size-8 place-items-center rounded-full text-xl text-white">
+                <img class="size-6 object-cover" src="../../assets/icons/cancel-01.svg" alt="" />
+              </span>
+              <div>
+                <b class="block pb-2 text-sm">مبلغ کالاهای سفارش</b>
+                <div class="text-muted flex flex-wrap items-center text-xs">
+                  <span class="text-error not-italic">پرداخت ناموفق</span>
+                  <span class="mx-2 inline-block size-1.5 rounded-full bg-[#1916161F]"></span>
+                  <div class="basis-full text-xs md:basis-auto">
+                    <span class="text-[#19161699]">درگاه:</span>
+                    <span class="text-primary">پرداخت اینترنتی</span>
+                    <span class="mx-2 inline-block size-1.5 rounded-full bg-[#1916161F]"></span>
+                    <span class="text-[#19161699]">شماره پیگیری:</span>
+                    <span class="text-primary">۳۷۲۵۴۷۹۸۴</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-full flex-col gap-6 md:w-[unset] md:flex-row">
+              <div class="flex justify-between gap-1 text-xs md:flex-col">
+                <label class="text-muted text-sm md:text-[13px]">تاریخ</label
+                ><span class="text-sm font-medium md:text-base">یکشنبه ۲۷ آذر، ساعت ۲۲:۰۵:۵۸</span>
+              </div>
+              <div class="flex justify-between gap-1 text-xs md:flex-col md:justify-baseline">
+                <label class="text-muted text-sm md:text-[13px]">مبلغ</label
+                ><span class="text-sm font-medium md:text-base">۹٬۱۹۸٬۰۰۰ تومان</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mb-5 rounded-2xl bg-white p-8">
+          <h2 class="text-primary mb-5 text-lg font-semibold md:text-[20px]">مشخصات گیرنده</h2>
+          <div class="flex flex-wrap justify-between gap-5 text-sm">
+            <div class="w-full space-y-5 md:w-[unset] md:space-y-0">
+              <span
+                class="flex w-full justify-between text-sm text-[#19161699] md:w-[unset] md:justify-baseline md:text-base"
+                >تحویل گیرنده:
+                <b class="text-primary me-1 inline-block font-medium">امیرحسین باطنی</b></span
+              >
+              <img class="mx-2 hidden md:inline" src="../../assets/icons/garay-circle.svg" alt="" />
+              <span
+                class="flex w-full justify-between text-sm text-[#19161699] md:w-[unset] md:justify-baseline md:text-base"
+                >شماره تماس:
+                <b class="text-primary me-1 inline-block font-medium">۰۹۱۹۳۰۸۷۲۳۰</b></span
+              >
+            </div>
+            <span
+              class="flex w-full items-center justify-between gap-1 text-sm md:w-[unset] md:justify-baseline md:text-base"
+              >کد تحویل:
+              <span class="flex items-center"
+                >۹۷۱۱
+                <button><img src="../../assets/icons/copy-01.svg" alt="" /></button>
+              </span>
+            </span>
           </div>
           <p class="border-border-light mt-5 border-t pt-4 text-sm">
-            آدرس: تهران، تهران، تجریش، بعد از تجریش، بالای کارته‌خودرویی (بعد از رسیدن حتماً تماس
-            بگیرید)
+            <span class="text-muted pe-1">ارسال به:</span>
+            تهران، تهران، تجریش، بعد از تجریش، بالای کارته‌خودرویی (بعد از رسیدن حتماً تماس بگیرید)
           </p>
         </section>
         <section class="rounded-2xl border border-black/10 p-6">
           <h2 class="mb-5 text-lg font-bold">مرسوله</h2>
           <div class="mb-5 grid gap-4 md:grid-cols-3">
-            <div>
-              <label class="text-muted block text-xs">کد پیگیری مرسوله</label
-              ><b class="text-sm">TLC-3406675</b>
+            <div class="flex w-full justify-between text-sm md:w-[unset] md:flex-col md:text-base">
+              <label class="text-muted block">کد پیگیری مرسوله</label
+              ><b class="pt-2 font-medium">TLC-3406675</b>
             </div>
-            <div>
-              <label class="text-muted block text-xs">زمان تحویل</label
-              ><b class="text-sm">پنجشنبه ۳۰ آذر، ساعت ۱۸-۲۱</b>
+            <div class="flex w-full justify-between text-sm md:w-[unset] md:flex-col md:text-base">
+              <label class="text-muted block">زمان تحویل</label
+              ><b class="pt-2 font-medium">پنجشنبه ۳۰ آذر، ساعت ۱۸-۲۱</b>
             </div>
-            <div>
-              <label class="text-muted block text-xs">وضعیت مرسوله</label
-              ><b class="text-sm">در حال ارسال</b>
+            <div class="flex w-full justify-between text-sm md:w-[unset] md:flex-col md:text-base">
+              <label class="text-muted block">وضعیت مرسوله</label
+              ><b class="pt-2 font-medium">در حال ارسال</b>
             </div>
           </div>
-          <div class="grid gap-3 md:grid-cols-2">
+          <div class="grid gap-3">
             <article class="flex items-center gap-3 rounded-xl bg-white p-3">
-              <img
-                class="size-16 object-contain"
-                src="../../assets/images/Wheel-drive-spring-image.png"
-                alt="فنر محرک چرخ ها"
-              />
+              <figure class="size-16">
+                <img
+                  class="size-full object-contain"
+                  src="../../assets/images/Wheel-drive-spring-image.png"
+                  alt="فنر محرک چرخ ها"
+                />
+              </figure>
               <div class="flex-1">
-                <b class="block text-sm">فنر محرک چرخ ها</b
-                ><small class="text-muted text-xs">سیستم تعلیق و بوقلمونک · ۴.۸ ⭐</small>
-              </div>
-              <strong class="text-success text-sm">۴۹۰,۰۰۰ تومان</strong>
-            </article>
-            <article class="flex items-center gap-3 rounded-xl bg-white p-3">
-              <img
-                class="size-16 object-contain"
-                src="../../assets/images/Wheel-drive-spring-image.png"
-                alt="فنر محرک چرخ ها"
-              />
-              <div class="flex-1">
-                <b class="block text-sm">فنر محرک چرخ ها</b
-                ><small class="text-muted text-xs">سیستم تعلیق و بوقلمونک · ۴.۸ ⭐</small>
+                <b class="block text-base font-semibold">فنر محرک چرخ ها</b
+                ><small class="text-muted flex items-center text-[13px]"
+                  >سیستم تعلیق و بوقلمونک
+                  <img class="mx-2" src="../../assets/icons/garay-circle.svg" alt="" />
+                  <span class="flex items-center">
+                    <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
+                    <span>۴.۸</span>
+                  </span>
+                </small>
               </div>
               <strong class="text-success text-sm">۴۹۰,۰۰۰ تومان</strong>
             </article>

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <title>اطلاعات ارسال | تراک پاور</title>
+  </head>
+  <body class="bg-surface-bg text-primary">
+    <main class="container-custom mx-auto px-5 py-4 md:px-0 md:py-5">
+      <nav
+        aria-label="مسیر صفحه"
+        class="container-custom text-muted mb-10 flex items-center gap-1 pt-5 text-xs sm:mb-15 md:mb-15 md:text-sm"
+      >
+        <a href="../index.html" class="hover:text-primary transition">خانه</a>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.25 4.5C11.25 4.5 6.75001 7.8142 6.75 9.00004C6.74999 10.1859 11.25 13.5 11.25 13.5"
+            stroke="#666464"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="text-primary">سبد خرید</span>
+      </nav>
+      <div class="">
+        <h1 class="mb-8 text-right text-2xl leading-tight font-semibold md:mb-12 md:text-[36px]">
+          اطلاعات آدرس
+        </h1>
+
+        <div class="mt-10 grid gap-10 md:mt-14 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-10">
+          <aside class="order-2 flex flex-col gap-3 md:-mt-26">
+            <section class="rounded-2xl border border-[#0000001F] p-5 md:p-6">
+              <h2 class="text-base font-semibold md:text-lg">جمع کل سفارش</h2>
+
+              <dl class="mt-6 space-y-3 text-sm font-medium md:text-base">
+                <div class="flex items-center justify-between">
+                  <dt class="font-normal text-[#666666]">قیمت کالاها (۲)</dt>
+                  <dd>۱۲۰,۰۰۰,۰۰۰ تومان</dd>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <dt class="text-brand-700 flex items-center gap-2">
+                    <span class="text-2xl font-normal">
+                      <img src="../../assets/icons/discount.svg" alt="" />
+                    </span>
+                    سود شما از این خرید
+                  </dt>
+                  <dd class="text-brand-700">۲,۱۲۰,۰۰۰ تومان</dd>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <dt class="font-normal text-[#666666]">هزینه ارسال</dt>
+                  <dd>۱,۰۰۰,۰۰۰ تومان</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="rounded-[20px] bg-white p-5 md:p-6">
+              <h2 class="text-base font-semibold md:text-lg">مبلغ قابل پرداخت</h2>
+
+              <dl class="mt-6 space-y-3 text-sm font-medium md:text-base">
+                <div class="flex items-start justify-between gap-5">
+                  <dt class="text-muted w-[60%] leading-7 font-normal">
+                    پیش‌پرداخت جهت رزرو و انباری (
+                    <span class="text-primary">۲۰٪</span>
+                    )
+                  </dt>
+                  <dd class="w-[40%] shrink-0 text-left">۲۴,۰۰۰,۰۰۰ تومان</dd>
+                </div>
+
+                <div class="flex items-start justify-between gap-5">
+                  <dt class="text-muted w-[60%] leading-7 font-normal">
+                    مانده حساب (پس از هماهنگی تلفنی / واتساپ)
+                  </dt>
+                  <dd class="w-[40%] shrink-0 text-left">۹۶,۰۰۰,۰۰۰ تومان</dd>
+                </div>
+              </dl>
+
+              <div class="mt-4 mb-7 border-t border-[#e0e0e0]"></div>
+
+              <div class="flex items-center justify-between text-sm font-semibold md:text-base">
+                <span>مبلغ قابل پرداخت بیعانه</span>
+                <span class="text-lg md:text-xl">
+                  ۲۴,۰۰۰,۰۰۰
+                  <span class="text-sm font-medium md:text-base">تومان</span>
+                </span>
+              </div>
+
+              <a
+                href="shipping.html"
+                class="bg-brand-700 hover:bg-brand-800 mt-8 flex h-[68px] w-full items-center justify-center rounded-xl text-lg font-medium text-white transition"
+              >
+                ادامه فرآیند
+              </a>
+            </section>
+
+            <div
+              class="flex items-start gap-3 rounded-2xl border-2 border-[#f59e0b] px-6 py-4 text-sm leading-7 md:text-base"
+            >
+              <img src="../../assets/icons/alert-circle.svg" alt="" />
+              <span>
+                پرداخت فقط ۲۰٪ جهت رزرو؛ مابقی مبلغ پس از تماس کارشناس و اطمینان ۱۰۰٪ از انطباق قطعه
+                با شاسی تسویه می‌شود.
+              </span>
+            </div>
+
+            <p class="px-3 text-right text-base leading-7 text-[#64748b] md:text-sm">
+              کالاهای موجود در سبد شما ثبت و رزرو شده‌اند، برای ثبت سفارش مراحل بعدی را تکمیل کنید.
+            </p>
+          </aside>
+
+          <form id="shipping-form" class="space-y-6 md:space-y-7" novalidate>
+            <section
+              aria-labelledby="personal-info-title"
+              class="rounded-2xl bg-white p-5 md:rounded-[20px] md:p-8"
+            >
+              <h2 id="personal-info-title" class="mb-6 text-lg font-semibold md:mb-8 md:text-xl">
+                اطلاعات فردی
+              </h2>
+
+              <div class="grid gap-5 xl:grid-cols-3">
+                <label
+                  class="group has-[:checked]:border-brand-700 relative block min-h-77.75 cursor-pointer overflow-hidden rounded-[15px] border border-[#d9d9d9] bg-white transition has-[:checked]:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+                >
+                  <input
+                    class="peer sr-only"
+                    type="checkbox"
+                    name="savedAddresses"
+                    value="tehran-home"
+                    checked
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="border-t-brand-700 pointer-events-none absolute top-0 left-0 h-0 w-0 border-t-[58px] border-r-[58px] border-r-transparent opacity-0 transition peer-checked:opacity-100"
+                  ></span>
+                  <svg
+                    aria-hidden="true"
+                    class="pointer-events-none absolute top-2 left-2 size-6 text-white opacity-0 transition peer-checked:opacity-100"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="m5 12 4 4L19 6"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <div class="flex h-full flex-col overflow-hidden p-5">
+                    <div class="flex items-center gap-4 border-b border-[#d9d9d9] pb-5">
+                      <span
+                        aria-hidden="true"
+                        class="grid size-7 shrink-0 place-items-center rounded-full border-[3px] border-[#e31b3b] opacity-0 transition group-has-[:checked]:opacity-100"
+                      >
+                        <span class="size-3 rounded-full bg-[#e31b3b]"></span>
+                      </span>
+                      <span class="text-base font-semibold text-[#808080] md:text-lg">
+                        ارسال به این آدرس
+                      </span>
+                    </div>
+
+                    <div class="mt-7 space-y-3 text-sm leading-8">
+                      <p class="text-lg font-semibold md:text-xl">تهران، تهران</p>
+                      <p class="text-base font-medium">ساختمان، بلوار دریانو، کوچه ۳ پلاک ۱۷</p>
+                      <p class="pt-2 text-base text-[#808080] md:text-lg">مهدی کیانی</p>
+                      <p class="text-base text-[#808080] md:text-lg">۰۹۱۲۴۶۵۹۰۸۶۴</p>
+                      <p class="text-base text-[#808080] md:text-lg">۰۲۱۴۴۸۸۷۵۵۳</p>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="mt-auto flex items-center justify-end gap-2 text-left text-base font-medium text-[#808080] md:text-lg"
+                      aria-label="ویرایش آدرس تهران"
+                    >
+                      ویرایش
+                      <img src="../../assets/icons/edit.svg" alt="" />
+                    </button>
+                  </div>
+                </label>
+
+                <button
+                  type="button"
+                  id="add-address"
+                  class="hover:border-brand-700 flex min-h-32.25 items-center justify-center rounded-[15px] border border-[#d9d9d9] bg-[#fafafa] px-5 py-8 text-center transition hover:bg-white xl:min-h-[430px]"
+                >
+                  <span class="flex flex-col items-center gap-2 text-xl font-medium md:text-base">
+                    <span aria-hidden="true" class="text-5xl leading-none font-light">+</span>
+                    افزودن آدرس جدید
+                  </span>
+                </button>
+              </div>
+            </section>
+
+            <section
+              aria-labelledby="address-title"
+              class="rounded-2xl bg-white p-5 md:rounded-[20px] md:p-8"
+            >
+              <h2 id="address-title" class="mb-6 text-lg font-semibold md:mb-8 md:text-xl">
+                آدرس تحویل
+              </h2>
+              <div class="grid gap-5 md:grid-cols-2 md:gap-5">
+                <label
+                  ><span class="sr-only">نام و نام خانوادگی</span
+                  ><input
+                    required
+                    name="fullName"
+                    type="text"
+                    placeholder="نام و نام خانوادگی"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">شماره موبایل</span
+                  ><input
+                    required
+                    name="mobile"
+                    type="tel"
+                    inputmode="tel"
+                    placeholder="شماره موبایل"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-right text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">شماره تلفن ثابت</span
+                  ><input
+                    name="phone"
+                    type="tel"
+                    inputmode="tel"
+                    placeholder="شماره تلفن ثابت"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-right text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">استان</span
+                  ><input
+                    required
+                    name="province"
+                    type="text"
+                    placeholder="استان"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">شهر</span
+                  ><input
+                    required
+                    name="city"
+                    type="text"
+                    placeholder="شهر"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">ایمیل (اختیاری)</span
+                  ><input
+                    name="email"
+                    type="email"
+                    placeholder="ایمیل (اختیاری)"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+                <label
+                  ><span class="sr-only">کد پستی</span
+                  ><input
+                    required
+                    name="postalCode"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="کد پستی"
+                    class="text-primary h-15.25 w-full rounded-xl border border-[#E5E5E5] p-4 text-sm font-normal placeholder-[#6E6E6F] md:p-5 md:text-base"
+                /></label>
+              </div>
+              <label class="mt-6 block md:mt-5"
+                ><span class="sr-only">آدرس پستی</span
+                ><textarea
+                  required
+                  name="address"
+                  rows="3"
+                  placeholder="آدرس پستی را کامل و دقیق وارد کنید"
+                  class="placeholder:text-muted focus:border-brand-700 focus:ring-brand-100 w-full resize-none rounded-[15px] border border-[#dedede] bg-white px-5 py-5 text-base leading-7 transition outline-none focus:ring-2"
+                ></textarea>
+              </label>
+            </section>
+            <section
+              aria-labelledby="method-title"
+              class="rounded-2xl bg-white p-5 md:rounded-[20px] md:p-8"
+            >
+              <div
+                class="mb-5 flex flex-col gap-2 md:mb-6 md:flex-row md:items-center md:justify-between"
+              >
+                <h2 id="method-title" class="text-base font-semibold">شیوه ارسال</h2>
+                <p class="text-muted text-sm md:text-base">
+                  سبدهای روی ۳۰۰ هزار تومان هزینه حمل رایگان می باشد
+                </p>
+              </div>
+              <fieldset>
+                <legend class="sr-only">انتخاب شیوه ارسال</legend>
+                <div id="shipping-methods" class="grid gap-3 md:gap-6"></div>
+              </fieldset>
+            </section>
+            <section
+              aria-labelledby="time-title"
+              class="rounded-2xl bg-white p-5 md:rounded-[20px] md:p-8"
+            >
+              <h2 id="time-title" class="mb-6 text-lg font-semibold md:mb-8 md:text-xl">
+                زمان ارسال
+              </h2>
+              <div
+                id="delivery-days"
+                role="tablist"
+                aria-label="روز ارسال"
+                class="flex items-end gap-2 overflow-x-auto pb-0"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-day="دوشنبه ۱۷ آذر"
+                  class="delivery-day border-brand-700 shrink-0 border-b-[3px] px-1 pb-3 text-sm font-semibold md:px-3 md:text-base"
+                >
+                  دوشنبه ۱۷ آذر</button
+                ><button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-day="سه شنبه ۱۸ آذر"
+                  class="delivery-day shrink-0 border-b-[3px] border-transparent px-1 pb-3 text-sm md:px-3 md:text-base"
+                >
+                  سه شنبه ۱۸ آذر</button
+                ><button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-day="چهارشنبه ۱۸ آذر"
+                  class="delivery-day shrink-0 border-b-[3px] border-transparent px-1 pb-3 text-sm md:px-3 md:text-base"
+                >
+                  چهارشنبه ۱۸ آذر</button
+                ><button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-day="پنجشنبه ۱۸ آذر"
+                  class="delivery-day shrink-0 border-b-[3px] border-transparent px-1 pb-3 text-sm md:px-3 md:text-base"
+                >
+                  پنجشنبه ۱۸ آذر
+                </button>
+              </div>
+              <fieldset class="mt-7">
+                <legend class="sr-only">انتخاب بازه زمانی</legend>
+                <div id="delivery-times" class="flex flex-wrap gap-3"></div>
+              </fieldset>
+            </section>
+            <a
+              href="payment.html"
+              class="bg-brand-700 hover:bg-brand-800 flex h-14 w-full items-center justify-center rounded-xl text-base font-medium text-white transition"
+            >
+              ادامه فرآیند و پرداخت
+            </a>
+          </form>
+        </div>
+      </div>
+      <!-- Newsletter Subscription -->
+      <section class="container-custom mt-30">
+        <div
+          class="bg-primary flex flex-col items-center justify-between rounded-[20px] p-5 md:flex-row md:p-10"
+        >
+          <div
+            class="flex w-full max-w-137.5 flex-col items-center justify-between gap-3.25 text-center text-white md:flex-row md:gap-[unset] md:text-start"
+          >
+            <div class="text-2xl md:text-[28px]">
+              <span class="font-extrabold">عضویت در</span><br />
+              <span class="font-medium">خبرنامه ایمیلی</span>
+            </div>
+            <p class="text-sm leading-6.25 md:w-83 md:text-base">
+              با عضویت در خبرنامه، از جدیدترین محصولات، تخفیف‌های ویژه و پیشنهادهای تراک پاور باخبر
+              شوید.
+            </p>
+          </div>
+          <div
+            class="mt-8 flex h-15 w-full max-w-100.5 rounded-xl border border-[#FFFFFF1F] bg-white py-1 ps-4 pe-1 md:mt-0"
+          >
+            <input
+              id="home-newsletter-email"
+              placeholder="ایمیل خود را وارد کنید..."
+              class="text-muted placeholder-muted flex flex-1 text-sm outline-0"
+              type="text"
+              aria-label="ایمیل عضویت در خبرنامه"
+            />
+            <button class="bg-brand-700 h-full rounded-lg px-5 text-white" type="submit">
+              عضویت
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const methodsContainer = document.querySelector('#shipping-methods');
+      const timesContainer = document.querySelector('#delivery-times');
+      const methodDescription = document.querySelector('#method-description');
+      const days = document.querySelectorAll('.delivery-day');
+      const methods = [
+        { value: 'city', title: 'پیک درون شهری', price: 'رایگان' },
+        { value: 'express', title: 'پیک درون شهری', price: '۱۳,۸۵۰,۰۰۰ تومان' },
+      ];
+      const times = {
+        city: ['15-20', '10-15', '20-22'],
+        express: ['15-20', '10-15'],
+      };
+      const timeLabels = {
+        '15-20': 'از ساعت ۱۵ تا ۲۰',
+        '10-15': 'از ساعت ۱۰ تا ۱۵',
+        '20-22': 'از ساعت ۲۰ تا ۲۲',
+      };
+      const descriptions = {
+        city: 'از طریق پیک (درون شهری) - اکسپرس - تحویل حدود ۶ ساعت الی ۱۲ ساعت، در روزهای اداری',
+        express: 'ارسال اکسپرس در همان روز، با زمان‌بندی قابل انتخاب در روزهای اداری',
+      };
+      function selectedMethod() {
+        return document.querySelector('input[name="shippingMethod"]:checked')?.value || 'city';
+      }
+      function renderMethods() {
+        methodsContainer.innerHTML = methods
+          .map(
+            (method, index) => `
+<label
+  class="group relative flex-wrap md:flex-nowrap flex min-h-20.5 w-full min-w-0 cursor-pointer items-center gap-4 rounded-[15px] border border-[#D9D9D9] px-4 py-5 transition has-[:checked]:border-brand-700 has-[:checked]:ring-1 has-[:checked]:ring-brand-700 md:px-5 md:py-6"
+>
+  <input
+    class="peer sr-only"
+    type="radio"
+    name="shippingMethod"
+    value="${method.value}"
+    ${index === 0 ? 'checked' : ''}
+  />
+
+  <span
+    aria-hidden="true"
+    class="grid size-6 shrink-0 place-items-center rounded-full border-2 border-[#93a4b5] transition peer-checked:border-brand-700 peer-checked:bg-brand-700 [&>span]:size-3.5 [&>span]:rounded-full [&>span]:border-2 [&>span]:border-transparent [&>span]:transition peer-checked:[&>span]:border-white"
+  >
+    <span></span>
+  </span>
+
+  <span class="flex min-w-0 flex-1 flex-col gap-1 md:flex-row md:items-center md:gap-6">
+    <strong class="shrink-0 text-sm md:text-base font-medium">
+      ${method.title}
+    </strong>
+
+<span
+  class="w-full min-w-0 text-xs leading-6 break-words text-[#19161699] md:w-auto md:flex-1 md:text-[13px]"
+>
+  از طریق پیک (درون شهری) اکسپرس - تحویل حدود ۶ ساعت۱۴ الی ۲۰ در روزهای اداری
+</span>
+
+  <strong
+    class="shrink-0 w-full md:w-auto text-left self-center text-sm font-medium md:text-base"
+  >
+    ${method.price}
+  </strong>
+</label>
+            `
+          )
+          .join('');
+        methodsContainer.addEventListener('change', handleMethodChange);
+      }
+      function renderTimes() {
+        const selectedDay = document.querySelector('.delivery-day[aria-selected="true"]')?.dataset
+          .day;
+        let available = times[selectedMethod()];
+        if (selectedDay?.includes('پنجشنبه'))
+          available = available.filter((time) => time !== '20-22');
+        const previousTime = document.querySelector('input[name="deliveryTime"]:checked')?.value;
+        timesContainer.innerHTML = available
+          .map(
+            (time, index) =>
+              `<label class="group flex cursor-pointer items-center w-34.75 gap-2 md:gap-3 rounded-[15px] border border-[#d8d8d8] whitespace-nowrap p-3 text-sm transition has-[:checked]:border-brand-700 has-[:checked]:ring-1 has-[:checked]:ring-brand-700 md:w-48.25"><input class="peer sr-only" type="radio" name="deliveryTime" value="${time}" ${previousTime === time || (!available.includes(previousTime) && index === 0) ? 'checked' : ''}><span aria-hidden="true" class="peer-checked:[&>span]:border-white grid size-6 shrink-0 place-items-center rounded-full border-2 border-[#93a4b5] transition peer-checked:border-brand-700 peer-checked:bg-brand-700"><span class="size-3.5 rounded-full border-2 border-transparent transition"></span></span>${timeLabels[time]}</label>`
+          )
+          .join('');
+      }
+      function handleMethodChange() {
+        methodDescription.textContent = descriptions[selectedMethod()];
+        renderTimes();
+      }
+      days.forEach((day) =>
+        day.addEventListener('click', () => {
+          days.forEach((item) => {
+            const active = item === day;
+            item.setAttribute('aria-selected', String(active));
+            item.classList.toggle('border-brand-700', active);
+            item.classList.toggle('font-semibold', active);
+            item.classList.toggle('border-transparent', !active);
+          });
+          renderTimes();
+        })
+      );
+      renderMethods();
+      renderTimes();
+    </script>
+  </body>
+</html>
