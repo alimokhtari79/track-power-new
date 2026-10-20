@@ -61,15 +61,20 @@
     --default-mono-font-family: var(--font-mono);
     --color-brand-700: var(--brand-700);
     --color-brand-800: var(--brand-800);
+    --color-brand-900: var(--brand-900);
     --color-brand-100: var(--brand-100);
+    --color-brand-50: var(--brand-50);
     --color-primary: var(--primary);
+    --color-body: var(--body);
     --color-muted: var(--muted);
     --color-inactive: var(--inactive);
     --color-border-light: var(--border-light);
     --color-surface-bg: var(--surface-bg);
+    --color-surface-card: var(--surface-card);
     --color-success: var(--success);
     --color-warning: var(--warning);
     --color-error: var(--error);
+    --color-info: var(--info);
   }
 }
 @layer base {
@@ -575,6 +580,9 @@
   }
   .hidden {
     display: none;
+  }
+  .inline {
+    display: inline;
   }
   .inline-block {
     display: inline-block;
@@ -1436,6 +1444,10 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 58px;
   }
+  .border-r {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
+  }
   .border-r-\[26px\] {
     border-right-style: var(--tw-border-style);
     border-right-width: 26px;
@@ -1647,11 +1659,20 @@
   .bg-\[\#fff3e1\] {
     background-color: #fff3e1;
   }
+  .bg-brand-50 {
+    background-color: var(--color-brand-50);
+  }
   .bg-brand-100 {
     background-color: var(--color-brand-100);
   }
   .bg-brand-700 {
     background-color: var(--color-brand-700);
+  }
+  .bg-brand-800 {
+    background-color: var(--color-brand-800);
+  }
+  .bg-brand-900 {
+    background-color: var(--color-brand-900);
   }
   .bg-error {
     background-color: var(--color-error);
@@ -1661,6 +1682,9 @@
   }
   .bg-green-100 {
     background-color: var(--color-green-100);
+  }
+  .bg-info {
+    background-color: var(--color-info);
   }
   .bg-neutral-200 {
     background-color: var(--color-neutral-200);
@@ -1680,8 +1704,14 @@
   .bg-surface-bg {
     background-color: var(--color-surface-bg);
   }
+  .bg-surface-card {
+    background-color: var(--color-surface-card);
+  }
   .bg-transparent {
     background-color: transparent;
+  }
+  .bg-warning {
+    background-color: var(--color-warning);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -2026,6 +2056,10 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -2280,6 +2314,9 @@
   .text-black {
     color: var(--color-black);
   }
+  .text-body {
+    color: var(--color-body);
+  }
   .text-brand-700 {
     color: var(--color-brand-700);
   }
@@ -2297,6 +2334,9 @@
   }
   .text-inactive {
     color: var(--color-inactive);
+  }
+  .text-info {
+    color: var(--color-info);
   }
   .text-muted {
     color: var(--color-muted);
@@ -2435,6 +2475,12 @@
   }
   .\[direction\:ltr\] {
     direction: ltr;
+  }
+  .direction-ltr {
+    direction: ltr;
+  }
+  .direction-rtl {
+    direction: rtl;
   }
   .group-open\:rotate-180:is(:where(.group):is([open], :popover-open, :open) *) {
     rotate: 180deg;

@@ -1,37 +1,39 @@
-# سیستم طراحی فعلی
+# Current Design System
 
-این سند وضعیت واقعی CSS و HTML موجود را ثبت می‌کند. موارد این سند الزاماً یک Design System کامل یا استانداردسازی‌شده نیستند؛ هرجا مقدارها فقط در صفحه خاصی دیده شده‌اند، به‌عنوان الگوی پراکنده ثبت شده‌اند.
+This document describes the actual CSS and HTML patterns currently implemented in the project. The items documented here do not necessarily constitute a complete or fully standardized design system. Where a value or pattern has only been observed on specific pages, it is documented as an existing implementation pattern rather than an official project-wide standard.
 
-## توکن‌های مرکزی CSS
+## Core CSS Design Tokens
 
-در `src/styles/input.css` متغیرهای زیر در `:root` تعریف شده و سپس در `@theme` به رنگ‌های Tailwind نگاشت شده‌اند.
+The following variables are defined in `:root` in `src/styles/input.css` and mapped to Tailwind color utilities through `@theme`.
 
-| گروه | متغیر | مقدار | کلاس‌های متناظر |
+| Category | Variable | Value | Corresponding Utility Classes |
 |---|---|---|---|
-| برند | `--brand-700` | `#bd0c0a` | `bg-brand-700`, `text-brand-700`, `border-brand-700` |
-| برند | `--brand-800` | `#9e0907` | `bg-brand-800`, معمولاً Hover |
-| برند | `--brand-900` | `#7a0605` | `bg-brand-900` |
-| برند | `--brand-100` | `#fee2e2` | `bg-brand-100` |
-| برند | `--brand-50` | `#fef2f2` | `bg-brand-50` |
-| متن | `--primary` | `#191616` | `text-primary`, `bg-primary` |
-| متن | `--body` | `#4b5563` | `text-body` |
-| متن | `--muted` | `#666464` | `text-muted` |
-| متن | `--inactive` | `#989898` | `text-inactive` |
+| Brand | `--brand-700` | `#bd0c0a` | `bg-brand-700`, `text-brand-700`, `border-brand-700` |
+| Brand | `--brand-800` | `#9e0907` | `bg-brand-800`, commonly used for hover states |
+| Brand | `--brand-900` | `#7a0605` | `bg-brand-900` |
+| Brand | `--brand-100` | `#fee2e2` | `bg-brand-100` |
+| Brand | `--brand-50` | `#fef2f2` | `bg-brand-50` |
+| Text | `--primary` | `#191616` | `text-primary`, `bg-primary` |
+| Text | `--body` | `#4b5563` | `text-body` |
+| Text | `--muted` | `#666464` | `text-muted` |
+| Text | `--inactive` | `#989898` | `text-inactive` |
 | Border | `--border-light` | `#e6e7e9` | `border-border-light` |
-| سطح | `--surface-bg` | `#f5f5f5` | `bg-surface-bg` |
-| سطح | `--surface-card` | `#ffffff` | `bg-surface-card` |
-| وضعیت | `--success` | `#06ac1c` | `text-success`, `bg-success` |
-| وضعیت | `--warning` | `#f59e0b` | `text-warning`, `bg-warning` |
-| وضعیت | `--error` | `#be0c0b` | `text-error`, `bg-error` |
-| وضعیت | `--info` | `#1d4ed8` | `text-info`, `bg-info` |
+| Surface | `--surface-bg` | `#f5f5f5` | `bg-surface-bg` |
+| Surface | `--surface-card` | `#ffffff` | `bg-surface-card` |
+| Status | `--success` | `#06ac1c` | `text-success`, `bg-success` |
+| Status | `--warning` | `#f59e0b` | `text-warning`, `bg-warning` |
+| Status | `--error` | `#be0c0b` | `text-error`, `bg-error` |
+| Status | `--info` | `#1d4ed8` | `text-info`, `bg-info` |
 
-این توکن‌ها استاندارد مرکزی پروژه هستند. بااین‌حال HTMLها رنگ‌های مستقیم زیادی نیز دارند؛ نمونه‌های پرتکرار شامل `#dedede`، `#e5e5e5`، `#ddd`، `#19161699`، `#1916161f`، `#bd0c0a1a`، `#6e6e6f`، `#d9d9d9` و `#64748b` است. این مقدارها در `src/styles/input.css` یا یک فایل توکن جداگانه به‌عنوان توکن مرکزی تعریف نشده‌اند.
+These tokens are the project's central color definitions. However, many HTML files also use hardcoded color values. Frequently occurring examples include `#dedede`, `#e5e5e5`, `#ddd`, `#19161699`, `#1916161f`, `#bd0c0a1a`, `#6e6e6f`, `#d9d9d9`, and `#64748b`.
 
-## فونت و تایپوگرافی
+These values are not currently defined as shared design tokens in `src/styles/input.css` or in a separate token file.
 
-فونت عمومی `Peyda` است و در `src/styles/input.css` برای وزن‌های زیر تعریف شده است:
+## Typography and Fonts
 
-| وزن | فایل مورد اشاره در CSS |
+The project uses `Peyda` as its primary font family. The following font weights are defined in `src/styles/input.css`.
+
+| Font Weight | File Referenced in CSS |
 |---:|---|
 | 100 | `PeydaWeb-Thin.woff2` |
 | 200 | `PeydaWeb-ExtraLight.woff2` |
@@ -43,86 +45,127 @@
 | 800 | `PeydaWeb-ExtraBold.woff2` |
 | 900 | `PeydaWeb-Black.woff2` |
 
-نام دو فایل موجود با نام CSS از نظر حروف بزرگ و کوچک یکسان نیستند: فایل‌های موجود `peydaWeb-extralight.woff2` و `peydaWeb-light.woff2` هستند، درحالی‌که CSS نام‌های `PeydaWeb-ExtraLight.woff2` و `PeydaWeb-Light.woff2` را می‌خواهد. روی میزبان حساس به حروف، این دو وزن ممکن است بارگذاری نشوند. این مورد در این مرحله اصلاح نشده است.
+Two font filenames differ from their CSS references in letter casing. The actual files are `peydaWeb-extralight.woff2` and `peydaWeb-light.woff2`, while the CSS references `PeydaWeb-ExtraLight.woff2` and `PeydaWeb-Light.woff2`, respectively.
 
-کلاس‌های تایپوگرافی پرتکرار شامل `text-xs` تا `text-4xl`، وزن‌های `font-medium`، `font-semibold`، `font-bold` و `font-extrabold` و اندازه‌های مستقیم مانند `text-[13px]`، `text-[14px]`، `text-[28px]` و `text-[36px]` است. این اندازه‌های مستقیم استاندارد مرکزی جداگانه‌ای ندارند.
+On case-sensitive file systems, these mismatches may prevent the corresponding font weights from loading. This issue has not yet been fixed.
 
-## Utilityهای سفارشی
+Common typography utilities include `text-xs` through `text-4xl`, font weights such as `font-medium`, `font-semibold`, `font-bold`, and `font-extrabold`, and arbitrary font sizes such as `text-[13px]`, `text-[14px]`, `text-[28px]`, and `text-[36px]`.
 
-در `src/styles/input.css` این Utilityها تعریف شده‌اند:
+These arbitrary font sizes do not currently belong to a separately defined, centralized typography scale.
 
-- `container-custom`: عرض ۱۰۰٪، حداکثر عرض `1320px` و `margin-inline: auto`. در عرض کمتر از `768px`، Padding افقی `20px` دارد.
-- `direction-ltr`: تنظیم `direction: ltr`.
-- `direction-rtl`: تنظیم `direction: rtl`.
-- `timer`: فاصله داخلی و Border بین آیتم‌های تایمر.
-- `most-viewed-articles`: فاصله عمودی و Border بین آیتم‌های فهرست مقالات.
+## Custom Utility Classes and Selectors
 
-Selectors اختصاصی دیگر:
+The following custom utilities are defined in `src/styles/input.css`:
 
-- `.reviews-track` و انیمیشن `reviews-marquee` برای حرکت نظرات.
-- `.deal-swiper` و وضعیت‌های اسلاید آن برای کارت پیشنهادها.
-- `.js-swiper` برای اسکرول افقی موبایل و Swiper دسکتاپ.
-- `.range-wrap` برای Slider دوگانه قیمت.
-- `.swiper-pagination-bullet.swiper-pagination-bullet-active` برای رنگ Pagination.
+- `container-custom`: Sets the width to `100%`, limits the maximum width to `1320px`, and centers the container using `margin-inline: auto`. Below `768px`, it applies `20px` of horizontal padding.
+- `direction-ltr`: Sets `direction: ltr`.
+- `direction-rtl`: Sets `direction: rtl`.
+- `timer`: Applies spacing and borders between timer items.
+- `most-viewed-articles`: Applies vertical spacing and borders between items in article lists.
 
-## Breakpoint و ریسپانسیو
+Other custom selectors and styles include:
 
-در HTML از Variantهای `sm:`, `md:`, `lg:` و `xl:` استفاده شده است. CSS سفارشی پروژه مرز اصلی موبایل و دسکتاپ را در `767px/768px` تعریف می‌کند:
+- `.reviews-track` and the `reviews-marquee` animation for the scrolling reviews section.
+- `.deal-swiper` and its slide-state styles for promotional product cards.
+- `.js-swiper` for native horizontal scrolling on mobile and Swiper layouts on desktop.
+- `.range-wrap` for the dual-range price slider.
+- `.swiper-pagination-bullet.swiper-pagination-bullet-active` for the active pagination bullet color.
 
-- موبایل: `max-width: 767px`
-- دسکتاپ: `min-width: 768px`
+## Breakpoints and Responsive Behavior
 
-الگوهای پرتکرار عبارت‌اند از:
+The HTML uses Tailwind responsive variants such as `sm:`, `md:`, `lg:`, and `xl:`. The project's custom CSS establishes the primary mobile/desktop boundary at `767px` and `768px`.
 
-- Grid دو ستونه محصولات در موبایل و چهارستونه در نمایشگرهای بزرگ‌تر.
-- تبدیل `flex-col` به `md:flex-row`.
-- پنهان‌سازی یا نمایش عناصر با `md:hidden` و `md:block`.
-- تغییر Padding و Radius در `md:`.
-- اسکرول افقی Native برای برخی اسلایدرها در موبایل.
+- **Mobile:** `max-width: 767px`
+- **Desktop:** `min-width: 768px`
 
-این‌ها الگوهای واقعی استفاده‌شده‌اند؛ پروژه فایل جداگانه‌ای برای قرارداد رسمی Breakpointها ندارد.
+Common responsive patterns include:
 
-## الگوهای رابط کاربری
+- Two-column product grids on mobile and four-column grids on larger screens.
+- Switching from `flex-col` to `md:flex-row`.
+- Showing or hiding elements with `md:hidden` and `md:block`.
+- Adjusting padding and border radius at the `md:` breakpoint.
+- Using native horizontal scrolling for selected mobile sliders.
 
-### کارت محصول
+These are patterns observed in the existing implementation. The project does not currently have a separate document defining an official breakpoint convention.
 
-در صفحه محصولات و بخش‌های محصولات صفحات دیگر، کارت معمولاً با `product-card flex min-w-0 flex-col rounded-2xl bg-white` ساخته شده است. تصویر `aspect-square` و `object-contain` دارد، مشخصات و امتیاز با متن کوچک نمایش داده می‌شود و قیمت نهایی معمولاً `text-success` است. Badge تخفیف اغلب با `text-brand-700` و پس‌زمینه مستقیم `#bd0c0a1a` ساخته شده است.
+## UI Component Patterns
 
-### دکمه
+### Product Cards
 
-الگوی پرتکرار دکمه اصلی:
+Product cards appear on the product listing page and in product sections across other pages. A common structure uses classes such as:
+
+`product-card flex min-w-0 flex-col rounded-2xl bg-white`
+
+The product image typically uses `aspect-square` and `object-contain`. Product details and ratings are displayed using small text sizes, while the final price commonly uses `text-success`.
+
+Discount badges often use `text-brand-700` with the hardcoded background color `#bd0c0a1a`.
+
+These are recurring implementation patterns, not a fully standardized component specification.
+
+### Buttons
+
+A frequently used primary button pattern is:
 
 ```text
 bg-brand-700 hover:bg-brand-800 rounded-xl px-... py-... font-medium text-white transition
 ```
 
-اندازه و عرض دکمه در صفحات مختلف متفاوت است؛ بعضی دکمه‌ها `w-full` و بعضی `md:w-[unset]` یا `w-fit` هستند.
+Button dimensions and widths vary by page. Some buttons use `w-full`, while others use `md:w-[unset]` or `w-fit`.
 
-### فرم
+### Forms
 
-فیلدهای ورود، تماس، حساب و آدرس معمولاً `rounded-xl`، Border خاکستری، Padding `p-4` یا `p-5`، متن راست‌چین و Focus با `focus:border-brand-700` دارند. رنگ Placeholder در بسیاری موارد مستقیم نوشته شده است.
+Input fields on login, contact, account, and address pages commonly use:
 
-### Badge و وضعیت
+- `rounded-xl`
+- Gray border colors
+- `p-4` or `p-5` for padding
+- Right-aligned text
+- `focus:border-brand-700` for focus styling
 
-Badgeهای تخفیف، وضعیت سفارش و وضعیت فیلتر از رنگ برند، سبز موفقیت، خاکستری و رنگ‌های مستقیم استفاده می‌کنند. قرارداد مشترک نام‌گذاری برای همه Badgeها وجود ندارد.
+Placeholder colors are often specified directly rather than through a shared token or utility convention.
 
-### Sidebar و داشبورد
+### Badges and Status Indicators
 
-صفحات `pages/Dashboard/` Sidebar مشابهی با آیتم‌های `flex items-center gap-2` و آیکون‌های جهت‌دار دارند. در موبایل، برخی آیتم‌ها با `md:hidden` و `ms-auto` مدیریت می‌شوند. Sidebar به Component مشترک تبدیل نشده و Markup آن در چند صفحه تکرار شده است.
+Discount badges, order-status indicators, and filter-status badges use brand colors, success green, gray, and other hardcoded colors.
 
-### اسلایدر
+There is currently no shared naming convention covering all badge variants.
 
-Swiper برای محصولات و پیشنهادها از CDN نسخه 11 استفاده می‌شود. در موبایل، `.js-swiper` به اسکرول افقی تبدیل می‌شود؛ در دسکتاپ Swiper Layout را کنترل می‌کند. اسلایدر پیشنهادها با `centeredSlides`, `loop`, `autoplay`, Scale و تایمر معکوس تنظیم شده است.
+### Sidebar and Dashboard
 
-## RTL و جهت
+Pages under `pages/Dashboard/` contain similar sidebars with navigation items that commonly use `flex items-center gap-2` and directional icons.
 
-همه صفحات فعلی `lang="fa"` و `dir="rtl"` دارند. برای کد پیگیری، شماره‌ها و نوارهای قیمت، موارد `dir="ltr"` یا `text-left` نیز استفاده شده است.
+On mobile, some items are controlled using utilities such as `md:hidden` and `ms-auto`.
 
-کلاس‌های منطقی مانند `ms-auto`، `me-*`، `ps-*`، `pe-*` و `border-e` در کنار کلاس‌های فیزیکی مانند `ml-*`، `mr-*`، `pl-*`، `pr-*`، `text-right` و `text-left دیده می‌شوند. هنگام افزودن نسخه انگلیسی باید این دو گروه جداگانه بررسی شوند؛ تغییر `dir` به‌تنهایی همه رفتارهای جهت‌دار و آیکون‌های Arrow را اصلاح نمی‌کند.
+The sidebar markup has not been extracted into a shared component and is repeated across multiple pages.
 
-## موارد صفحه‌ای و خارج از استاندارد مرکزی
+### Sliders
 
-- رنگ‌های Hex مستقیم، Radiusهای خاص مانند `rounded-[20px]` و اندازه‌های سفارشی در صفحات مختلف پراکنده‌اند.
-- ساختار Header، Newsletter، Sidebar و کارت محصول در HTML تکرار شده و Component مشترک ندارند.
-- منطق فیلتر محصولات در فایل جداگانه است، اما منطق فرم‌های محصول و خرید Inline است.
-- ساختار URL زبان دوم، فونت انگلیسی و قرارداد نهایی LTR هنوز تعریف نشده‌اند.
+Swiper 11 is loaded from a CDN and is used for product sliders and promotional sections.
+
+On mobile, `.js-swiper` uses native horizontal scrolling. On desktop, Swiper controls the slider layout.
+
+The promotional slider uses `centeredSlides`, `loop`, `autoplay`, slide scaling, and a countdown timer.
+
+## Right-to-Left (RTL) Layout and Directionality
+
+All current pages use `lang="fa"` and `dir="rtl"`.
+
+Some elements, including tracking codes, numeric values, and price-range controls, explicitly use `dir="ltr"` or `text-left` where needed.
+
+Both logical and physical spacing utilities appear in the codebase:
+
+- **Logical utilities:** `ms-auto`, `me-*`, `ps-*`, `pe-*`, and `border-e`.
+- **Physical utilities:** `ml-*`, `mr-*`, `pl-*`, `pr-*`, `text-right`, and `text-left`.
+
+When introducing the English version, these two groups must be reviewed separately. Changing `dir` alone will not correct every direction-dependent layout, spacing rule, or arrow icon.
+
+## Page-Specific Patterns and Areas Outside the Centralized System
+
+The following limitations and inconsistencies exist in the current implementation:
+
+- Hardcoded hexadecimal colors, custom border radii such as `rounded-[20px]`, and arbitrary dimensions are scattered across multiple pages.
+- Header, newsletter, sidebar, and product-card markup is repeated rather than implemented through shared components.
+- Product filtering logic is separated into its own JavaScript file, while product forms and purchasing logic include inline JavaScript.
+- The URL structure for a second language, English font selection, and the final LTR conventions have not yet been defined.
+
+These items describe the current state of the project. They should not be treated as requirements to refactor or standardize everything at once. Any future changes should be based on verified usage, explicit requirements, and the scope of the task.

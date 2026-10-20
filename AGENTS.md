@@ -1,27 +1,28 @@
-# راهنمای توسعه پروژه تراک پاور
+# Trak Power Project Development Guide
 
-این پروژه یک سایت استاتیک چندصفحه‌ای فارسی و راست‌چین است که با HTML، Tailwind CSS نسخه 4.3.3 و Vanilla JavaScript ساخته شده است. پیش از هر تغییر، فایل‌ها و الگوهای موجود را بررسی کنید و دامنه تغییر را محدود به درخواست جاری نگه دارید.
+This project is a static, multi-page Persian website built with HTML, Tailwind CSS v4.3.3, and Vanilla JavaScript. Before making any changes, inspect the existing files and patterns, and keep the scope of changes limited to the current task.
 
-## مسیرهای اصلی
+## Key Paths
 
-- `index.html`: صفحه اصلی.
-- `pages/`: صفحات عمومی، داشبورد و فرایند خرید.
-- `src/styles/input.css`: منبع Tailwind و CSS سفارشی.
-- `dist/output.css`: CSS تولیدشده؛ مستقیماً ویرایش نشود.
-- `src/js/`: اسکریپت‌های Vanilla JavaScript.
-- `assets/fonts/`, `assets/icons/`, `assets/images/`: دارایی‌های محلی.
-- `package.json` و `package-lock.json`: دستورها و وابستگی‌های ثبت‌شده.
-- `docs/`: مستندات پروژه.
+- `index.html`: Main page.
+- `pages/`: Public pages, dashboard pages, and checkout flow pages.
+- `src/styles/input.css`: Tailwind CSS source and custom CSS.
+- `dist/output.css`: Generated CSS output; do not edit directly.
+- `src/js/`: Vanilla JavaScript files.
+- `assets/fonts/`, `assets/icons/`, `assets/images/`: Local assets.
+- `package.json` and `package-lock.json`: Project scripts and recorded dependencies.
+- `docs/`: Project documentation.
 
-## قواعد اجرایی
+## Development Rules
 
-- از HTML، Tailwind v4 و Vanilla JavaScript موجود استفاده کنید و بدون درخواست یا ضرورت تأییدشده، فریم‌ورک یا وابستگی جدید اضافه نکنید.
-- توکن‌ها، Utilityهای سفارشی و الگوهای تکرارشونده موجود را دوباره استفاده کنید؛ برای یکدست‌سازی ظاهری، استاندارد جدید حدس نزنید.
-- طراحی و عملکرد صفحاتی را که در محدوده وظیفه نیستند حفظ کنید.
-- صفحات فارسی باید RTL و ریسپانسیو باقی بمانند. هنگام تغییر HTML، `lang`, `dir` و کلاس‌های وابسته به جهت را بررسی کنید.
-- CSS را در `src/styles/input.css` یا منبع مناسب تغییر دهید؛ `dist/output.css` فایل تولیدی است و نباید مستقیماً ویرایش شود.
-- فقط از دستورهای تأییدشده پروژه استفاده کنید. `npm run dev` حالت Watch Tailwind است و می‌تواند `dist/output.css` را تغییر دهد؛ بدون نیاز آن را اجرا نکنید. `npm run format:tailwind` کل پروژه را قالب‌بندی می‌کند و باید فقط با دامنه روشن اجرا شود. اسکریپت `test` تست واقعی ندارد.
-- هنگام ایجاد یا جابه‌جایی فایل، مسیرهای نسبی CSS، JavaScript، تصاویر، آیکون‌ها و فونت‌ها را از محل همان HTML بررسی کنید.
-- پس از تغییر JavaScript، رفتار تعاملات مرتبط را بررسی کنید؛ پس از تغییر مسیرها، لینک‌ها و بارگذاری دارایی‌ها را بررسی کنید.
-- تغییرات قبلی کاربر را حفظ کنید. فایل‌ها را حذف، بازنویسی یا reset نکنید و Commit تغییرات نامرتبط نسازید.
-- در گزارش پایان کار، فایل‌های تغییرکرده، بررسی‌های اجراشده، نتیجه آن‌ها و محدودیت‌های بررسی را دقیق بنویسید.
+- Use the existing HTML, Tailwind CSS v4, and Vanilla JavaScript stack. Do not introduce a new framework or dependency unless explicitly requested or justified by a confirmed requirement.
+- Reuse existing design tokens, custom utilities, and recurring patterns. Do not invent new conventions solely for visual consistency.
+- Preserve the design and functionality of pages outside the scope of the current task.
+- Keep Persian pages right-to-left (RTL) and responsive. When modifying HTML, check `lang`, `dir`, and direction-dependent classes.
+- Make CSS changes in `src/styles/input.css` or the appropriate source file. `dist/output.css` is generated output and must not be edited directly.
+- Use only the project's established scripts. `npm run dev` starts Tailwind CSS in watch mode and may modify `dist/output.css`; do not run it unless needed. `npm run format:tailwind` formats the entire project and should only be run when its scope is appropriate. The `test` script does not run actual tests.
+- When creating or moving files, verify the relative paths for CSS, JavaScript, images, icons, and fonts from the location of each HTML file.
+- After modifying JavaScript, verify the relevant interactions. After changing paths, verify links and asset loading.
+- Preserve the user's existing changes. Do not delete, overwrite, or reset files or unrelated work.
+- If a task changes the file structure, dependencies, project scripts, or development conventions, update the relevant documentation in `docs/` and, when necessary, this `AGENTS.md` file. Avoid modifying unrelated documentation.
+- In the final report, accurately list the modified files, checks performed, their results, and any limitations of the verification process. Do not claim that a check or test was run if it was not.

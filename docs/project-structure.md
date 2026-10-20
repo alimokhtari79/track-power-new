@@ -1,8 +1,8 @@
-# ساختار پروژه تراک پاور
+# Trak Power Project Structure
 
-این پروژه یک سایت استاتیک چندصفحه‌ای فارسی است. صفحات فعلی با `lang="fa"` و `dir="rtl"` نوشته شده‌اند. هیچ سیستم Template، Router یا فریم‌ورک JavaScript در پروژه ثبت نشده است.
+This project is a static, multi-page website built primarily in Persian. All current pages use `lang="fa"` and `dir="rtl"`. No templating system, router, or JavaScript framework is currently configured in the project.
 
-## درخت فایل‌های مهم
+## Key File and Directory Structure
 
 ```text
 .
@@ -47,31 +47,50 @@
 └── test
 ```
 
-`test` یک فایل HTML آزمایشی مستقل است و در دستورهای پروژه به‌عنوان تست یا ورودی Build استفاده نشده است.
+The `test` file is a standalone HTML test page. It is not configured as a test entry point or build input in the project's scripts.
 
-## صفحات
+## Pages
 
-صفحه اصلی در `index.html` است. صفحات عمومی عبارت‌اند از `FandQ.html`، `about-us.html`، `all-products.html`، `blog.html`، `contact.html`، `login.html`، `product.html` و `single-blog.html`.
+The homepage is `index.html`.
 
-صفحات حساب کاربری در `pages/Dashboard/` قرار دارند. نام `traucks.html` نام فعلی فایل است و در این مرحله تغییر نمی‌کند.
+The public-facing pages are:
 
-صفحات سبد خرید و پرداخت در `pages/shopnig-card/` قرار دارند. نام `shopnig-card` نیز نام فعلی پوشه است و نباید از روی حدس به `shopping-card` تغییر داده شود.
+- `FandQ.html`
+- `about-us.html`
+- `all-products.html`
+- `blog.html`
+- `contact.html`
+- `login.html`
+- `product.html`
+- `single-blog.html`
 
-## CSS و Tailwind
+Account and dashboard pages are located in `pages/Dashboard/`. The filename `traucks.html` is the current filename and must not be changed as part of unrelated tasks.
 
-- ورودی Tailwind: `src/styles/input.css`
-- خروجی مورد استفاده صفحات: `dist/output.css`
-- نسخه ثبت‌شده `tailwindcss` و `@tailwindcss/cli`: `4.3.3`
+Cart and checkout-related pages are located in `pages/shopnig-card/`. The directory name `shopnig-card` is also intentional in the current project structure and must not be renamed to `shopping-card` based on an assumption.
 
-ورودی CSS با `@import 'tailwindcss'` شروع می‌شود و فونت‌ها، متغیرهای رنگ، `@theme`، Utilityهای سفارشی و Selectors مربوط به اسلایدر و فیلتر قیمت را نیز در خود دارد. صفحات HTML فقط خروجی `dist/output.css` را بارگذاری می‌کنند.
+## CSS and Tailwind CSS
 
-## JavaScript و وابستگی‌ها
+- **Tailwind CSS input:** `src/styles/input.css`
+- **CSS output loaded by pages:** `dist/output.css`
+- **Installed versions of `tailwindcss` and `@tailwindcss/cli`:** `4.3.3`
 
-`src/js/all-products.js` منطق فیلتر برند و قیمت، مرتب‌سازی، فیلتر موبایل و باز و بسته شدن بخش‌ها را در صفحه محصولات اجرا می‌کند.
+The input stylesheet begins with `@import 'tailwindcss'`. It also contains font definitions, color variables, `@theme` mappings, custom utility classes, and selectors related to sliders and the price filter.
 
-`src/js/swiper-config.js` اسلایدر محصولات، اسلایدر پیشنهادها، تایمر و نوار پیشرفت را کنترل می‌کند. Swiper در `package.json` وابستگی npm نیست و در صفحات استفاده‌کننده از این منطق، نسخه 11 آن از jsDelivr CDN بارگذاری می‌شود. بخشی از منطق صفحات محصول و خرید نیز به‌صورت Inline داخل همان HTMLها نوشته شده است.
+HTML pages load the generated stylesheet at `dist/output.css` rather than importing the source stylesheet directly.
 
-## دستورهای ثبت‌شده
+## JavaScript and Dependencies
+
+`src/js/all-products.js` handles the product listing page's brand and price filters, sorting, mobile filters, and expandable or collapsible sections.
+
+`src/js/swiper-config.js` controls product sliders, promotional sliders, countdown timers, and progress bars.
+
+Swiper is not listed as an npm dependency in `package.json`. Pages using this functionality load Swiper version 11 from the jsDelivr CDN.
+
+Some product and checkout functionality is also implemented using inline JavaScript within the corresponding HTML files.
+
+## Available Project Scripts
+
+The following scripts are defined in `package.json`:
 
 ```text
 npm run dev
@@ -79,26 +98,48 @@ npm run format:tailwind
 npm test
 ```
 
-`npm run dev` دستور Watch زیر را اجرا می‌کند و ممکن است `dist/output.css` را تولید یا به‌روزرسانی کند:
+### `npm run dev`
+
+Runs the following Tailwind CLI command in watch mode and may generate or update `dist/output.css`:
 
 ```text
 npx @tailwindcss/cli -i ./src/styles/input.css -o ./dist/output.css --watch
 ```
 
-`npm run format:tailwind` با Prettier کل مسیر پروژه را هدف می‌گیرد. `npm test` تست واقعی ندارد و با پیام خطا خارج می‌شود. دستور Build تولیدی جداگانه در `package.json` ثبت نشده است.
+### `npm run format:tailwind`
 
-## مسیرهای نسبی
+Runs Prettier against the entire project directory.
 
-- `index.html`: CSS در `./dist/output.css` و JavaScript در `./src/js/`.
-- صفحات مستقیم داخل `pages/`: CSS و دارایی‌ها معمولاً با `../` به ریشه اشاره می‌کنند؛ JavaScript نیز `../src/js/` است.
-- صفحات `pages/Dashboard/` و `pages/shopnig-card/`: CSS و دارایی‌ها معمولاً با `../../` به ریشه اشاره می‌کنند؛ JavaScript نیز `../../src/js/` است.
+### `npm test`
 
-هنگام ایجاد یا جابه‌جایی صفحه، هر مسیر را از محل همان فایل محاسبه و وجود مقصد را بررسی کنید. در وضعیت فعلی، لینک `../index.html` در `pages/shopnig-card/cart.html`، `shipping.html` و `payment.html` به مقصد موجودی نمی‌رسد؛ این محدودیت در این مرحله اصلاح نشده است. تعداد زیادی `href="#"` نیز Placeholder هستند.
+No actual automated tests are configured. The script exits with an error message indicating that no tests are specified.
 
-## محدودیت‌های فعلی
+There is currently no separate production build command defined in `package.json`.
 
-- CSS خروجی از CSS منبع جداست و دستور Build تولیدی مستقل ندارد.
-- تست خودکار واقعی وجود ندارد.
-- Swiper به CDN خارجی وابسته است.
-- Header، Sidebar، Newsletter و برخی کارت‌ها در HTML صفحات تکرار شده‌اند و Component مشترکی ندارند.
-- ساختار URL زبان‌محور برای نسخه انگلیسی هنوز تعریف نشده است.
+## Relative Paths
+
+Asset and script paths must be resolved relative to the location of each HTML file.
+
+- **`index.html`:** CSS paths use `./dist/output.css`, and JavaScript paths use `./src/js/`.
+- **Pages directly inside `pages/`:** CSS and asset paths generally use `../` to reference the project root. JavaScript paths use `../src/js/`.
+- **Pages inside `pages/Dashboard/` and `pages/shopnig-card/`:** CSS and asset paths generally use `../../` to reference the project root. JavaScript paths use `../../src/js/`.
+
+Whenever a page is created or moved, calculate every relative path from that page's actual location and verify that the destination exists.
+
+The following links currently use `../index.html` and do not resolve to an existing destination:
+
+- `pages/shopnig-card/cart.html`
+- `pages/shopnig-card/shipping.html`
+- `pages/shopnig-card/payment.html`
+
+These issues have not been fixed as part of the current documentation work.
+
+Many `href="#"` values are also present and serve as placeholders.
+
+## Current Limitations
+
+- The generated CSS is separate from the source stylesheet, and there is no dedicated production build command.
+- No real automated test suite is configured.
+- Swiper depends on an external CDN.
+- Headers, sidebars, newsletter sections, and some product cards are duplicated across HTML pages rather than implemented as shared components.
+- A language-aware URL structure for the future English version has not yet been defined.
