@@ -11,8 +11,10 @@
   const sortButtons = document.querySelectorAll('.sort-trigger');
   const priceRanges = [...document.querySelectorAll('.range-wrap input[type="range"]')];
   const numberInputs = document.querySelectorAll('.price-input');
-  const formatter = new Intl.NumberFormat('fa-IR');
+  const isEnglish = document.documentElement.lang === 'en';
+  const formatter = new Intl.NumberFormat(isEnglish ? 'en-US' : 'fa-IR');
   const toNumber = (value) => Number(String(value).replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[^0-9]/g, '')) || 0;
+  const productLabel = (count) => `${formatter.format(count)} ${count === 1 ? 'product' : 'products'}`;
 
   const setFilterState = (open) => {
     mobileFilters.classList.toggle('hidden', !open);
@@ -58,7 +60,9 @@
     const count = visible || 0;
     if (resultCount) resultCount.textContent = formatter.format(count);
     if (mobileResultCount) mobileResultCount.textContent = formatter.format(count);
-    if (applyButton) applyButton.textContent = `مشاهده ${formatter.format(count || 0)} محصول`;
+    if (applyButton) applyButton.textContent = isEnglish
+      ? `View ${productLabel(count || 0)}`
+      : `مشاهده ${formatter.format(count || 0)} محصول`;
   };
   brandInputs.forEach((input) => input.addEventListener('change', applyFilters));
   clearButtons.forEach((button) => button.addEventListener('click', () => { brandInputs.forEach((input) => { input.checked = false; }); priceRanges.forEach((range) => { range.value = range.id.includes('min') ? range.min : range.max; }); priceRanges.forEach(updateRange); applyFilters(); }));
