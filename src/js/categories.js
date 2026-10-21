@@ -133,19 +133,4 @@
   desktop.addEventListener('change', () => { close(); render(); });
   render();
 
-  const icons = {
-    home: '<path d="m3 10 7-6a3 3 0 0 1 4 0l7 6v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3Z"/><path d="M12 15v4"/>',
-    categories: '<rect x="2" y="2" width="8" height="8" rx="2.5"/><rect x="14" y="2" width="8" height="8" rx="2.5"/><rect x="2" y="14" width="8" height="8" rx="2.5"/><rect x="14" y="14" width="8" height="8" rx="2.5"/>',
-    cart: '<path d="M2 8h20l-3 12a2 2 0 0 1-2 1H7a2 2 0 0 1-2-1L2 8Zm5 0 3-6m7 6-3-6M9 12h6"/>',
-    profile: '<circle cx="12" cy="7" r="5"/><path d="M3 22a9 9 0 0 1 18 0"/>',
-  };
-  const bottom = document.createElement('nav');
-  bottom.className = 'category-bottom-nav';
-  bottom.setAttribute('aria-label', 'ناوبری پایین صفحه');
-  bottom.innerHTML = [
-    ['home', 'خانه', 'index.html'], ['categories', 'دسته‌بندی‌ها', 'pages/categories.html'],
-    ['cart', 'سبد خرید', 'pages/shopnig-card/cart.html'], ['profile', 'پروفایل', 'pages/Dashboard/dashboard.html'],
-  ].map(([id, label, path]) => `<a href="${url(path)}" ${id === (isPage ? 'categories' : 'home') ? 'aria-current="page"' : ''}><svg viewBox="0 0 24 24" fill="${id === 'categories' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[id]}</svg><span>${label}</span></a>`).join('');
-  document.body.append(bottom);
-  document.body.classList.add('has-category-navigation');
 })();
