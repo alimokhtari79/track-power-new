@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="../src/js/categories.js" defer></script>
+    <title>دسته‌بندی قطعات | تراک پاور</title>
+  </head>
+  <body class="bg-surface-bg text-primary" data-categories-page>
+    <main class="categories-page">
+      <h1 class="sr-only">دسته‌بندی قطعات</h1>
+      <form class="category-search" action="./all-products.html" role="search">
+        <button type="submit" aria-label="جستجوی محصولات"><img src="../assets/icons/search-icon.svg" width="28" height="28" alt="" /></button>
+        <input type="search" name="q" aria-label="جستجوی نام قطعه، کد OEM یا نام برند" placeholder="نام قطعه، کد OEM یا نام برند..." />
+        <span class="category-search__camera" aria-hidden="true"><img src="../assets/icons/search-camera-icon.svg" width="28" height="28" alt="" /></span>
+      </form>
+      <div data-category-interface></div>
+      <a class="category-back" href="../index.html">بازگشت به خانه</a>
+      <noscript><p>برای مرور دسته‌بندی‌ها جاوااسکریپت را فعال کنید، یا <a href="./all-products.html">همه محصولات</a> را ببینید.</p></noscript>
+    </main>
+  </body>
+</html>
