@@ -9,6 +9,237 @@
     <script src="../src/js/storefront.js" defer></script>
   </head>
   <body class="bg-surface-bg text-primary min-h-screen">
+    <header class="homepage-header text-primary" data-site-header>
+      <div class="homepage-header__bar container-custom flex items-center justify-between">
+        <div class="flex items-center">
+          <a
+            class="homepage-header__brand flex shrink-0 items-center font-extrabold"
+            href="/"
+            aria-label="تراک پاور، صفحه اصلی"
+          >
+            <!-- Temporary brand mark: replace this existing truck asset with the final logo. -->
+            <img
+              class="homepage-header__logo"
+              src="/assets/icons/header-logo.svg"
+              width="56"
+              height="48"
+              alt=""
+            />
+            <span>تراک پاور</span>
+          </a>
+          <nav
+            class="homepage-header__navigation hidden items-center lg:flex"
+            aria-label="ناوبری اصلی"
+          >
+            <a
+              class="homepage-header__categories flex items-center gap-2 font-medium"
+              href="#categories"
+            >
+              <img src="/assets/icons/menu-square.svg" width="24" height="24" alt="" />
+              <span>دسته‌بندی‌ها</span>
+            </a>
+            <span class="homepage-header__divider" aria-hidden="true"></span>
+            <ul class="homepage-header__links text-muted flex items-center">
+              <li><a href="/" aria-current="page">خانه</a></li>
+              <li><a href="/pages/contact.html">تماس با ما</a></li>
+              <li><a href="/pages/blog.html">وبلاگ</a></li>
+              <li><a href="/pages/about-us.html">درباره ما</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="homepage-header__actions hidden items-center lg:flex">
+          <details class="homepage-header__language relative" data-header-language>
+            <summary
+              class="flex cursor-pointer items-center gap-2 font-medium"
+              aria-label="انتخاب زبان، فارسی"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M7 8h10M12 5.5V8M9 8c.5 4 3 7 6 9M15 8c-.5 4-3 7-6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>فارسی</span>
+            </summary>
+            <div
+              class="homepage-header__language-options flex flex-col rounded-xl bg-white p-1 shadow-sm"
+            >
+              <a class="rounded-lg px-4 py-2" href="/" lang="fa" hreflang="fa" aria-current="true"
+                >فارسی</a
+              >
+              <a
+                class="rounded-lg px-4 py-2"
+                href="./en/index.html"
+                lang="en"
+                hreflang="en"
+                dir="ltr"
+                >English</a
+              >
+            </div>
+          </details>
+          <span class="homepage-header__divider" aria-hidden="true"></span>
+          <a
+            class="homepage-header__account flex items-center gap-2 font-medium"
+            href="/login.html"
+          >
+            <img src="/assets/icons/user.svg" width="24" height="24" alt="" />
+            <span>ورود و ثبت نام</span>
+          </a>
+          <!-- There is currently no shared cart store. Do not copy the mock cart's quantity. -->
+          <a
+            class="homepage-header__cart flex items-center rounded-xl bg-white"
+            href="/shopnig-card/cart.html"
+            aria-label="سبد خرید، ۰ کالا"
+          >
+            <span class="homepage-header__cart-count text-center" data-cart-count>۰</span>
+            <span class="bg-surface-bg flex items-center justify-center rounded-lg">
+              <img src="/assets/icons/shopping-cart-01.svg" width="24" height="24" alt="" />
+            </span>
+          </a>
+        </div>
+        <button
+          class="homepage-header__toggle flex cursor-pointer items-center justify-center lg:hidden"
+          type="button"
+          aria-label="باز کردن منوی اصلی"
+          aria-expanded="false"
+          aria-controls="homepage-navigation"
+          data-drawer-open
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M2 3h20M2 12h13M2 21h20"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <dialog
+      id="homepage-navigation"
+      class="homepage-drawer text-primary"
+      aria-label="منوی اصلی"
+      aria-modal="true"
+      data-header-drawer
+    >
+      <div class="homepage-drawer__layout flex h-full flex-col">
+        <div class="homepage-drawer__top flex shrink-0 items-center justify-between">
+          <a
+            class="homepage-header__brand flex items-center font-extrabold"
+            href="/"
+            aria-label="تراک پاور، صفحه اصلی"
+          >
+            <img
+              class="homepage-header__logo"
+              src="/assets/icons/header-logo.svg"
+              width="44"
+              height="38"
+              alt=""
+            />
+            <span>تراک پاور</span>
+          </a>
+          <button
+            class="homepage-drawer__close flex cursor-pointer items-center justify-center"
+            type="button"
+            aria-label="بستن منوی اصلی"
+            data-drawer-close
+            autofocus
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="m5 5 14 14M19 5 5 19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="homepage-drawer__content min-h-0 flex-1">
+          <div class="homepage-drawer__language flex items-center justify-between">
+            <span class="flex items-center gap-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M7 8h10M12 5.5V8M9 8c.5 4 3 7 6 9M15 8c-.5 4-3 7-6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              زبان
+            </span>
+            <nav
+              class="homepage-drawer__languages flex items-center rounded-lg p-1 text-sm"
+              aria-label="انتخاب زبان"
+            >
+              <a
+                class="rounded-md px-3 py-1.5 font-medium"
+                href="/"
+                lang="fa"
+                hreflang="fa"
+                aria-current="true"
+                >فارسی</a
+              >
+              <a
+                class="text-muted rounded-md px-3 py-1.5"
+                href="/en/index.html"
+                lang="en"
+                hreflang="en"
+                dir="ltr"
+                >English</a
+              >
+            </nav>
+          </div>
+          <nav aria-label="ناوبری موبایل">
+            <ul class="homepage-drawer__links text-muted text-sm">
+              <li><a class="flex items-center" href="/" aria-current="page">خانه</a></li>
+              <li><a class="flex items-center" href="/pages/contact.html">تماس با ما</a></li>
+              <li><a class="flex items-center" href="/pages/blog.html">وبلاگ</a></li>
+              <li><a class="flex items-center" href="/pages/about-us.html">درباره ما</a></li>
+            </ul>
+            <a
+              class="homepage-drawer__featured text-brand-700 flex items-center gap-2 text-sm font-medium"
+              href="#featured-products"
+            >
+              <img src="/assets/icons/discount.svg" width="24" height="24" alt="" />
+              <span>محصولات شگفت‌انگیز</span>
+            </a>
+          </nav>
+        </div>
+        <div class="homepage-drawer__footer shrink-0">
+          <a
+            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-xl text-sm font-medium"
+            href="/login.html"
+          >
+            <img src="/assets/icons/user.svg" width="24" height="24" alt="" />
+            <span>ورود و ثبت نام</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
     <main class="container-custom px-5 py-5 sm:py-7 lg:py-6">
       <nav
         aria-label="مسیر صفحه"

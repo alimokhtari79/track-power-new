@@ -8,35 +8,265 @@
     <script src="../src/js/cart-state.js" defer></script>
     <script src="../src/js/storefront.js" defer></script>
   </head>
-  <body class="bg-surface-bg text-primary min-h-screen overflow-x-hidden">
-    <main class="container-custom mx-auto px-4 py-4 sm:px-6 lg:px-0 lg:py-5">
+  <body class="catalog-page bg-surface-bg text-primary min-h-screen">
+    <header class="homepage-header text-primary" data-site-header>
+      <div class="homepage-header__bar container-custom flex items-center justify-between">
+        <div class="flex items-center">
+          <a
+            class="homepage-header__brand flex shrink-0 items-center font-extrabold"
+            href="/"
+            aria-label="تراک پاور، صفحه اصلی"
+          >
+            <!-- Temporary brand mark: replace this existing truck asset with the final logo. -->
+            <img
+              class="homepage-header__logo"
+              src="/assets/icons/header-logo.svg"
+              width="56"
+              height="48"
+              alt=""
+            />
+            <span>تراک پاور</span>
+          </a>
+          <nav
+            class="homepage-header__navigation hidden items-center lg:flex"
+            aria-label="ناوبری اصلی"
+          >
+            <a
+              class="homepage-header__categories flex items-center gap-2 font-medium"
+              href="#categories"
+            >
+              <img src="/assets/icons/menu-square.svg" width="24" height="24" alt="" />
+              <span>دسته‌بندی‌ها</span>
+            </a>
+            <span class="homepage-header__divider" aria-hidden="true"></span>
+            <ul class="homepage-header__links text-muted flex items-center">
+              <li><a href="/" aria-current="page">خانه</a></li>
+              <li><a href="/pages/contact.html">تماس با ما</a></li>
+              <li><a href="/pages/blog.html">وبلاگ</a></li>
+              <li><a href="/pages/about-us.html">درباره ما</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="homepage-header__actions hidden items-center lg:flex">
+          <details class="homepage-header__language relative" data-header-language>
+            <summary
+              class="flex cursor-pointer items-center gap-2 font-medium"
+              aria-label="انتخاب زبان، فارسی"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M7 8h10M12 5.5V8M9 8c.5 4 3 7 6 9M15 8c-.5 4-3 7-6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>فارسی</span>
+            </summary>
+            <div
+              class="homepage-header__language-options flex flex-col rounded-xl bg-white p-1 shadow-sm"
+            >
+              <a class="rounded-lg px-4 py-2" href="/" lang="fa" hreflang="fa" aria-current="true"
+                >فارسی</a
+              >
+              <a
+                class="rounded-lg px-4 py-2"
+                href="./en/index.html"
+                lang="en"
+                hreflang="en"
+                dir="ltr"
+                >English</a
+              >
+            </div>
+          </details>
+          <span class="homepage-header__divider" aria-hidden="true"></span>
+          <a
+            class="homepage-header__account flex items-center gap-2 font-medium"
+            href="/login.html"
+          >
+            <img src="/assets/icons/user.svg" width="24" height="24" alt="" />
+            <span>ورود و ثبت نام</span>
+          </a>
+          <!-- There is currently no shared cart store. Do not copy the mock cart's quantity. -->
+          <a
+            class="homepage-header__cart flex items-center rounded-xl bg-white"
+            href="/shopnig-card/cart.html"
+            aria-label="سبد خرید، ۰ کالا"
+          >
+            <span class="homepage-header__cart-count text-center" data-cart-count>۰</span>
+            <span class="bg-surface-bg flex items-center justify-center rounded-lg">
+              <img src="/assets/icons/shopping-cart-01.svg" width="24" height="24" alt="" />
+            </span>
+          </a>
+        </div>
+        <button
+          class="homepage-header__toggle flex cursor-pointer items-center justify-center lg:hidden"
+          type="button"
+          aria-label="باز کردن منوی اصلی"
+          aria-expanded="false"
+          aria-controls="homepage-navigation"
+          data-drawer-open
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M2 3h20M2 12h13M2 21h20"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <dialog
+      id="homepage-navigation"
+      class="homepage-drawer text-primary"
+      aria-label="منوی اصلی"
+      aria-modal="true"
+      data-header-drawer
+    >
+      <div class="homepage-drawer__layout flex h-full flex-col">
+        <div class="homepage-drawer__top flex shrink-0 items-center justify-between">
+          <a
+            class="homepage-header__brand flex items-center font-extrabold"
+            href="/"
+            aria-label="تراک پاور، صفحه اصلی"
+          >
+            <img
+              class="homepage-header__logo"
+              src="/assets/icons/header-logo.svg"
+              width="44"
+              height="38"
+              alt=""
+            />
+            <span>تراک پاور</span>
+          </a>
+          <button
+            class="homepage-drawer__close flex cursor-pointer items-center justify-center"
+            type="button"
+            aria-label="بستن منوی اصلی"
+            data-drawer-close
+            autofocus
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="m5 5 14 14M19 5 5 19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="homepage-drawer__content min-h-0 flex-1">
+          <div class="homepage-drawer__language flex items-center justify-between">
+            <span class="flex items-center gap-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M7 8h10M12 5.5V8M9 8c.5 4 3 7 6 9M15 8c-.5 4-3 7-6 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              زبان
+            </span>
+            <nav
+              class="homepage-drawer__languages flex items-center rounded-lg p-1 text-sm"
+              aria-label="انتخاب زبان"
+            >
+              <a
+                class="rounded-md px-3 py-1.5 font-medium"
+                href="/"
+                lang="fa"
+                hreflang="fa"
+                aria-current="true"
+                >فارسی</a
+              >
+              <a
+                class="text-muted rounded-md px-3 py-1.5"
+                href="/en/index.html"
+                lang="en"
+                hreflang="en"
+                dir="ltr"
+                >English</a
+              >
+            </nav>
+          </div>
+          <nav aria-label="ناوبری موبایل">
+            <ul class="homepage-drawer__links text-muted text-sm">
+              <li><a class="flex items-center" href="/" aria-current="page">خانه</a></li>
+              <li><a class="flex items-center" href="/pages/contact.html">تماس با ما</a></li>
+              <li><a class="flex items-center" href="/pages/blog.html">وبلاگ</a></li>
+              <li><a class="flex items-center" href="/pages/about-us.html">درباره ما</a></li>
+            </ul>
+            <a
+              class="homepage-drawer__featured text-brand-700 flex items-center gap-2 text-sm font-medium"
+              href="#featured-products"
+            >
+              <img src="/assets/icons/discount.svg" width="24" height="24" alt="" />
+              <span>محصولات شگفت‌انگیز</span>
+            </a>
+          </nav>
+        </div>
+        <div class="homepage-drawer__footer shrink-0">
+          <a
+            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-xl text-sm font-medium"
+            href="/login.html"
+          >
+            <img src="/assets/icons/user.svg" width="24" height="24" alt="" />
+            <span>ورود و ثبت نام</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+    <main class="catalog-main container-custom">
       <nav
-        class="text-muted mb-4 flex items-center gap-1 text-xs md:mb-6 md:text-sm"
+        class="catalog-breadcrumb text-muted flex items-center gap-1 text-xs"
         aria-label="مسیر صفحه"
       >
         <a href="../index.html" class="hover:text-primary transition">خانه</a>
         <span aria-hidden="true" class="text-lg leading-none">‹</span>
         <span class="text-primary">سیستم باد و پنوماتیک</span>
+      <a href="../en/pages/all-products.html" hreflang="en" class="ms-auto">English</a>
       </nav>
 
       <section
-        class="relative mb-8 flex min-h-50 flex-col-reverse overflow-hidden rounded-3xl bg-white md:mb-10 md:min-h-50 md:flex-row md:items-center"
+        class="catalog-hero"
       >
         <div
-          class="bg-brand-700 relative order-2 h-36 w-full shrink-0 overflow-hidden md:order-1 md:h-full md:w-65"
+          class="catalog-hero-art"
         >
-          <div
-            class="bg-brand-700 absolute -bottom-20 -left-10 size-64 rounded-full md:-bottom-28 md:-left-18 md:size-80"
-          ></div>
+          
           <img
             src="../assets/images/engine-part.png"
             alt="قطعه موتور"
-            class="absolute bottom-0 left-5 z-10 h-40 w-44 object-contain md:left-8 md:h-48 md:w-52"
+            class="catalog-hero-image"
           />
         </div>
-        <div class="order-1 px-5 py-6 text-right md:order-2 md:flex-1 md:px-14 md:py-8">
-          <h1 class="text-2xl leading-tight font-semibold md:text-4xl">سیستم باد و پنوماتیک</h1>
-          <p class="text-muted mt-3 max-w-180 text-sm leading-6 md:mt-4 md:text-base md:leading-7">
+        <div class="catalog-hero-copy">
+          <h1 class="font-semibold">سیستم باد و پنوماتیک</h1>
+          <p class="text-muted">
             قطعات و تجهیزات سیستم باد و پنوماتیک کامیون برای عملکرد دقیق ترمز، تعلیق و تجهیزات
             وابسته. مجموعه‌ای از قطعات تخصصی DAF و MAN با کیفیت و سازگاری مناسب برای عملکرد مطمئن و
             پایدار.
@@ -45,115 +275,108 @@
       </section>
 
       <section
-        class="mb-9 grid grid-cols-3 border-y border-[#dedede] md:grid-cols-8 md:border-y-0"
+        class="catalog-categories"
         aria-label="دسته‌بندی محصولات"
       >
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:border-l md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img
               src="../assets/images/Wheel-drive-spring-image.png"
               alt=""
               class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">مخازن باد</span>
+          <span class="catalog-category-name font-medium">مخازن باد</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img src="../assets/images/Screw-image.png" alt="" class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">خشک‌کن هوا</span>
+          <span class="catalog-category-name font-medium">خشک‌کن هوا</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img
               src="../assets/images/Brake-disc-image.png"
               alt=""
               class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">کمپرسور باد</span>
+          <span class="catalog-category-name font-medium">کمپرسور باد</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img src="../assets/images/Screw-image.png" alt="" class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">اتصالات پنوماتیک</span>
+          <span class="catalog-category-name font-medium">اتصالات پنوماتیک</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img
               src="../assets/images/Brake-disc-image.png"
               alt=""
               class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">شلنگ و لوله باد</span>
+          <span class="catalog-category-name font-medium">شلنگ و لوله باد</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img src="../assets/images/engine-part.png" alt="" class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">شیرهای پنوماتیک</span>
+          <span class="catalog-category-name font-medium">شیرهای پنوماتیک</span>
         </a>
         <a
           href="#products"
-          class="category-tile group border-l border-[#dedede] py-5 text-center md:border-b md:py-7"
+          class="category-tile group"
         >
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img
               src="../assets/images/Wheel-drive-spring-image.png"
               alt=""
               class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">سیستم تعلیق بادی</span>
+          <span class="catalog-category-name font-medium">سیستم تعلیق بادی</span>
         </a>
-        <a href="#products" class="category-tile group py-5 text-center md:border-b md:py-7">
+        <a href="#products" class="category-tile group">
           <span
-            class="mx-auto flex size-16 items-center justify-center rounded-full bg-white p-2 transition group-hover:scale-105 md:size-22"
+            class="catalog-category-image"
             ><img
               src="../assets/images/Brake-disc-image.png"
               alt=""
               class="size-full object-contain"
           /></span>
-          <span class="mt-3 block text-xs font-medium md:text-base">سیستم ترمز بادی</span>
+          <span class="catalog-category-name font-medium">سیستم ترمز بادی</span>
         </a>
       </section>
 
       <div
-        class="mb-6 flex items-center gap-2 overflow-x-auto pb-1 text-sm whitespace-nowrap md:hidden"
+        class="catalog-mobile-controls"
         aria-label="کنترل‌های فهرست"
       >
-        <button
-          type="button"
-          class="sort-trigger flex items-center gap-2 rounded-full border border-[#d8d8d8] bg-white px-4 py-2"
-          data-sort="newest"
-          aria-pressed="true"
-        >
-          جدیدترین <span aria-hidden="true">⇵</span>
-        </button>
+        <label class="catalog-mobile-sort"><span aria-hidden="true">⇵</span><select id="mobile-sort" aria-label="مرتب‌سازی محصولات"><option value="newest">جدیدترین</option><option value="low">ارزان‌ترین</option><option value="high">گران‌ترین</option></select></label>
         <button
           type="button"
           class="filter-trigger flex items-center gap-2 rounded-full border border-[#d8d8d8] bg-white px-4 py-2"
@@ -161,7 +384,7 @@
           aria-expanded="false"
           aria-controls="mobile-filters"
         >
-          فیلترها <span aria-hidden="true">⌘</span>
+          فیلترها <span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h18v3l-7 7v6l-4-2v-4L3 7Z"/></svg></span>
         </button>
         <button
           type="button"
@@ -176,304 +399,251 @@
 
       <section
         id="products"
-        class="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_305px] lg:gap-7"
+        class="catalog-layout"
       >
-        <div class="min-w-0">
-          <div class="mb-5 hidden items-center justify-between md:flex">
-            <div class="text-muted flex items-center gap-6 text-sm">
+        <div class="catalog-results min-w-0">
+          <div class="catalog-toolbar">
+            <div class="catalog-sort text-muted">
               <span class="text-primary font-medium">مرتب‌سازی براساس:</span>
               <button
                 type="button"
-                class="sort-trigger text-brand-700 font-medium"
+                class="sort-trigger font-medium"
                 data-sort="newest"
                 aria-pressed="true"
               >
                 جدیدترین
               </button>
-              <button type="button" class="sort-trigger" data-sort="popular">پرفروش‌ترین</button>
-              <button type="button" class="sort-trigger" data-sort="discount">محبوب‌ترین</button>
+              <button type="button" class="sort-trigger" data-sort="popular" disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست">پرفروش‌ترین</button>
+              <button type="button" class="sort-trigger" data-sort="discount" disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست">محبوب‌ترین</button>
               <button type="button" class="sort-trigger" data-sort="low">ارزان‌ترین</button>
               <button type="button" class="sort-trigger" data-sort="high">گران‌ترین</button>
             </div>
-            <p class="text-muted text-sm"><span id="result-count">۴۶۰</span> محصول</p>
+            <p class="text-muted text-sm"><span id="result-count" aria-live="polite">۸</span> محصول</p>
           </div>
-          <div class="mb-4 flex items-center justify-between md:hidden">
-            <p class="text-muted text-sm"><span id="mobile-result-count">۴۶۰</span> محصول</p>
-            <button type="button" class="text-muted text-sm" data-clear>پاک کردن فیلترها</button>
+          <div class="catalog-mobile-count">
+            <p class="text-muted text-sm"><span id="mobile-result-count" aria-live="polite">۸</span> محصول</p>
           </div>
 
-          <div id="product-grid" class="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-4">
+          <div id="product-grid" class="catalog-grid">
             <!-- Product card 1 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="man"
-              data-price="29000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">MAN</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
-                </div>
-                <div class="mt-5">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-inactive text-[10px] line-through sm:text-xs">۳۹,۰۰۰,۰۰۰</span
-                    ><span class="text-brand-700 rounded-full bg-[#bd0c0a1a] px-1.5 text-[10px]"
-                      >۵٪</span
-                    >
+            <a
+                href="product.html" data-brand="man" data-price="29000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-8.75 object-cover"
+                    src="../assets/images/product-item-band-image.png"
+                    alt="MAN"
+                  />
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
-                  <span class="text-success mt-1 block text-sm font-medium sm:text-base"
-                    >۲۹,۰۰۰,۰۰۰ تومان</span
-                  >
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۳۹,۰۰۰,۰۰۰ تومان</span
+                      >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۵٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۲۹,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </a>
             <!-- Product card 2 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="man"
-              data-price="29000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">MAN</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
-                </div>
-                <div class="mt-5">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-inactive text-[10px] line-through sm:text-xs">۳۹,۰۰۰,۰۰۰</span
-                    ><span class="text-brand-700 rounded-full bg-[#bd0c0a1a] px-1.5 text-[10px]"
-                      >۵٪</span
-                    >
+            <a
+                href="product.html" data-brand="man" data-price="29000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-8.75 object-cover"
+                    src="../assets/images/product-item-band-image.png"
+                    alt="MAN"
+                  />
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
-                  <span class="text-success mt-1 block text-sm font-medium sm:text-base"
-                    >۲۹,۰۰۰,۰۰۰ تومان</span
-                  >
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۳۹,۰۰۰,۰۰۰ تومان</span
+                      >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۵٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۲۹,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </a>
             <!-- Product card 3 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="daf"
-              data-price="29500000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">DAF</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
-                </div>
-                <div class="mt-5">
-                  <span class="text-success block text-sm font-medium sm:text-base"
-                    >۲۹,۵۰۰,۰۰۰ تومان</span
-                  >
-                </div>
-              </div>
-            </article>
-            <!-- Product card 4 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="daf"
-              data-price="30000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">DAF</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
-                </div>
-                <div class="mt-5">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-inactive text-[10px] line-through sm:text-xs">۳۹,۰۰۰,۰۰۰</span
-                    ><span class="text-brand-700 rounded-full bg-[#bd0c0a1a] px-1.5 text-[10px]"
-                      >۵٪</span
-                    >
+            <a
+                href="product.html" data-brand="daf" data-price="29500000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <span class="text-sm font-semibold">DAF</span>
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
-                  <span class="text-success mt-1 block text-sm font-medium sm:text-base"
-                    >۲۹,۰۰۰,۰۰۰ تومان</span
-                  >
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۲۹,۵۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </a>
+            <!-- Product card 4 -->
+            <a
+                href="product.html" data-brand="daf" data-price="29000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <span class="text-sm font-semibold">DAF</span>
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۳۹,۰۰۰,۰۰۰ تومان</span
+                      >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۵٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۲۹,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
             <!-- Product card 5 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="man"
-              data-price="31000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">MAN</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
+            <a
+                href="product.html" data-brand="man" data-price="31000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-8.75 object-cover"
+                    src="../assets/images/product-item-band-image.png"
+                    alt="MAN"
+                  />
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۳۱,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-5">
-                  <span class="text-success block text-sm font-medium sm:text-base"
-                    >۳۱,۰۰۰,۰۰۰ تومان</span
-                  >
-                </div>
-              </div>
-            </article>
+              </a>
             <!-- Product card 6 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="man"
-              data-price="32000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">MAN</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
+            <a
+                href="product.html" data-brand="man" data-price="32000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-8.75 object-cover"
+                    src="../assets/images/product-item-band-image.png"
+                    alt="MAN"
+                  />
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۳۲,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-5">
-                  <span class="text-success block text-sm font-medium sm:text-base"
-                    >۳۲,۰۰۰,۰۰۰ تومان</span
-                  >
-                </div>
-              </div>
-            </article>
+              </a>
             <!-- Product card 7 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="daf"
-              data-price="33500000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">DAF</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
+            <a
+                href="product.html" data-brand="daf" data-price="33500000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <span class="text-sm font-semibold">DAF</span>
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۳۳,۵۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-5">
-                  <span class="text-success block text-sm font-medium sm:text-base"
-                    >۳۳,۵۰۰,۰۰۰ تومان</span
-                  >
-                </div>
-              </div>
-            </article>
+              </a>
             <!-- Product card 8 -->
-            <article
-              class="product-card flex min-w-0 flex-col rounded-2xl bg-white p-3 sm:p-4"
-              data-brand="man"
-              data-price="35000000"
-              data-category="spring"
-            >
-              <div class="flex h-6 items-center justify-end">
-                <span class="text-[11px] font-semibold">MAN</span>
-              </div>
-              <div class="my-3 flex aspect-square items-center justify-center">
-                <img
-                  src="../assets/images/Wheel-drive-spring-image.png"
-                  alt="فنر محرک چرخ ها"
-                  class="size-full object-contain"
-                />
-              </div>
-              <div class="mt-auto">
-                <h3 class="text-sm font-medium sm:text-base">فنر محرک چرخ ها</h3>
-                <div class="text-muted mt-1.5 flex items-center gap-1 text-[11px] sm:text-xs">
-                  <span>سیستم باد و پنوماتیک</span
-                  ><span class="size-1 rounded-full bg-[#d9d9d9]"></span
-                  ><img class="size-3.5" src="../assets/icons/Star.svg" alt="" /><span>۴.۸</span>
+            <a
+                href="product.html" data-brand="man" data-price="35000000" data-category="spring"
+                class="product-card flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-8.75 object-cover"
+                    src="../assets/images/product-item-band-image.png"
+                    alt="MAN"
+                  />
+                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
+                    <img class="size-4" src="../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="catalog-card-price pt-8">
+                    
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۳۵,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-5">
-                  <span class="text-success block text-sm font-medium sm:text-base"
-                    >۳۵,۰۰۰,۰۰۰ تومان</span
-                  >
-                </div>
-              </div>
-            </article>
+              </a>
           </div>
+          <p id="catalog-empty" class="catalog-empty" hidden>محصولی با این فیلترها پیدا نشد.</p>
         </div>
 
         <aside
-          class="bg-surface-bg hidden rounded-2xl border border-[#d8d8d8] p-5 lg:block"
+          class="catalog-sidebar"
           aria-label="فیلترها"
         >
           <div class="mb-7 flex items-center justify-between">
@@ -489,22 +659,22 @@
               <span>محدوده قیمت</span><span class="text-brand-700">⌃</span>
             </button>
             <div class="mt-5">
-              <div class="grid grid-cols-[1fr_auto] gap-2">
+              <div class="catalog-price-fields">
                 <label class="rounded-xl bg-white px-3 py-3 text-xs"
                   ><span class="text-muted">از</span
                   ><input
-                    class="price-input mt-1 w-full bg-transparent text-left outline-0"
+                    class="price-input"
                     data-bound="min"
                     value="۱,۲۰۰,۰۰۰"
                     inputmode="numeric" /></label
                 ><label class="rounded-xl bg-white px-3 py-3 text-xs"
                   ><span class="text-muted">تا</span
                   ><input
-                    class="price-input mt-1 w-full bg-transparent text-left outline-0"
+                    class="price-input"
                     data-bound="max"
                     value="۱۲۰,۰۰۰,۰۰۰"
                     inputmode="numeric"
-                /></label>
+                /><span class="text-muted">تومان</span></label>
               </div>
               <div class="range-wrap mt-6">
                 <input
@@ -534,8 +704,7 @@
               class="filter-heading flex w-full items-center justify-between font-medium"
               aria-expanded="true"
             >
-              <span>برند کامیون</span><span class="text-brand-700">⌃</span></button
-            ><label class="mt-5 flex items-center justify-between text-sm"
+              <span>برند کامیون</span><span class="text-brand-700">⌃</span></button><div class="catalog-brand-options"><label class="mt-5 flex items-center justify-between text-sm"
               ><span class="text-muted">برند MAN</span
               ><input
                 type="checkbox"
@@ -544,31 +713,31 @@
             ><label class="mt-4 flex items-center justify-between text-sm"
               ><span class="text-muted">برند DAF</span
               ><input type="checkbox" class="brand-filter accent-brand-700 size-5" value="daf"
-            /></label>
+            /></label></div>
           </div>
           <div class="filter-section py-1">
             <button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>دسته‌بندی قطعه</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>مدل و مشخصات کامیون</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>برند سازنده</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>وضعیت قطعه</span><span>⌄</span>
             </button>
@@ -605,22 +774,22 @@
               <span>محدوده قیمت</span><span class="text-brand-700">⌃</span>
             </button>
             <div class="mt-5">
-              <div class="grid grid-cols-[1fr_auto] gap-2">
+              <div class="catalog-price-fields">
                 <label class="rounded-xl bg-white px-3 py-3 text-xs"
                   ><span class="text-muted">از</span
                   ><input
-                    class="price-input mt-1 w-full bg-transparent text-left outline-0"
+                    class="price-input"
                     data-bound="min"
                     value="۱,۲۰۰,۰۰۰"
                     inputmode="numeric" /></label
                 ><label class="rounded-xl bg-white px-3 py-3 text-xs"
                   ><span class="text-muted">تا</span
                   ><input
-                    class="price-input mt-1 w-full bg-transparent text-left outline-0"
+                    class="price-input"
                     data-bound="max"
                     value="۱۲۰,۰۰۰,۰۰۰"
                     inputmode="numeric"
-                /></label>
+                /><span class="text-muted">تومان</span></label>
               </div>
               <div class="range-wrap mt-6">
                 <input
@@ -650,8 +819,7 @@
               class="filter-heading flex w-full items-center justify-between font-medium"
               aria-expanded="true"
             >
-              <span>برند کامیون</span><span class="text-brand-700">⌃</span></button
-            ><label class="mt-5 flex items-center justify-between text-sm"
+              <span>برند کامیون</span><span class="text-brand-700">⌃</span></button><div class="catalog-brand-options"><label class="mt-5 flex items-center justify-between text-sm"
               ><span class="text-muted">برند MAN</span
               ><input
                 type="checkbox"
@@ -660,31 +828,31 @@
             ><label class="mt-4 flex items-center justify-between text-sm"
               ><span class="text-muted">برند DAF</span
               ><input type="checkbox" class="brand-filter accent-brand-700 size-5" value="daf"
-            /></label>
+            /></label></div>
           </div>
           <div class="filter-section">
             <button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>دسته‌بندی قطعه</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>مدل و مشخصات کامیون</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between border-b border-[#ddd] py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>برند سازنده</span><span>⌄</span></button
             ><button
               type="button"
               class="filter-heading flex w-full items-center justify-between py-5 text-sm"
-              aria-expanded="false"
+              disabled title="اطلاعات این گزینه در داده‌های فعلی موجود نیست"
             >
               <span>وضعیت قطعه</span><span>⌄</span>
             </button>
@@ -699,7 +867,7 @@
             type="button"
             class="filter-apply bg-brand-700 flex-1 rounded-xl py-3 font-medium text-white"
           >
-            مشاهده ۴۶۰ محصول
+            مشاهده ۸ محصول
           </button>
         </div>
       </div>

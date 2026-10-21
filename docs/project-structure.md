@@ -82,6 +82,8 @@ HTML pages load the generated stylesheet at `dist/output.css` rather than import
 
 `src/js/all-products.js` handles the product listing page's brand and price filters, sorting, mobile filters, and expandable or collapsible sections.
 
+`src/js/header.js` is loaded only by the Persian root `index.html`. It controls the native mobile navigation dialog (focus, scroll restoration, dismissal, and the 1024px desktop boundary) and desktop language disclosure. Its styles in `src/styles/input.css` are scoped to `.homepage-header` and `.homepage-drawer`. The header links to the existing Persian routes and `en/index.html`; categories and featured products use homepage section anchors. The truck icon is an explicitly temporary logo. The cart indicator defaults to zero because the current cart page has no shared or persisted state. No other page has been integrated with this header.
+
 `src/js/swiper-config.js` controls product sliders, promotional sliders, countdown timers, and progress bars.
 
 Swiper is not listed as an npm dependency in `package.json`. Pages using this functionality load Swiper version 11 from the jsDelivr CDN.
