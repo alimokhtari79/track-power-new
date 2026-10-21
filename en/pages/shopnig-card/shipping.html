@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../dist/output.css" />
     <title>Shipping information | Track Power</title>
+    <script src="../../../src/js/english-components.js" defer></script>
+    <script src="../../../src/js/categories.js" defer></script>
     <script src="../../../src/js/cart-state.js" defer></script>
     <script src="../../../src/js/storefront.js" defer></script>
+    <script src="../../../src/js/header.js" defer></script>
+    <script src="../../../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="bg-surface-bg text-primary">
+    <div data-english-header></div>
     <main class="container-custom mx-auto px-5 py-4 md:px-0 md:py-5">
       <nav
         aria-label="Breadcrumb"
@@ -31,7 +36,6 @@
           />
         </svg>
         <a href="cart.html" class="text-primary">Shopping cart</a>
-        <a href="../../../pages/shopnig-card/shipping.html" class="hover:text-primary ms-auto transition" lang="fa" hreflang="fa">Persian</a>
       </nav>
       <div class="">
         <h1 class="mb-8 text-start text-2xl leading-tight font-semibold md:mb-12 md:text-[36px]">
@@ -504,5 +508,6 @@
       renderMethods();
       renderTimes();
     </script>
+    <div data-english-footer></div>
   </body>
 </html>

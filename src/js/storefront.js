@@ -8,7 +8,7 @@
     cart: 'Shopping cart', yourCart: 'Your shopping cart', items: 'items', checkout: 'Place order',
     empty: 'Your cart is empty.', browse: 'Browse products', increase: 'Increase quantity', decrease: 'Decrease quantity',
     remove: 'Remove item', language: 'Select language', missing: 'English translation unavailable',
-    home: 'Home', categories: 'Categories (FA)', profile: 'Profile', login: 'Sign in / Register',
+    home: 'Home', categories: 'Categories', profile: 'Profile', login: 'Sign in / Register',
     currency: 'toman', total: 'Total', quantity: 'Quantity',
   } : {
     cart: 'سبد خرید', yourCart: 'سبد خرید شما', items: 'کالا', checkout: 'ثبت سفارش',
@@ -103,12 +103,16 @@
       "en": "en/pages/Dashboard/addresses.html"
     }
   };
-  const current = decodeURI(location.pathname).slice(decodeURI(root.pathname).length) || 'index.html';
+  const currentPath = decodeURI(location.pathname).slice(decodeURI(root.pathname).length) || 'index.html';
+  const current = currentPath === 'en/' ? 'en/index.html' : currentPath;
   const entry = Object.values(routes).find((route) => route.fa === current || route.en === current);
   const isHome = current === 'index.html' || current === 'en/index.html';
+  const hasEnglishHeader = en && !!document.querySelector('[data-site-header]');
+  const hasHeaderActions = isHome || hasEnglishHeader;
   const isCart = current.endsWith('/shopnig-card/cart.html');
   const isCategories = current === 'pages/categories.html';
-  const route = (path) => asset(routes[path]?.[lang] || path);
+  const route = (path) => asset(en && path === 'pages/categories.html'
+    ? 'en/pages/all-products.html#products' : routes[path]?.[lang] || path);
   const money = (value) => `${number.format(value)} ${text.currency}`;
   const escape = (value) => String(value).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = (name) => `<img src="${asset(`assets/icons/${name}.svg`)}" width="24" height="24" alt="">`;
@@ -129,7 +133,7 @@
   function languageMarkup() {
     return `<summary aria-label="${text.language}">${languageIcon}<span>${en ? 'English' : 'فارسی'}</span></summary><div class="commerce-language__options">${['fa','en'].map((target) => {
       const href = languageURL(target);
-      const label = target === 'fa' ? 'فارسی' : 'English';
+      const label = target === 'fa' ? (en ? 'Persian' : 'فارسی') : 'English';
       const inner = `<span class="commerce-flag" aria-hidden="true">${target === 'fa' ? '🇮🇷' : '🇺🇸'}</span><span lang="${target}">${label}</span>`;
       return href ? `<a href="${escape(href)}" hreflang="${target}" lang="${target}" ${target === lang ? 'aria-current="true"' : ''}>${inner}</a>` : `<span class="commerce-language__unavailable" aria-disabled="true" title="${text.missing}">${inner}</span>`;
     }).join('')}</div>`;
@@ -140,7 +144,7 @@
   language.classList.add('commerce-language');
   language.innerHTML = languageMarkup();
   let actions = document.querySelector('.homepage-header__actions');
-  if (isHome) {
+  if (hasHeaderActions) {
     if (!actions) {
       actions = document.createElement('div');
       actions.className = 'commerce-actions';
@@ -211,7 +215,7 @@
     cartTrigger.setAttribute('aria-expanded', 'false');
     if (focus) cartTrigger.focus();
   }
-  if (isHome) {
+  if (hasHeaderActions) {
     const wrapper = document.createElement('div');
     wrapper.className = 'commerce-cart';
     wrapper.innerHTML = `<button class="commerce-cart__trigger" type="button" aria-expanded="false" aria-controls="cart-preview"><span data-cart-count></span><span>${icon('shopping-cart-01')}</span></button><section id="cart-preview" class="commerce-cart__preview" aria-label="${text.yourCart}" hidden>${cartMarkup(true)}</section>`;

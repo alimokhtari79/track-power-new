@@ -3,7 +3,37 @@
   const script = document.currentScript;
   const root = new URL('../../', script.src);
   const url = (path) => new URL(path, root).href;
-  const products = url('pages/all-products.html#products');
+  const en = document.documentElement.lang === 'en';
+  const products = url(`${en ? 'en/' : ''}pages/all-products.html#products`);
+  const english = {
+    'سیستم ترمز': 'Braking system', 'گیربکس و کلاچ': 'Transmission and clutch',
+    'فرمان و هیدرولیک': 'Steering and hydraulics', 'سیستم باد و پنوماتیک': 'Air and pneumatic systems',
+    'قطعات موتور': 'Engine parts', 'برق و الکترونیک': 'Electrical and electronics',
+    'کابین و بدنه': 'Cab and body', 'فیلترها و قطعات مصرفی': 'Filters and consumables',
+    'کمپرسور کامل': 'Complete compressors', 'کیت تعمیر کمپرسور': 'Compressor repair kits',
+    'پیستون و رینگ کمپرسور': 'Compressor pistons and rings', 'سوپاپ کمپرسور': 'Compressor valves',
+    'سرسیلندر کمپرسور': 'Compressor cylinder heads', 'واشر و اورینگ کمپرسور': 'Compressor gaskets and O-rings',
+    'متعلقات کمپرسور': 'Compressor accessories', 'خشک‌کن هوا (Air Dryer)': 'Air dryers',
+    'خشک‌کن کامل': 'Complete air dryers', 'کارتریج خشک‌کن': 'Air dryer cartridges',
+    'شیر خشک‌کن': 'Air dryer valves', 'کیت تعمیر خشک‌کن': 'Air dryer repair kits',
+    'سوپاپ خشک‌کن': 'Air dryer valve components', 'رطوبت‌گیر و متعلقات': 'Moisture separators and accessories',
+    'مخازن باد': 'Air reservoirs', 'مخزن باد اصلی': 'Main air reservoirs',
+    'مخزن مدار ترمز': 'Brake circuit reservoirs', 'مخزن تعلیق': 'Suspension reservoirs',
+    'مخزن کمکی': 'Auxiliary reservoirs', 'شیر تخلیه مخزن': 'Reservoir drain valves',
+    'پایه و بست مخزن': 'Reservoir brackets and clamps', 'شیرهای پنوماتیک': 'Pneumatic valves',
+    'شیر چهارمداره': 'Four-circuit protection valves', 'شیر محافظ فشار': 'Pressure protection valves',
+    'شیر کنترل فشار': 'Pressure control valves', 'شیر محدودکننده فشار': 'Pressure limiting valves',
+    'شیر یک‌طرفه': 'Check valves', 'شیر تخلیه': 'Drain valves', 'شیر رله': 'Relay valves',
+    'شیر سریع': 'Quick-release valves', 'شیر ترمز': 'Brake valves', 'شیر دستی': 'Hand valves',
+    'شیر برقی پنوماتیک': 'Pneumatic solenoid valves', 'شیرهای ترمز و سیستم EBS/ABS': 'Brake and EBS/ABS valves',
+    'شیر EBS': 'EBS valves', 'شیر ABS': 'ABS valves', 'شیر رله EBS': 'EBS relay valves',
+    'شیر کنترل تریلر': 'Trailer control valves', 'شیر ترمز پایی': 'Foot brake valves',
+    'شیر ترمز دستی': 'Parking brake valves', 'شیر کنترل فشار ترمز': 'Brake pressure control valves',
+    'لوله و شیلنگ باد': 'Air pipes and hoses', 'شیلنگ باد': 'Air hoses',
+    'لوله پنوماتیک': 'Pneumatic pipes', 'شیلنگ فنری': 'Coiled air hoses',
+    'شیلنگ ترمز': 'Brake hoses', 'اتصالات لوله باد': 'Air pipe fittings',
+  };
+  const labelText = (value) => en ? english[value] : value;
   const groups = [
     ['سیستم باد و پنوماتیک', ['کمپرسور کامل', 'کیت تعمیر کمپرسور', 'پیستون و رینگ کمپرسور', 'سوپاپ کمپرسور', 'سرسیلندر کمپرسور', 'واشر و اورینگ کمپرسور', 'متعلقات کمپرسور']],
     ['خشک‌کن هوا (Air Dryer)', ['خشک‌کن کامل', 'کارتریج خشک‌کن', 'شیر خشک‌کن', 'کیت تعمیر خشک‌کن', 'سوپاپ خشک‌کن', 'رطوبت‌گیر و متعلقات']],
@@ -29,18 +59,18 @@
 
   const navigation = document.createElement('nav');
   navigation.className = 'category-navigation';
-  navigation.setAttribute('aria-label', 'دسته‌بندی قطعات');
+  navigation.setAttribute('aria-label', en ? 'Parts categories' : 'دسته‌بندی قطعات');
   navigation.innerHTML = `
-    <div class="category-tabs" role="tablist" aria-label="دسته‌های اصلی">${categories.map(([id, label]) => `
-      <button type="button" role="tab" id="category-tab-${id}" data-category="${id}" aria-controls="category-panel" aria-selected="false" tabindex="-1">${label}</button>`).join('')}
+    <div class="category-tabs" role="tablist" aria-label="${en ? 'Main categories' : 'دسته‌های اصلی'}">${categories.map(([id, label]) => `
+      <button type="button" role="tab" id="category-tab-${id}" data-category="${id}" aria-controls="category-panel" aria-selected="false" tabindex="-1">${labelText(label)}</button>`).join('')}
     </div>
     <div class="category-panel" id="category-panel" role="tabpanel" tabindex="0">
       <div class="category-content"></div>
-      <aside class="category-promotion" aria-label="قطعات تراک پاور">
-        <p>از ریزترین تا<br><strong>درشت‌ترین قطعات</strong></p>
-        <p class="category-promotion__description">از کوچک‌ترین پیچ تا بزرگ‌ترین قطعات<br>را از ما بخواهید.</p>
+      <aside class="category-promotion" aria-label="${en ? 'Trak Power parts' : 'قطعات تراک پاور'}">
+        <p>${en ? 'From the smallest to<br><strong>the largest parts</strong>' : 'از ریزترین تا<br><strong>درشت‌ترین قطعات</strong>'}</p>
+        <p class="category-promotion__description">${en ? 'From the smallest screw to the largest assembly,<br>find the parts you need here.' : 'از کوچک‌ترین پیچ تا بزرگ‌ترین قطعات<br>را از ما بخواهید.'}</p>
         <img class="category-promotion__image" src="${url('assets/images/Screw-image.png')}" alt="" width="353" height="351">
-        <a href="${products}">مشاهده محصولات ${arrow}</a>
+        <a href="${products}">${en ? 'View products' : 'مشاهده محصولات'} ${arrow}</a>
       </aside>
     </div>`;
   const content = navigation.querySelector('.category-content');
@@ -56,10 +86,10 @@
     });
     navigation.querySelector('[role="tablist"]').setAttribute('aria-orientation', desktop.matches ? 'horizontal' : 'vertical');
     panel.setAttribute('aria-labelledby', `category-tab-${selected}`);
-    const all = `<a class="category-all" href="${products}">همه محصولات ${label}${chevron}</a>`;
+    const all = `<a class="category-all" href="${products}">${en ? 'All products:' : 'همه محصولات'} ${labelText(label)}${chevron}</a>`;
     content.innerHTML = all + (desktop.matches
-      ? `<div class="category-columns">${children.map(([heading, items]) => `<h3>${heading}</h3>${items.map((item) => `<a href="${products}">${item}</a>`).join('')}`).join('')}</div>`
-      : `<div class="category-accordions">${children.map(([heading, items], index) => `<details ${index === 0 ? 'open' : ''}><summary>${heading}${chevron}</summary><ul>${items.map((item) => `<li><a href="${products}">${item}</a></li>`).join('')}</ul></details>`).join('')}</div>`);
+      ? `<div class="category-columns">${children.map(([heading, items]) => `<h3>${labelText(heading)}</h3>${items.map((item) => `<a href="${products}">${labelText(item)}</a>`).join('')}`).join('')}</div>`
+      : `<div class="category-accordions">${children.map(([heading, items], index) => `<details ${index === 0 ? 'open' : ''}><summary>${labelText(heading)}${chevron}</summary><ul>${items.map((item) => `<li><a href="${products}">${labelText(item)}</a></li>`).join('')}</ul></details>`).join('')}</div>`);
   }
 
   function select(tab, focus = false) {
@@ -76,8 +106,8 @@
     let next;
     if (event.key === 'Home') next = 0;
     if (event.key === 'End') next = ordered.length - 1;
-    if (event.key === (desktop.matches ? 'ArrowLeft' : 'ArrowDown')) next = (index + 1) % ordered.length;
-    if (event.key === (desktop.matches ? 'ArrowRight' : 'ArrowUp')) next = (index - 1 + ordered.length) % ordered.length;
+    if (event.key === (desktop.matches ? (en ? 'ArrowRight' : 'ArrowLeft') : 'ArrowDown')) next = (index + 1) % ordered.length;
+    if (event.key === (desktop.matches ? (en ? 'ArrowLeft' : 'ArrowRight') : 'ArrowUp')) next = (index - 1 + ordered.length) % ordered.length;
     if (next !== undefined) { event.preventDefault(); select(ordered[next], true); }
   });
 
@@ -94,7 +124,7 @@
     trigger = document.createElement('button');
     trigger.type = 'button';
     trigger.className = `${existing?.className || ''} category-trigger`;
-    trigger.innerHTML = `<img src="${url('assets/icons/menu-square.svg')}" width="24" height="24" alt=""><span>دسته‌بندی‌ها</span>`;
+    trigger.innerHTML = `<img src="${url('assets/icons/menu-square.svg')}" width="24" height="24" alt=""><span>${en ? 'Categories' : 'دسته‌بندی‌ها'}</span>`;
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'category-mega-menu');
     if (existing) existing.replaceWith(trigger);
@@ -106,7 +136,7 @@
     overlay.append(navigation);
     document.body.append(overlay);
     trigger.addEventListener('click', () => {
-      if (!desktop.matches) { location.href = url('pages/categories.html'); return; }
+      if (!desktop.matches) { location.href = en ? products : url('pages/categories.html'); return; }
       if (!overlay.hidden) { close(); return; }
       const language = document.querySelector('[data-header-language]');
       if (language) language.open = false;

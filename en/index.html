@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="../dist/output.css" />
     <title>Trak Power | Truck parts</title>
     <style></style>
+    <script src="../src/js/english-components.js" defer></script>
+    <script src="../src/js/categories.js" defer></script>
+    <script src="../src/js/cart-state.js" defer></script>
+    <script src="../src/js/storefront.js" defer></script>
+    <script src="../src/js/header.js" defer></script>
+    <script src="../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="bg-surface-bg">
-    <header class="h-17"></header>
+    <div data-english-header></div>
     <main>
       <!-- hero -->
       <section
@@ -108,8 +114,9 @@
             <a
               href="#"
               class="text-primary mt-6 flex items-center gap-3 rounded-lg bg-white px-6 py-3 leading-6.5"
-              >View products
+            >
               <img src="../assets/icons/arrow-left.svg" alt="" />
+              View products
             </a>
           </figcaption>
         </figure>
@@ -130,8 +137,9 @@
             <a
               href="#"
               class="text-primary mt-6 flex items-center gap-3 rounded-lg bg-white px-6 py-3 leading-6.5"
-              >View products
+            >
               <img src="../assets/icons/arrow-left.svg" alt="" />
+              View products
             </a>
           </figcaption>
         </figure>
@@ -323,7 +331,7 @@
         </div>
       </section>
       <!-- Amazing Products -->
-      <section
+      <section id="featured-products"
         class="bg-[radial-gradient(73%_203.17%_at_0%_0%,#E21715_0%,#B40B09_100%)] py-15 md:py-20"
       >
         <div
@@ -1302,7 +1310,7 @@
 
           <!-- Trak Power -->
           <div class="relative z-10 w-full min-w-0 flex-1 lg:px-8">
-            <div class="swiper deal-swiper me-[unset]! w-full max-w-[650px]" dir="rtl">
+            <div class="swiper deal-swiper me-[unset]! w-full max-w-[650px]">
               <div class="swiper-wrapper">
                 <!-- ===== Trak Power 1 ===== -->
                 <div class="swiper-slide">
@@ -1331,7 +1339,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1397,7 +1405,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1463,7 +1471,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1529,7 +1537,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1595,7 +1603,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1661,7 +1669,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1727,7 +1735,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1793,7 +1801,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -1859,7 +1867,7 @@
                             <span>Air and pneumatic system</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img src="../assets/icons/Star.svg" alt="" />
                               4.8
                             </span>
                           </div>
@@ -2363,7 +2371,7 @@
             <!-- Trak Power -->
             <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl">
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2384,7 +2392,7 @@
               </article>
 
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2405,7 +2413,7 @@
               </article>
 
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2429,7 +2437,7 @@
             <!-- Trak Power : Trak Power -->
             <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl" aria-hidden="true">
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2448,7 +2456,7 @@
               </article>
 
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2467,7 +2475,7 @@
               </article>
 
               <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
+                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 text-left md:w-108"
               >
                 <div class="flex gap-1">
                   <img src="../assets/icons/Star.svg" alt="" />
@@ -2617,10 +2625,7 @@
             <details
               class="group rounded-2xl border border-[#DFDFDF] transition-all duration-300 ease-in-out open:border-0 open:bg-white"
             >
-              <summary
-                class="flex cursor-pointer list-none items-center justify-between gap-4 p-5"
-                dir="rtl"
-              >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
                 <span class="text-primary text-[15px] font-semibold md:text-lg">
                   How can I place an order?
                 </span>
@@ -2692,5 +2697,6 @@
     <!-- swiper config js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../src/js/swiper-config.js"></script>
+    <div data-english-footer></div>
   </body>
 </html>

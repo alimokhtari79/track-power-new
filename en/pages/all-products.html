@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../dist/output.css" />
     <title>All Products | Trak Power</title>
+    <script src="../../src/js/english-components.js" defer></script>
+    <script src="../../src/js/categories.js" defer></script>
     <script src="../../src/js/cart-state.js" defer></script>
     <script src="../../src/js/storefront.js" defer></script>
+    <script src="../../src/js/header.js" defer></script>
+    <script src="../../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="catalog-page bg-surface-bg text-primary min-h-screen">
+    <div data-english-header></div>
     <main class="catalog-main container-custom">
       <nav
         class="catalog-breadcrumb text-muted flex items-center gap-1 text-xs"
@@ -17,9 +22,6 @@
         <a href="../index.html" class="hover:text-primary transition">Home</a>
         <span aria-hidden="true" class="text-lg leading-none">›</span>
         <span class="text-primary">Air and pneumatic systems</span>
-        <a href="../../pages/all-products.html" hreflang="fa" class="hover:text-primary ms-auto transition"
-          >Persian</a
-        >
       </nav>
 
       <section
@@ -646,5 +648,6 @@
       </div>
     </div>
     <script src="../../src/js/all-products.js"></script>
+    <div data-english-footer></div>
   </body>
 </html>

@@ -2,7 +2,7 @@
 
 /* Retain pre-existing generated utilities, including local work, during this rebuild. */
 @source inline(
-  '-right-10 right-5 md:-right-18 md:right-8 md:border-r min-h-[112px] self-end text-[#8b9aab] text-transparent peer-checked:text-white'
+  '-right-10 right-5 md:-right-18 md:right-8 md:border-r min-h-[112px] self-end text-[#8b9aab] text-transparent peer-checked:text-white mt-20 size-10.5 h-17 h-19 pe-12 leading-[5.5] leading-[5.] md:leading-0'
 );
 
 @font-face {
@@ -339,7 +339,7 @@ body {
   background: white;
 }
 
-/* Homepage header only. The dialog shares these styles without changing other pages. */
+/* Shared header and mobile navigation dialog. */
 .homepage-header {
   height: 86px;
   background: linear-gradient(246.2deg, #d60e0b 0%, var(--brand-700) 100%);
@@ -1460,7 +1460,7 @@ body {
   }
 }
 
-/* Footer is mounted only in the Persian root index.html. */
+/* Persian homepage and shared English footer. */
 .homepage-footer {
   position: relative;
   isolation: isolate;
@@ -1771,4 +1771,29 @@ body {
     width: 32px;
     height: 32px;
   }
+}
+
+/* English shared components mirror directional controls without changing Persian pages. */
+html[lang='en'] .homepage-drawer {
+  inset: 0 auto 0 0;
+}
+html[lang='en'] .homepage-drawer.is-closing {
+  transform: translateX(-100%);
+}
+@starting-style {
+  html[lang='en'] .homepage-drawer[open] {
+    transform: translateX(-100%);
+  }
+}
+html[lang='en'] .category-all svg {
+  transform: rotate(-90deg);
+}
+html[lang='en'] .category-promotion > a img {
+  transform: rotate(180deg);
+}
+html[lang='en'] .category-columns {
+  grid-template-rows: repeat(12, minmax(45px, auto));
+}
+html[lang='en'] .category-columns > * {
+  font-size: 14px;
 }

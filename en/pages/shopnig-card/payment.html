@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../dist/output.css" />
     <title>Review and payment | Track Power</title>
+    <script src="../../../src/js/english-components.js" defer></script>
+    <script src="../../../src/js/categories.js" defer></script>
     <script src="../../../src/js/cart-state.js" defer></script>
     <script src="../../../src/js/storefront.js" defer></script>
+    <script src="../../../src/js/header.js" defer></script>
+    <script src="../../../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="bg-surface-bg text-primary min-h-screen">
+    <div data-english-header></div>
     <main class="container-custom mx-auto px-5 py-4 md:px-0 md:py-5">
       <nav
         aria-label="Breadcrumb"
@@ -31,7 +36,6 @@
           />
         </svg>
         <a href="cart.html" class="text-primary">Shopping cart</a>
-        <a href="../../../pages/shopnig-card/payment.html" class="hover:text-primary ms-auto transition" lang="fa" hreflang="fa">Persian</a>
       </nav>
       <div class="">
         <h1 class="mt-7.5 text-2xl font-bold md:mt-15 md:text-[36px]">Review and payment</h1>
@@ -348,5 +352,6 @@
         if (selected) form.textContent = 'Redirecting to payment gateway...';
       });
     </script>
+    <div data-english-footer></div>
   </body>
 </html>

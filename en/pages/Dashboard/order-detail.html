@@ -10,10 +10,15 @@
         inset-inline-start: 7%;
       }
     </style>
+    <script src="../../../src/js/english-components.js" defer></script>
+    <script src="../../../src/js/categories.js" defer></script>
     <script src="../../../src/js/cart-state.js" defer></script>
     <script src="../../../src/js/storefront.js" defer></script>
+    <script src="../../../src/js/header.js" defer></script>
+    <script src="../../../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="bg-surface-bg text-primary">
+    <div data-english-header></div>
     <main class="container-custom mx-auto mt-5 flex w-full flex-col gap-6 px-5 md:flex-row">
       <aside
         class="order-2 flex w-full shrink-0 flex-col gap-2.5 self-start rounded-2xl p-5 md:order-1 md:w-60 md:border md:border-[#0000001F]"
@@ -232,12 +237,6 @@
           <span>Account Information</span>
           <img class="ms-auto md:hidden" src="../../../assets/icons/arrow-right.svg" alt="" />
         </a>
-        <a
-          href="../../../pages/Dashboard/order-detail.html"
-          hreflang="fa"
-          class="text-muted flex items-center gap-2 p-3"
-          >Persian</a
-        >
       </aside>
       <section class="order-1 min-w-0 flex-1 md:order-2">
         <header class="mb-5 flex items-center justify-between">
@@ -589,5 +588,6 @@
         </section>
       </section>
     </main>
+    <div data-english-footer></div>
   </body>
 </html>

@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../dist/output.css" />
     <title>My Trucks | Track Power</title>
+    <script src="../../../src/js/english-components.js" defer></script>
+    <script src="../../../src/js/categories.js" defer></script>
     <script src="../../../src/js/cart-state.js" defer></script>
     <script src="../../../src/js/storefront.js" defer></script>
+    <script src="../../../src/js/header.js" defer></script>
+    <script src="../../../src/js/homepage-footer.js" defer></script>
   </head>
   <body class="bg-surface-bg text-primary">
+    <div data-english-header></div>
     <main class="container-custom mx-auto my-5 flex flex-col items-start gap-10 md:flex-row">
       <aside
         class="order-2 flex w-full shrink-0 flex-col gap-1.5 self-start rounded-2xl border border-[#0000001f] p-4 md:order-1 md:w-60"
@@ -227,12 +232,6 @@
           <span>Account Information</span>
           <img class="ms-auto md:hidden" src="../../../assets/icons/arrow-right.svg" alt="" />
         </a>
-        <a
-          href="../../../pages/Dashboard/traucks.html"
-          hreflang="fa"
-          class="text-muted flex items-center gap-2 p-3"
-          >Persian</a
-        >
       </aside>
       <section class="order-1 w-full min-w-0 flex-1 md:order-2">
         <header class="mb-[42px] flex items-center justify-between max-md:my-[18px] max-md:mb-14">
@@ -316,5 +315,6 @@
         </section>
       </section>
     </main>
+    <div data-english-footer></div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 # Trak Power Project Structure
 
-This project is a static, multi-page website built primarily in Persian. All current pages use `lang="fa"` and `dir="rtl"`. No templating system, router, or JavaScript framework is currently configured in the project.
+This project is a static, multi-page website with Persian pages (`lang="fa"`, `dir="rtl"`) and 20 English pages under `en/` (`lang="en"`, `dir="ltr"`). There is no framework or server-side templating. English pages share a JavaScript-mounted header and footer; see [English shared components](english-shared-components.md) for script order, paths and deployment.
 
 ## Key File and Directory Structure
 
@@ -82,7 +82,7 @@ HTML pages load the generated stylesheet at `dist/output.css` rather than import
 
 `src/js/all-products.js` handles the product listing page's brand and price filters, sorting, mobile filters, and expandable or collapsible sections.
 
-`src/js/header.js` is loaded only by the Persian root `index.html`. It controls the native mobile navigation dialog (focus, scroll restoration, dismissal, and the 1024px desktop boundary) and desktop language disclosure. Its styles in `src/styles/input.css` are scoped to `.homepage-header` and `.homepage-drawer`. The header links to the existing Persian routes and `en/index.html`; categories and featured products use homepage section anchors. The truck icon is an explicitly temporary logo. The cart indicator defaults to zero because the current cart page has no shared or persisted state. No other page has been integrated with this header.
+`src/js/header.js` controls the native mobile navigation dialog (focus, scroll restoration, dismissal, and the 1024px desktop boundary) and desktop language disclosure on the Persian homepage and all English pages. English markup is mounted by `src/js/english-components.js`; category navigation, cart state and language routing reuse `categories.js`, `cart-state.js` and `storefront.js`. The shared English footer reuses `homepage-footer.js` and the existing component styles.
 
 `src/js/swiper-config.js` controls product sliders, promotional sliders, countdown timers, and progress bars.
 
@@ -143,5 +143,5 @@ Many `href="#"` values are also present and serve as placeholders.
 - The generated CSS is separate from the source stylesheet, and there is no dedicated production build command.
 - No real automated test suite is configured.
 - Swiper depends on an external CDN.
-- Headers, sidebars, newsletter sections, and some product cards are duplicated across HTML pages rather than implemented as shared components.
-- A language-aware URL structure for the future English version has not yet been defined.
+- Persian headers, dashboard sidebars, newsletter sections and some product cards still contain duplicated markup. English site headers and footers are shared.
+- English routes live under `en/`; the storefront route map maintains language-switch destinations.

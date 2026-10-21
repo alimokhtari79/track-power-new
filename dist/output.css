@@ -5676,6 +5676,29 @@ html, body {
     height: 32px;
   }
 }
+html[lang='en'] .homepage-drawer {
+  inset: 0 auto 0 0;
+}
+html[lang='en'] .homepage-drawer.is-closing {
+  transform: translateX(-100%);
+}
+@starting-style {
+  html[lang='en'] .homepage-drawer[open] {
+    transform: translateX(-100%);
+  }
+}
+html[lang='en'] .category-all svg {
+  transform: rotate(-90deg);
+}
+html[lang='en'] .category-promotion > a img {
+  transform: rotate(180deg);
+}
+html[lang='en'] .category-columns {
+  grid-template-rows: repeat(12, minmax(45px, auto));
+}
+html[lang='en'] .category-columns > * {
+  font-size: 14px;
+}
 @property --tw-border-spacing-x {
   syntax: "<length>";
   inherits: false;
