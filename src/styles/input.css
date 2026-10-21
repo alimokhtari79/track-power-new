@@ -507,3 +507,90 @@ body {
   .commerce-cart-page .commerce-checkout { gap: 10px; padding-inline: 12px; }
   .commerce-cart-page .commerce-checkout__button { padding-inline: 18px; }
 }
+
+/* Footer is mounted only in the Persian root index.html. */
+.homepage-footer {
+  position: relative;
+  isolation: isolate;
+  margin-top: 40px;
+  padding-block: 60px 24px;
+  overflow: clip;
+  background: var(--surface-bg);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.homepage-footer::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 140px 0 0;
+  background: url('../assets/images/about-us-image-2.png') center 60% / cover no-repeat;
+  filter: grayscale(1);
+  opacity: .045;
+  mask-image: linear-gradient(transparent, black 40%);
+  pointer-events: none;
+}
+.homepage-footer__inner.container-custom { width: calc(100% - 88px); }
+.homepage-footer__layout { display: grid; grid-template-columns: minmax(0, 36%) minmax(0, 53%); justify-content: space-between; gap: 36px 0; }
+.homepage-footer__brand { grid-column: 1; grid-row: 1 / 3; min-width: 0; }
+.homepage-footer__logo { display: flex; align-items: center; justify-content: center; width: 80px; height: 70px; margin-bottom: 18px; }
+.homepage-footer__logo img { width: 80px; height: 70px; object-fit: contain; }
+.homepage-footer__brand p { margin: 0; }
+.homepage-footer__badges { display: flex; align-items: center; gap: 6px; margin-top: 30px; padding: 0; list-style: none; }
+.homepage-footer__badge { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 70px; height: 80px; border-radius: 12px; background: white; font-size: 10px; color: var(--inactive); text-align: center; }
+.homepage-footer__badge > span:first-child { font-size: 28px; line-height: 1.2; }
+.homepage-footer__navigation { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; grid-column: 2; }
+.homepage-footer__section { min-width: 0; }
+.homepage-footer__section summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 30px; list-style: none; font-size: 18px; font-weight: 700; color: var(--primary); }
+.homepage-footer__section summary::-webkit-details-marker { display: none; }
+.homepage-footer__section summary > img { display: none; flex-shrink: 0; }
+.homepage-footer__section ul { margin: 6px 0 0; padding: 0; list-style: none; }
+.homepage-footer__section li > :is(a, span) { display: flex; align-items: center; min-height: 42px; }
+.homepage-footer a:hover { color: var(--brand-700); }
+.homepage-footer :is(a, summary):focus-visible { outline: 2px solid var(--brand-700); outline-offset: 3px; border-radius: 3px; }
+.homepage-footer__pending { cursor: default; }
+.homepage-footer__contact { grid-column: 2; padding-top: 28px; border-top: 1px solid #dedede; }
+.homepage-footer__contact address { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; margin-top: 16px; font-style: normal; }
+.homepage-footer__contact address > * { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.homepage-footer__contact address :is(svg, img) { width: 24px; height: 24px; flex-shrink: 0; color: var(--primary); }
+.homepage-footer__address { grid-column: 1 / -1; }
+.homepage-footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; padding: 16px 20px; margin-top: 90px; background: white; border-radius: 20px; }
+.homepage-footer__bottom p { margin: 0; }
+.homepage-footer__social { display: flex; direction: ltr; align-items: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.homepage-footer__social li > span { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--border-light); border-radius: 50%; color: #141b34; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .homepage-footer { font-size: 12px; }
+  .homepage-footer__section summary { font-size: 16px; }
+  .homepage-footer__section li > :is(a, span) { min-height: 35px; }
+  .homepage-footer__navigation { gap: 20px; }
+  .homepage-footer__badge { width: 60px; height: 66px; font-size: 9px; }
+  .homepage-footer__bottom { min-height: 64px; padding: 12px 16px; border-radius: 16px; margin-top: 76px; }
+  .homepage-footer__social li > span { width: 32px; height: 32px; }
+}
+@media (max-width: 767px) {
+  .homepage-footer { padding-block: 28px 20px; font-size: 12px; line-height: 1.8; }
+  .homepage-footer::before { inset-block-start: 310px; background-position: 34% center; opacity: .05; }
+  .homepage-footer__inner.container-custom { width: 100%; padding-inline: 16px; }
+  .homepage-footer__layout { display: block; }
+  .homepage-footer__brand { padding-bottom: 24px; }
+  .homepage-footer__logo { width: 56px; height: 48px; margin-bottom: 14px; }
+  .homepage-footer__logo img { width: 56px; height: 48px; }
+  .homepage-footer__badges { margin-top: 16px; gap: 5px; }
+  .homepage-footer__badge { width: 48px; height: 54px; border-radius: 8px; font-size: 8px; }
+  .homepage-footer__badge > span:first-child { font-size: 22px; }
+  .homepage-footer__navigation { display: block; }
+  .homepage-footer__section { border-top: 1px solid #dedede; }
+  .homepage-footer__section summary { min-height: 48px; font-size: 14px; cursor: pointer; }
+  .homepage-footer__section summary > img { display: block; }
+  .homepage-footer__section[open] summary > img { transform: rotate(180deg); }
+  .homepage-footer__section ul { margin: -4px 0 8px; }
+  .homepage-footer__section li > :is(a, span) { min-height: 32px; }
+  .homepage-footer__contact { padding-top: 0; }
+  .homepage-footer__contact address { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-block: 4px 18px; }
+  .homepage-footer__contact address > * { min-height: 32px; }
+  .homepage-footer__bottom { flex-direction: column; gap: 16px; min-height: 92px; padding: 16px; margin-top: 14px; border-radius: 14px; text-align: center; font-size: 12px; }
+  .homepage-footer__credit { display: none; }
+  .homepage-footer__social { gap: 10px; }
+  .homepage-footer__social li > span { width: 32px; height: 32px; }
+}
