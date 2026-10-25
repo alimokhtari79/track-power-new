@@ -190,7 +190,7 @@
 
   function priceMarkup() {
     const percent = new Intl.NumberFormat(en ? 'en-US' : 'fa-IR', {maximumFractionDigits: 1}).format((1 - product.price / product.originalPrice) * 100);
-    return `<div class="commerce-price"><div class="commerce-price__previous"><del data-cart-original></del><span>${percent}${en ? '%' : '٪'}</span></div><strong data-cart-total></strong></div>`;
+    return `<div class="commerce-price"><div class="commerce-price__previous justify-end"><del data-cart-original></del><span>${percent}${en ? '%' : '٪'}</span></div><strong data-cart-total></strong></div>`;
   }
   function itemMarkup() {
     return `<article class="commerce-item" data-cart-item>

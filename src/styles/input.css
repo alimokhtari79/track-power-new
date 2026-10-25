@@ -189,11 +189,31 @@ body {
   background-color: #191616;
 }
 
+/* قاب بیرونی نظرات؛ باید روی والد reviews-track قرار بگیرد */
+.reviews-container {
+  overflow: hidden;
+  width: 100%;
+}
+
 .reviews-track {
+  display: flex;
+  width: max-content;
   animation: reviews-marquee 35s linear infinite;
   will-change: transform;
 }
 
+.reviews-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  padding-inline-end: 1.5rem;
+}
+
+/* حرکت دقیقاً به اندازه یک گروه */
 @keyframes reviews-marquee {
   from {
     transform: translateX(0);
@@ -201,12 +221,6 @@ body {
 
   to {
     transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reviews-track {
-    animation: none;
   }
 }
 
@@ -494,20 +508,21 @@ body {
   background: white;
 }
 .homepage-drawer__links {
-  padding-block: 8px 6px;
-}
-.homepage-drawer__links a {
-  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 24px;
+  padding-bottom: 20px;
 }
 .homepage-drawer__featured {
-  min-height: 72px;
   border-top: 1px solid var(--border-light);
+  padding-top: 24px;
 }
 .homepage-drawer__footer {
   padding-block: 16px max(16px, env(safe-area-inset-bottom, 0px));
 }
 .homepage-drawer__login {
-  min-height: 52px;
+  min-height: 50px;
 }
 @media (min-width: 1024px) {
   .homepage-header {
@@ -1503,11 +1518,11 @@ body {
   justify-content: center;
   width: 80px;
   height: 70px;
-  margin-bottom: 18px;
+  margin-bottom: 24.75px;
 }
 .homepage-footer__logo img {
-  width: 80px;
-  height: 70px;
+  width: 100.97px;
+  height: 85.25px;
   object-fit: contain;
 }
 .homepage-footer__brand p {
@@ -1516,8 +1531,8 @@ body {
 .homepage-footer__badges {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 30px;
+  gap: 6.74px;
+  margin-top: 40px;
   padding: 0;
   list-style: none;
 }
@@ -1541,7 +1556,7 @@ body {
 .homepage-footer__navigation {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  gap: 60px;
   grid-column: 2;
 }
 .homepage-footer__section {
@@ -1552,9 +1567,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  min-height: 30px;
   list-style: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--primary);
 }
@@ -1569,11 +1583,13 @@ body {
   margin: 6px 0 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .homepage-footer__section li > :is(a, span) {
   display: flex;
   align-items: center;
-  min-height: 42px;
 }
 .homepage-footer a:hover {
   color: var(--brand-700);
@@ -1588,25 +1604,25 @@ body {
 }
 .homepage-footer__contact {
   grid-column: 2;
-  padding-top: 28px;
+  padding-top: 36px;
   border-top: 1px solid #dedede;
 }
 .homepage-footer__contact address {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 20px;
+  gap: 24px 20px;
   margin-top: 16px;
   font-style: normal;
 }
 .homepage-footer__contact address > * {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
 }
 .homepage-footer__contact address :is(svg, img) {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   color: var(--primary);
 }
@@ -1618,9 +1634,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 76px;
-  padding: 16px 20px;
-  margin-top: 90px;
+  min-height: 82px;
+  padding: 0px 20px;
+  margin-top: 100px;
   background: white;
   border-radius: 20px;
 }
@@ -1653,15 +1669,14 @@ body {
     font-size: 16px;
   }
   .homepage-footer__section li > :is(a, span) {
-    min-height: 35px;
+    /* min-height: 35px; */
   }
   .homepage-footer__navigation {
     gap: 20px;
   }
   .homepage-footer__badge {
-    width: 60px;
-    height: 66px;
-    font-size: 9px;
+    width: 75px;
+    height: 85px;
   }
   .homepage-footer__bottom {
     min-height: 64px;
@@ -1696,9 +1711,9 @@ body {
     padding-bottom: 24px;
   }
   .homepage-footer__logo {
-    width: 56px;
-    height: 48px;
-    margin-bottom: 14px;
+    width: 71px;
+    height: 60px;
+    margin-bottom: 16px;
   }
   .homepage-footer__logo img {
     width: 56px;
@@ -1706,7 +1721,7 @@ body {
   }
   .homepage-footer__badges {
     margin-top: 16px;
-    gap: 5px;
+    gap: 5.54px;
   }
   .homepage-footer__badge {
     width: 48px;
@@ -1724,7 +1739,8 @@ body {
     border-top: 1px solid #dedede;
   }
   .homepage-footer__section summary {
-    min-height: 48px;
+    /* min-height: 48px; */
+    padding-block: 20px;
     font-size: 14px;
     cursor: pointer;
   }
@@ -1735,27 +1751,21 @@ body {
     transform: rotate(180deg);
   }
   .homepage-footer__section ul {
-    margin: -4px 0 8px;
-  }
-  .homepage-footer__section li > :is(a, span) {
-    min-height: 32px;
+    margin: -4px 0 20px;
   }
   .homepage-footer__contact {
     padding-top: 0;
   }
   .homepage-footer__contact address {
     grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
+    gap: 20px;
     margin-block: 4px 18px;
-  }
-  .homepage-footer__contact address > * {
-    min-height: 32px;
   }
   .homepage-footer__bottom {
     flex-direction: column;
-    gap: 16px;
-    min-height: 92px;
-    padding: 16px;
+    gap: 20px;
+    min-height: 118px;
+    padding: 16px 0px;
     margin-top: 14px;
     border-radius: 14px;
     text-align: center;

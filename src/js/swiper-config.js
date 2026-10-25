@@ -1,25 +1,60 @@
-const mq = window.matchMedia('(min-width: 768px)');
-let swiper = null;
+const newProductMq = window.matchMedia('(min-width: 768px)');
+let newProductSwiper = null;
 
-function setupSlider() {
-  const productsSlider = document.querySelector('.products .swiper');
+function setupNewProductSlider() {
+  const newProductSlider = document.querySelector('.new-product .swiper');
 
-  if (mq.matches && !swiper && productsSlider) {
+  if (newProductMq.matches && !newProductSwiper && newProductSlider) {
     // دسکتاپ: Swiper فعال
-    swiper = new Swiper('.products .swiper', {
+    newProductSwiper = new Swiper('.new-product .swiper', {
       slidesPerView: 5,
       spaceBetween: 20,
-      navigation: { nextEl: '.btn-next', prevEl: '.btn-prev' },
-      pagination: { el: '.dots', clickable: true },
+      navigation: {
+        nextEl: '.new-btn-next',
+        prevEl: '.new-btn-prev',
+      },
+      pagination: {
+        el: '.new-dots',
+        clickable: true,
+      },
     });
-  } else if (!mq.matches && swiper) {
-    swiper.destroy(true, true);
-    swiper = null;
+  } else if (!newProductMq.matches && newProductSwiper) {
+    newProductSwiper.destroy(true, true);
+    newProductSwiper = null;
   }
 }
 
-setupSlider();
-mq.addEventListener('change', setupSlider);
+setupNewProductSlider();
+newProductMq.addEventListener('change', setupNewProductSlider);
+
+const popularProductMq = window.matchMedia('(min-width: 768px)');
+let popularProductSwiper = null;
+
+function setupPopularProductSlider() {
+  const popularProductSlider = document.querySelector('.popular-product .swiper');
+
+  if (popularProductMq.matches && !popularProductSwiper && popularProductSlider) {
+    // دسکتاپ: Swiper فعال
+    popularProductSwiper = new Swiper('.popular-product .swiper', {
+      slidesPerView: 5,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.popular-btn-next',
+        prevEl: '.popular-btn-prev',
+      },
+      pagination: {
+        el: '.popular-dots',
+        clickable: true,
+      },
+    });
+  } else if (!popularProductMq.matches && popularProductSwiper) {
+    popularProductSwiper.destroy(true, true);
+    popularProductSwiper = null;
+  }
+}
+
+setupPopularProductSlider();
+popularProductMq.addEventListener('change', setupPopularProductSlider);
 
 // ---------- Swiper ----------
 const PEEK = 18; // مقدار بیرون‌زدگی لبه کارت‌های پشتی (px)

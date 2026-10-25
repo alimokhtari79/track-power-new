@@ -149,8 +149,8 @@
             <img
               class="homepage-header__logo"
               src="/assets/icons/header-logo.svg"
-              width="44"
-              height="38"
+              width="42"
+              height="36"
               alt=""
             />
             <span>تراک پاور</span>
@@ -200,7 +200,7 @@
               aria-label="انتخاب زبان"
             >
               <a
-                class="rounded-md px-3 py-1.5 font-medium"
+                class="rounded-md px-3 py-1.5 text-[15px] font-medium"
                 href="/"
                 lang="fa"
                 hreflang="fa"
@@ -208,7 +208,7 @@
                 >فارسی</a
               >
               <a
-                class="text-muted rounded-md px-3 py-1.5"
+                class="text-muted rounded-md px-3 py-1.5 text-[15px]"
                 href="/en/index.html"
                 lang="en"
                 hreflang="en"
@@ -218,7 +218,7 @@
             </nav>
           </div>
           <nav aria-label="ناوبری موبایل">
-            <ul class="homepage-drawer__links text-muted text-sm">
+            <ul class="homepage-drawer__links text-muted text-[15px]">
               <li><a class="flex items-center" href="/" aria-current="page">خانه</a></li>
               <li><a class="flex items-center" href="/pages/contact.html">تماس با ما</a></li>
               <li><a class="flex items-center" href="/pages/blog.html">وبلاگ</a></li>
@@ -235,7 +235,7 @@
         </div>
         <div class="homepage-drawer__footer shrink-0">
           <a
-            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-xl text-sm font-medium"
+            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-[10px] text-sm font-medium"
             href="/login.html"
           >
             <img src="/assets/icons/user.svg" width="24" height="24" alt="" />
@@ -276,7 +276,7 @@
           <!-- hero search container -->
           <div class="translate-y-6 md:translate-y-0">
             <!-- hero search -->
-            <div class="mb-6 flex w-full items-center rounded-xl bg-white p-2 md:mt-12.5">
+            <div class="mb-4 flex w-full items-center rounded-xl bg-white p-2 md:mt-12.5">
               <img
                 class="h-6 w-auto object-contain ps-4 pe-4"
                 src="./assets/icons/search-icon.svg"
@@ -327,7 +327,7 @@
         </div>
       </section>
       <!-- MAN AND DAF -->
-      <section class="hidden md:flex">
+      <section class="mx-auto hidden w-full max-w-[1600px] md:flex">
         <figure class="relative overflow-hidden">
           <img class="h-137.5 w-full object-cover" src="./assets/images/daf-track.png" alt="" />
 
@@ -373,16 +373,16 @@
           </figcaption>
         </figure>
       </section>
-      <section class="mt-24 flex md:hidden">
+      <section class="mt-30 flex md:hidden">
         <div class="border-e-muted h-19.75 w-1/2 border-e ps-5 pe-3">
-          <img src="/assets/icons/daf-logo-icon.svg" alt="" />
+          <img class="mb-2" src="/assets/icons/daf-logo-icon.svg" alt="" />
           <div class="flex justify-between">
             <p>برند Daf</p>
             <img src="/assets/icons/arrow-left.svg" alt="" />
           </div>
         </div>
         <div class="h-19.75 w-1/2 ps-5 pe-5">
-          <img src="/assets/icons/daf-logo-icon.svg" alt="" />
+          <img class="mb-2 size-12.5" src="/assets/images/product-item-band-image.png" alt="" />
           <div class="flex justify-between">
             <p>برند Daf</p>
             <img src="/assets/icons/arrow-left.svg" alt="" />
@@ -395,12 +395,12 @@
         class="container-custom grid gap-5 pt-20 pb-20 md:grid-cols-[3fr_1fr] md:gap-10 md:pt-30 md:pb-35"
       >
         <div>
-          <h3 class="text-primary text-[28px] md:text-[44px]">
+          <h3 class="text-primary text-[28px] leading-none md:text-[44px]">
             <span class="font-extrabold">دنباله چه</span>
             <br />
             <span class="font-medium">قطعه‌ایی میگردی؟</span>
           </h3>
-          <div class="flex flex-wrap gap-2 pt-5 md:gap-3 md:pt-10">
+          <div class="grid grid-cols-3 gap-2 pt-5 md:gap-3 md:pt-10 lg:grid-cols-4">
             <!-- segment item -->
             <a
               href="#"
@@ -504,75 +504,30 @@
           </div>
         </div>
         <!-- left - banner -->
-        <div>
+        <div class="space-y-3">
           <!-- banner top -->
-          <div
-            class="relative flex h-33.5 w-full rounded-[20px] bg-[linear-gradient(180deg,#FF2825_0%,#A70B0A_100%)] p-5 md:h-105.5 md:flex-col md:p-0"
-          >
-            <div class="w-1/2 md:h-1/2 md:w-[unset] md:pt-8">
-              <div class="text-[18px] text-white md:text-center md:text-[28px]">
-                <p class="font-medium">از ریزترین تا</p>
-                <p class="font-extrabold">درشت‌ترین قطعات</p>
-              </div>
-              <p class="pt-3 text-xs font-normal text-white md:text-center md:text-base">
-                از کوچک‌ترین پیچ تا بزرگ‌ترین قطعات را از ما بخواهید.
-              </p>
-            </div>
-            <div class="w-1/2 md:h-1/2 md:w-[unset]">
-              <img
-                class="absolute bottom-0 z-0 h-33.5 object-cover md:h-[unset]"
-                src="./assets/images/Screw-image.png"
-                alt=""
-              />
-              <!-- must use this link not other -->
-              <a
-                href="#"
-                class="text-primary absolute bottom-5 left-5 z-10 flex w-max items-center gap-3 rounded-lg bg-white p-1 leading-6.5 md:left-1/2 md:-translate-x-1/2 md:px-6 md:py-3"
-              >
-                <span class="hidden md:inline">مشاهده محصولات</span>
-                <img src="./assets/icons/arrow-left.svg" alt="" />
-              </a>
-            </div>
-          </div>
+
+          <img
+            class="hidden h-105.5 w-80 md:inline"
+            src="/assets/images/piece-banner-1-desktop-1.png"
+            alt=""
+          />
+          <img
+            class="h-33.5 w-88.25 md:hidden"
+            src="/assets/images/piece-banner-1-mobile-1.png"
+            alt=""
+          />
           <!-- banner bottom -->
-          <div
-            class="relative mt-3 h-33.5 overflow-hidden rounded-[20px] bg-[linear-gradient(249.05deg,#191616_0%,#4D4848_100%)] p-7.5 md:h-49.5"
-          >
-            <div class="text-lg text-white md:text-2xl">
-              <span class="font-medium">دیسک، کالیپر و</span>
-              <br />
-              <span class="font-extrabold">انواع لوازم ترمز</span>
-            </div>
-            <img
-              class="absolute -bottom-5 left-7 md:-bottom-4.25 md:-left-4.25"
-              src="./assets/images/Brake-disc-image.png"
-              alt=""
-            />
-            <a
-              href="#"
-              class="text-primary absolute bottom-5 left-5 z-10 flex w-max items-center gap-3 rounded-lg bg-white p-1 leading-6.5 md:right-7.5 md:bottom-7.5 md:bg-[#554F4F] md:px-4 md:py-1.5 md:text-white"
-            >
-              <svg
-                width="23"
-                height="22"
-                viewBox="0 0 23 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.75002 10.25C5.3358 10.25 5.00002 10.5858 5.00003 11C5.00004 11.4143 5.33583 11.75 5.75004 11.75L5.75003 11L5.75002 10.25ZM18.2084 11.7498C18.6226 11.7498 18.9584 11.414 18.9584 10.9998C18.9584 10.5856 18.6226 10.2498 18.2084 10.2498L18.2084 10.9998L18.2084 11.7498ZM5.75003 11L5.75004 11.75L18.2084 11.7498L18.2084 10.9998L18.2084 10.2498L5.75002 10.25L5.75003 11Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M9.58335 6.4165L5.54718 10.2772C5.19242 10.6165 5.01504 10.7862 5.01504 10.9998C5.01504 11.2135 5.19242 11.3831 5.54718 11.7225L9.58335 15.5832"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
+          <img
+            class="hidden h-49.5 w-80 md:inline"
+            src="/assets/images/piece-banner-2-desktop-1.png"
+            alt=""
+          />
+          <img
+            class="h-33.5 w-88.25 md:hidden"
+            src="/assets/images/piece-banner-2-mobile-1.png"
+            alt=""
+          />
         </div>
       </section>
       <!-- Amazing Products -->
@@ -596,7 +551,9 @@
 
             <!-- Amazing Products timer -->
             <div class="pt-6 md:pb-10">
-              <span class="pb-2 text-[14px] text-[#FFFFFF99] md:pb-4">زمان باقی مانده:</span>
+              <span class="pb-2 text-[14px] text-[#FFFFFF99] md:pb-4 md:text-base"
+                >زمان باقی مانده:</span
+              >
               <ul class="timer mt-4 flex">
                 <li class="flex w-[61.25px] shrink-0 flex-col gap-1 text-center">
                   <span class="text-xl font-semibold text-white">۰۸</span>
@@ -618,10 +575,12 @@
             </div>
           </div>
           <div
-            class="grid auto-cols-[100%] grid-flow-col grid-rows-3 gap-2 overflow-x-auto pe-5 pb-2 md:col-start-2 md:row-span-2 md:row-start-1 md:auto-cols-auto md:grid-flow-row md:grid-cols-[repeat(2,minmax(0,420px))] md:gap-5.25 md:justify-self-end md:overflow-visible md:pe-0 md:pb-0"
+            class="grid auto-cols-[100%] grid-flow-col grid-rows-3 gap-2 overflow-x-auto pe-5 pb-2 md:col-start-2 md:row-span-2 md:row-start-1 md:auto-cols-auto md:grid-flow-row md:grid-cols-[repeat(2,minmax(0,420px))] md:gap-5 md:justify-self-end md:overflow-visible md:pe-0 md:pb-0"
           >
             <!-- product-card-Horizontal -->
-            <div class="relative flex h-40 items-center gap-5 rounded-2xl bg-white p-5">
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
               <img
                 class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
                 src="./assets/images/product-item-band-image.png"
@@ -629,20 +588,22 @@
               />
               <figure class="shrink-0">
                 <img
-                  class="size-25.5 object-cover"
+                  class="size-21.25 object-cover md:size-25.5"
                   src="./assets/images/Wheel-drive-spring-image.png"
                   alt=""
                 />
               </figure>
               <div>
-                <span class="text-primary text-base font-semibold">فنر محرک چرخ ها</span>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
                 <div class="flex items-center pt-2">
-                  <span class="text-muted text-[13px] font-normal">سیستم باد و پنوماتیک</span>
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
                   <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
-                  <img class="size-4 pe-1.5" src="./assets/icons/Star.svg" alt="" />
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
                   <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
                 </div>
-                <div class="pt-8">
+                <div class="pt-5 md:pt-8">
                   <div class="flex gap-2">
                     <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                       >۸۷۰,۰۰۰ تومان</span
@@ -653,7 +614,222 @@
                       <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
                     </div>
                   </div>
-                  <div class="mt-0.5 flex gap-1 text-[14px] md:text-base">
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-Horizontal -->
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
+              <img
+                class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
+                src="./assets/images/product-item-band-image.png"
+                alt=""
+              />
+              <figure class="shrink-0">
+                <img
+                  class="size-21.25 object-cover md:size-25.5"
+                  src="./assets/images/Wheel-drive-spring-image.png"
+                  alt=""
+                />
+              </figure>
+              <div>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
+                <div class="flex items-center pt-2">
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
+                  <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
+                </div>
+                <div class="pt-5 md:pt-8">
+                  <div class="flex gap-2">
+                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                      >۸۷۰,۰۰۰ تومان</span
+                    >
+                    <div
+                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                    >
+                      <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
+                    </div>
+                  </div>
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-Horizontal -->
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
+              <img
+                class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
+                src="./assets/images/product-item-band-image.png"
+                alt=""
+              />
+              <figure class="shrink-0">
+                <img
+                  class="size-21.25 object-cover md:size-25.5"
+                  src="./assets/images/Wheel-drive-spring-image.png"
+                  alt=""
+                />
+              </figure>
+              <div>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
+                <div class="flex items-center pt-2">
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
+                  <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
+                </div>
+                <div class="pt-5 md:pt-8">
+                  <div class="flex gap-2">
+                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                      >۸۷۰,۰۰۰ تومان</span
+                    >
+                    <div
+                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                    >
+                      <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
+                    </div>
+                  </div>
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-Horizontal -->
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
+              <img
+                class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
+                src="./assets/images/product-item-band-image.png"
+                alt=""
+              />
+              <figure class="shrink-0">
+                <img
+                  class="size-21.25 object-cover md:size-25.5"
+                  src="./assets/images/Wheel-drive-spring-image.png"
+                  alt=""
+                />
+              </figure>
+              <div>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
+                <div class="flex items-center pt-2">
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
+                  <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
+                </div>
+                <div class="pt-5 md:pt-8">
+                  <div class="flex gap-2">
+                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                      >۸۷۰,۰۰۰ تومان</span
+                    >
+                    <div
+                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                    >
+                      <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
+                    </div>
+                  </div>
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-Horizontal -->
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
+              <img
+                class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
+                src="./assets/images/product-item-band-image.png"
+                alt=""
+              />
+              <figure class="shrink-0">
+                <img
+                  class="size-21.25 object-cover md:size-25.5"
+                  src="./assets/images/Wheel-drive-spring-image.png"
+                  alt=""
+                />
+              </figure>
+              <div>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
+                <div class="flex items-center pt-2">
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
+                  <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
+                </div>
+                <div class="pt-5 md:pt-8">
+                  <div class="flex gap-2">
+                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                      >۸۷۰,۰۰۰ تومان</span
+                    >
+                    <div
+                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                    >
+                      <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
+                    </div>
+                  </div>
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-Horizontal -->
+            <div
+              class="relative flex h-40 items-center gap-3 rounded-2xl bg-white p-4 md:gap-5 md:p-5"
+            >
+              <img
+                class="absolute top-3.75 right-3.75 size-7 object-cover md:size-8.75"
+                src="./assets/images/product-item-band-image.png"
+                alt=""
+              />
+              <figure class="shrink-0">
+                <img
+                  class="size-21.25 object-cover md:size-25.5"
+                  src="./assets/images/Wheel-drive-spring-image.png"
+                  alt=""
+                />
+              </figure>
+              <div>
+                <span class="text-primary text-sm font-semibold md:text-base">فنر محرک چرخ ها</span>
+                <div class="flex items-center pt-2">
+                  <span class="text-muted text-xs font-normal md:text-[13px]"
+                    >سیستم باد و پنوماتیک</span
+                  >
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <img class="me-1.5 size-4" src="./assets/icons/Star.svg" alt="" />
+                  <span class="text-muted text-xs font-normal md:text-[13px]">۴.۵</span>
+                </div>
+                <div class="pt-5 md:pt-8">
+                  <div class="flex gap-2">
+                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                      >۸۷۰,۰۰۰ تومان</span
+                    >
+                    <div
+                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                    >
+                      <span class="text-brand-700 text-[13px] leading-0 font-semibold">۲۸٪</span>
+                    </div>
+                  </div>
+                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
                     <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
                   </div>
                 </div>
@@ -662,7 +838,7 @@
           </div>
           <a
             href="#"
-            class="flex w-max items-center justify-center gap-3 rounded-lg bg-[#FFFFFF33] px-6 py-3 leading-6.5 text-white md:col-start-1 md:row-start-2 md:w-max md:justify-start md:self-start"
+            class="flex w-max items-center justify-center gap-3 rounded-lg bg-[#FFFFFF33] px-6 py-3 leading-6.5 text-white md:col-start-1 md:row-start-2 md:w-max md:justify-start md:self-start md:rounded-[10px]"
           >
             مشاهده محصولات
             <img src="./assets/icons/arrow-left-white-icon.svg" alt="" />
@@ -671,12 +847,12 @@
       </section>
       <!-- Popular Products Section -->
       <section
-        class="products container-custom mx-auto px-0 py-10 md:grid md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-3 md:[&>.swiper]:col-span-full md:[&>.swiper]:row-start-2 md:[&>.swiper]:w-full md:[&>.swiper]:min-w-0"
+        class="popular-product container-custom mx-auto px-0 py-20 md:grid md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-3 md:pt-35 md:pb-30 md:[&>.swiper]:col-span-full md:[&>.swiper]:row-start-2 md:[&>.swiper]:w-full md:[&>.swiper]:min-w-0"
       >
         <!-- هدر (در دسکتاپ contents: عنوان و فلش‌ها مستقیم آیتم گرید سکشن می‌شوند) -->
         <div class="mb-6 flex items-start justify-between gap-4 px-4 md:contents">
           <h2
-            class="text-2xl leading-tight md:col-start-1 md:row-start-1 md:mb-6 md:self-end md:text-4xl"
+            class="text-[28px] leading-tight md:col-start-1 md:row-start-1 md:mb-10 md:self-end md:text-[44px]"
           >
             <span class="font-extrabold">پرطرفدارترین</span><br />
             <span class="font-light">محصولات تراک پارو</span>
@@ -684,17 +860,17 @@
 
           <!-- فقط فلش‌ها (دکمه به انتهای سکشن رفت) -->
           <div
-            class="hidden items-center gap-3 md:col-start-2 md:row-start-1 md:mb-6 md:flex md:self-end"
+            class="hidden items-center gap-3 md:col-start-2 md:row-start-1 md:mb-10 md:flex md:self-end"
           >
             <!-- در RTL: prev فلش راست، next فلش چپ -->
             <button
-              class="btn-prev hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              class="popular-btn-prev hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
               aria-label="قبلی"
             >
               <img src="./assets/icons/arrow-right.svg" alt="" />
             </button>
             <button
-              class="btn-next hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              class="popular-btn-next hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
               aria-label="بعدی"
             >
               <img class="size-6" src="./assets/icons/arrow-left.svg" alt="" />
@@ -706,12 +882,13 @@
           class="swiper px-4 max-md:[scrollbar-width:none] max-md:overflow-x-auto! md:px-0 max-md:[&::-webkit-scrollbar]:hidden"
           dir="rtl"
         >
+          <!-- swipper wrapper -->
           <div class="swiper-wrapper h-83 px-5 max-md:w-max! max-md:gap-3 md:h-97! md:px-0">
             <!-- product-card-slider -->
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -731,8 +908,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -742,7 +919,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -767,7 +944,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -787,8 +964,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -798,7 +975,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -823,7 +1000,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -843,8 +1020,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -854,7 +1031,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -879,7 +1056,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -899,8 +1076,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -910,7 +1087,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -935,7 +1112,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -955,8 +1132,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -966,7 +1143,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -991,7 +1168,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -1011,8 +1188,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -1022,63 +1199,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
-                    <div class="flex gap-2">
-                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
-                        >۸۷۰,۰۰۰ تومان</span
-                      >
-                      <div
-                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
-                      >
-                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
-                          >۲۸٪</span
-                        >
-                      </div>
-                    </div>
-                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- product-card-slider -->
-            <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
-              <a
-                href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
-              >
-                <div class="flex h-6 items-center justify-between">
-                  <img
-                    class="size-8.75 object-cover"
-                    src="./assets/images/product-item-band-image.png"
-                    alt=""
-                  />
-                  <span
-                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
-                    >سازگار</span
-                  >
-                </div>
-                <div class="mx-auto my-2">
-                  <img
-                    class="mx-auto aspect-square size-39 md:size-43.5"
-                    src="./assets/images/Wheel-drive-spring-image.png"
-                    alt=""
-                  />
-                </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
-                  <div
-                    class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
-                  >
-                    <span>سیستم باد و پنوماتیک</span>
-                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
-                    <img class="size-4" src="./assets/icons/Star.svg" alt="" />
-                    <span class="text-xs md:text-[13px]">۴.۸</span>
-                  </div>
-                  <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -1102,37 +1223,37 @@
         </div>
 
         <!-- نقطه‌ها (فقط دسکتاپ) -->
-        <div class="dots hidden justify-center pt-6 md:col-span-full md:row-start-3 md:flex"></div>
+        <div
+          class="popular-dots hidden justify-center pt-6 md:col-span-full md:row-start-3 md:flex"
+        ></div>
 
         <!-- دکمه مشاهده محصولات: موبایل زیر اسلایدر، دسکتاپ کنار فلش‌ها -->
         <a
           href="#"
-          class="bg-brand-700 hover:bg-brand-800 ms-4 mt-6 block w-fit rounded-lg px-8 py-4 text-lg leading-6.5 font-medium whitespace-nowrap text-white transition md:col-start-3 md:row-start-1 md:ms-0 md:mt-0 md:mb-6 md:self-end"
+          class="bg-brand-700 hover:bg-brand-800 ms-5 mt-6 block w-fit rounded-xl px-8 py-4 text-sm leading-6.5 font-medium whitespace-nowrap text-white transition md:col-start-3 md:row-start-1 md:ms-0 md:mt-0 md:mb-10 md:self-end md:text-lg"
         >
           مشاهده محصولات
         </a>
       </section>
       <!-- Baner Section -->
-      <section
-        class="container-custom grid grid-cols-1 gap-6.25 pt-10 pb-20 md:grid-cols-3 md:py-30"
-      >
-        <figure class="aspect-[353/149.15] overflow-hidden rounded-2xl md:aspect-[426/180]">
+      <section class="container-custom flex flex-col gap-6.25 pb-20 md:flex-row md:pt-0 md:pb-30">
+        <figure class="h-37.25 w-full overflow-hidden rounded-2xl md:h-45 md:w-106.5">
           <img
-            class="block size-full object-cover"
+            class="block size-full h-37.25 w-full overflow-hidden rounded-2xl object-cover md:h-45 md:w-106.5"
             src="./assets/images/banner-3-image.png"
             alt=""
           />
         </figure>
-        <figure class="aspect-[353/149.15] overflow-hidden rounded-2xl md:aspect-[426/180]">
+        <figure class="h-37.25 w-full overflow-hidden rounded-2xl md:h-45 md:w-106.5">
           <img
-            class="block size-full object-cover"
+            class="block size-full h-37.25 w-full overflow-hidden rounded-2xl object-cover md:h-45 md:w-106.5"
             src="./assets/images/banner-2-image.png"
             alt=""
           />
         </figure>
-        <figure class="aspect-[353/149.15] overflow-hidden rounded-2xl md:aspect-[426/180]">
+        <figure class="h-37.25 w-full overflow-hidden rounded-2xl md:h-45 md:w-106.5">
           <img
-            class="block size-full object-cover"
+            class="block size-full h-37.25 w-full overflow-hidden rounded-2xl object-cover md:h-45 md:w-106.5"
             src="./assets/images/banner-1-image.png"
             alt=""
           />
@@ -1141,7 +1262,7 @@
       <!-- Popular Categories Section -->
       <section class="container-custom mb-20 md:mb-30">
         <h2
-          class="mb-6 text-2xl leading-tight md:col-start-1 md:row-start-1 md:mb-10 md:self-end md:text-4xl"
+          class="mb-6 text-[28px] leading-tight md:col-start-1 md:row-start-1 md:mb-10 md:self-end md:text-[44px]"
         >
           <span class="font-extrabold">بر اساس</span><br />
           <span class="font-light">دسته‌های پرطرفدار</span>
@@ -1523,7 +1644,7 @@
       <!-- ====== سکشن تخفیف ویژه ====== -->
       <section class="container-custom">
         <div
-          class="relative flex flex-col items-center gap-8 overflow-hidden rounded-4xl bg-gradient-to-br from-[#e31b17] via-[#c10f0f] to-[#a30808] px-2.5 py-5 lg:h-[345px] lg:flex-row lg:gap-0 lg:px-0 lg:py-0"
+          class="relative flex flex-col items-center gap-6 overflow-hidden rounded-[20px] bg-linear-to-br from-[#e31b17] via-[#c10f0f] to-[#a30808] px-2.5 py-5 md:rounded-4xl lg:h-[345px] lg:flex-row lg:gap-0 lg:px-0 lg:py-0"
         >
           <!-- خط تزئینی -->
           <div
@@ -1534,24 +1655,18 @@
           <div
             class="relative z-10 flex w-full flex-col text-center md:text-start lg:order-first lg:w-[380px] lg:shrink-0 lg:pr-10 lg:pl-4"
           >
-            <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
-              <svg
-                class="h-5 w-5 text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z" />
-                <circle cx="7.5" cy="7.5" r="1.2" />
-              </svg>
+            <div
+              class="mb-5 flex size-12.5 items-center justify-center rounded-full bg-[#FFFFFF33] text-center max-md:mx-auto"
+            >
+              <img class="size-7.5" src="/assets/icons/discount-tag-white.svg" alt="" />
             </div>
-            <h2 class="text-3xl leading-[1.6] font-bold text-white">
-              تخفیف ویژه،<br />فقط برای مدت محدود
+            <h2 class="text-[28px] font-medium whitespace-nowrap text-white md:text-[44px]">
+              <span class="font-extrabold"> تخفیف ویژه،</span>
+              <br />فقط برای مدت محدود
             </h2>
-            <p class="mt-4 max-w-[300px] text-center text-sm leading-7 text-white/80 md:text-base">
+            <p
+              class="mt-2 max-w-75 text-sm leading-7 text-white/80 max-md:mx-auto max-md:text-center md:mt-5 md:text-base"
+            >
               محصولات منتخب را با کد تخفیف ویژه و قیمتی استثنایی، فقط برای مدت محدود تهیه کنید.
             </p>
           </div>
@@ -1587,22 +1702,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1616,7 +1730,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1653,22 +1767,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1682,7 +1795,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1719,22 +1832,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1748,7 +1860,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1785,22 +1897,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1814,7 +1925,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1851,22 +1962,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1880,7 +1990,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1917,22 +2027,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -1946,7 +2055,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -1983,22 +2092,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -2012,7 +2120,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -2049,22 +2157,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -2078,7 +2185,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -2115,22 +2222,21 @@
                             <span>سیستم باد و پنوماتیک</span>
                             <span class="size-1.25 rounded-full bg-gray-300"></span>
                             <span class="text-muted flex items-center gap-1.5">
-                              <img src="assets/icons/Star.svg" alt="" />
+                              <img class="size-4" src="assets/icons/Star.svg" alt="" />
                               ۴.۸
                             </span>
                           </div>
                         </div>
                         <div>
-                          <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-1.25">
                             <span
                               class="text-inactive text-xs font-normal line-through md:text-base"
                               >۸۷۰,۰۰۰ تومان</span
                             >
                             <div
-                              class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                              class="flex h-4 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
                             >
-                              <span
-                                class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                              <span class="text-brand-700 text-xs font-semibold md:text-[13px]"
                                 >۲۸٪</span
                               >
                             </div>
@@ -2144,7 +2250,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex items-center gap-10 border-t border-gray-200 pt-4">
-                      <div class="text-sm whitespace-nowrap text-gray-500">
+                      <div class="text-sm whitespace-nowrap text-gray-500 md:text-base">
                         زمان باقی مانده:
                         <b class="countdown text-gray-900" data-seconds="620" data-total="1800"></b>
                       </div>
@@ -2161,12 +2267,12 @@
       </section>
       <!-- Latest Products Section -->
       <section
-        class="products container-custom mx-auto px-0 py-10 md:grid md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-3 md:[&>.swiper]:col-span-full md:[&>.swiper]:row-start-2 md:[&>.swiper]:w-full md:[&>.swiper]:min-w-0"
+        class="new-product container-custom mx-auto px-0 py-20 md:grid md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-3 md:py-30 md:[&>.swiper]:col-span-full md:[&>.swiper]:row-start-2 md:[&>.swiper]:w-full md:[&>.swiper]:min-w-0"
       >
         <!-- هدر (در دسکتاپ contents: عنوان و فلش‌ها مستقیم آیتم گرید سکشن می‌شوند) -->
-        <div class="mb-6 flex items-start justify-between gap-4 px-4 md:contents">
+        <div class="mb-5 flex items-start justify-between gap-4 px-5 md:contents">
           <h2
-            class="text-2xl leading-tight md:col-start-1 md:row-start-1 md:mb-6 md:self-end md:text-4xl"
+            class="text-[28px] leading-tight md:col-start-1 md:row-start-1 md:mb-10 md:self-end md:text-[44px]"
           >
             <span class="font-extrabold">جدیدترین</span><br />
             <span class="font-light"> محصولات تراک پارو</span>
@@ -2174,17 +2280,17 @@
 
           <!-- فقط فلش‌ها (دکمه به انتهای سکشن رفت) -->
           <div
-            class="hidden items-center gap-3 md:col-start-2 md:row-start-1 md:mb-6 md:flex md:self-end"
+            class="hidden items-center gap-3 md:col-start-2 md:row-start-1 md:mb-10 md:flex md:self-end"
           >
             <!-- در RTL: prev فلش راست، next فلش چپ -->
             <button
-              class="btn-prev hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              class="new-btn-prev hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
               aria-label="قبلی"
             >
               <img src="./assets/icons/arrow-right.svg" alt="" />
             </button>
             <button
-              class="btn-next hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              class="new-btn-next hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
               aria-label="بعدی"
             >
               <img class="size-6" src="./assets/icons/arrow-left.svg" alt="" />
@@ -2201,7 +2307,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2221,8 +2327,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2232,7 +2338,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2257,7 +2363,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2277,8 +2383,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2288,7 +2394,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2313,7 +2419,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2333,8 +2439,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2344,7 +2450,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2369,7 +2475,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2389,8 +2495,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2400,7 +2506,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2425,7 +2531,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2445,8 +2551,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2456,7 +2562,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2481,7 +2587,7 @@
             <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
               <a
                 href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+                class="flex h-full flex-col rounded-2xl bg-white px-2 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
               >
                 <div class="flex h-6 items-center justify-between">
                   <img
@@ -2501,8 +2607,8 @@
                     alt=""
                   />
                 </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                <div>
+                  <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                   <div
                     class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                   >
@@ -2512,63 +2618,7 @@
                     <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
                   <!-- product-cart__price -->
-                  <div class="pt-8">
-                    <div class="flex gap-2">
-                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
-                        >۸۷۰,۰۰۰ تومان</span
-                      >
-                      <div
-                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
-                      >
-                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
-                          >۲۸٪</span
-                        >
-                      </div>
-                    </div>
-                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- product-card-slider -->
-            <div class="swiper-slide w-50! max-md:shrink-0 md:w-62!">
-              <a
-                href="#"
-                class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
-              >
-                <div class="flex h-6 items-center justify-between">
-                  <img
-                    class="size-8.75 object-cover"
-                    src="./assets/images/product-item-band-image.png"
-                    alt=""
-                  />
-                  <span
-                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
-                    >سازگار</span
-                  >
-                </div>
-                <div class="mx-auto my-2">
-                  <img
-                    class="mx-auto aspect-square size-39 md:size-43.5"
-                    src="./assets/images/Wheel-drive-spring-image.png"
-                    alt=""
-                  />
-                </div>
-                <div class="px-0.5">
-                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
-                  <div
-                    class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
-                  >
-                    <span>سیستم باد و پنوماتیک</span>
-                    <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
-                    <img class="size-4" src="./assets/icons/Star.svg" alt="" />
-                    <span class="text-xs md:text-[13px]">۴.۸</span>
-                  </div>
-                  <!-- product-cart__price -->
-                  <div class="pt-8">
+                  <div class="pt-6 md:pt-8">
                     <div class="flex gap-2">
                       <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
                         >۸۷۰,۰۰۰ تومان</span
@@ -2592,12 +2642,14 @@
         </div>
 
         <!-- نقطه‌ها (فقط دسکتاپ) -->
-        <div class="dots hidden justify-center pt-6 md:col-span-full md:row-start-3 md:flex"></div>
+        <div
+          class="new-dots hidden justify-center pt-6 md:col-span-full md:row-start-3 md:flex"
+        ></div>
 
         <!-- دکمه مشاهده محصولات: موبایل زیر اسلایدر، دسکتاپ کنار فلش‌ها -->
         <a
           href="#"
-          class="bg-brand-700 hover:bg-brand-800 ms-4 mt-6 block w-fit rounded-lg px-8 py-4 text-lg leading-6.5 font-medium whitespace-nowrap text-white transition md:col-start-3 md:row-start-1 md:ms-0 md:mt-0 md:mb-6 md:self-end"
+          class="bg-brand-700 hover:bg-brand-800 ms-5 mt-6 block w-fit rounded-xl px-8 py-4 text-sm leading-6.5 font-medium whitespace-nowrap text-white transition md:col-start-3 md:row-start-1 md:ms-0 md:mt-0 md:mb-10 md:self-end md:text-lg"
         >
           مشاهده محصولات
         </a>
@@ -2608,144 +2660,146 @@
           <span class="font-bold text-[#121113]">تجربه‌ای که</span>
           <span class="font-medium text-[#121113]">مشتریان ما انتخاب کرده‌اند</span>
           <p
-            class="text-muted mt-3 px-5 text-center text-sm font-normal md:mt-5 md:px-0 md:text-base"
+            class="text-muted mt-3 px-5 text-center text-sm leading-6 font-normal md:mt-5 md:px-0 md:text-base md:leading-6.5"
           >
             تجربه‌ای ساده، حرفه‌ای و قابل اعتماد؛ انتخابی که مشتریان ما بارها تکرارش کرده‌اند.
           </p>
         </div>
 
-        <section class="w-full overflow-hidden py-8" dir="ltr">
-          <div class="reviews-track flex w-max hover:[animation-play-state:paused]">
-            <!-- گروه اول -->
-            <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl">
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
+        <section class="w-full overflow-hidden pt-6 md:pt-10" dir="ltr">
+          <div class="reviews-container">
+            <div class="reviews-track flex w-max hover:[animation-play-state:paused]">
+              <!-- گروه اول -->
+              <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl">
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
 
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  محصولی که سفارش داده بودم کاملاً اصل بود و خیلی سریع به دستم رسید. بسته‌بندی هم
-                  تمیز و حرفه‌ای بود.
-                </p>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    محصولی که سفارش داده بودم کاملاً اصل بود و خیلی سریع به دستم رسید. بسته‌بندی هم
+                    تمیز و حرفه‌ای بود.
+                  </p>
 
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">سارا محمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۲ هفته پیش</span>
-                </div>
-              </article>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">سارا محمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۲ هفته پیش</span>
+                  </div>
+                </article>
 
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
 
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره خرید
-                  می‌کنم.
-                </p>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره
+                    خرید می‌کنم.
+                  </p>
 
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۳ روز پیش</span>
-                </div>
-              </article>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۳ روز پیش</span>
+                  </div>
+                </article>
 
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
 
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره خرید
-                  می‌کنم.
-                </p>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره
+                    خرید می‌کنم.
+                  </p>
 
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۳ روز پیش</span>
-                </div>
-              </article>
-            </div>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۳ روز پیش</span>
+                  </div>
+                </article>
+              </div>
 
-            <!-- گروه دوم: کپی دقیق گروه اول برای حلقه بی‌نهایت -->
-            <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl" aria-hidden="true">
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  محصولی که سفارش داده بودم کاملاً اصل بود و خیلی سریع به دستم رسید. بسته‌بندی هم
-                  تمیز و حرفه‌ای بود.
-                </p>
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">سارا محمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۲ هفته پیش</span>
-                </div>
-              </article>
+              <!-- گروه دوم: کپی دقیق گروه اول برای حلقه بی‌نهایت -->
+              <div class="reviews-group flex shrink-0 gap-6 pe-6" dir="rtl" aria-hidden="true">
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    محصولی که سفارش داده بودم کاملاً اصل بود و خیلی سریع به دستم رسید. بسته‌بندی هم
+                    تمیز و حرفه‌ای بود.
+                  </p>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">سارا محمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۲ هفته پیش</span>
+                  </div>
+                </article>
 
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره خرید
-                  می‌کنم.
-                </p>
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۳ روز پیش</span>
-                </div>
-              </article>
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره
+                    خرید می‌کنم.
+                  </p>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۳ روز پیش</span>
+                  </div>
+                </article>
 
-              <article
-                class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-8 md:w-108"
-              >
-                <div class="flex gap-1">
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                  <img src="./assets/icons/Star.svg" alt="" />
-                </div>
-                <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
-                  پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره خرید
-                  می‌کنم.
-                </p>
-                <div class="mt-18 flex items-center justify-between">
-                  <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
-                  <span class="text-xs font-normal text-[#6E6E6F]">۳ روز پیش</span>
-                </div>
-              </article>
+                <article
+                  class="w-87 shrink-0 rounded-2xl border border-[#0000000A] bg-white p-5 md:w-108 md:p-8"
+                >
+                  <div class="flex gap-1">
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                    <img class="size-5.5 md:size-6" src="./assets/icons/Star.svg" alt="" />
+                  </div>
+                  <p class="pt-5 text-lg leading-7.5 font-normal text-[#474647] md:text-xl">
+                    پشتیبانی خیلی خوبی داشتند و محصول دقیقاً مطابق توضیحات سایت بود. حتماً دوباره
+                    خرید می‌کنم.
+                  </p>
+                  <div class="mt-18 flex items-center justify-between">
+                    <span class="text-primary text-sm font-medium md:text-base">مریم احمدی</span>
+                    <span class="text-xs font-normal text-[#6E6E6F] md:text-sm">۳ روز پیش</span>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>
@@ -2754,19 +2808,19 @@
       <section class="container-custom pt-20 md:pt-30 md:pb-34.5">
         <div class="grid grid-cols-1 gap-y-5 md:grid-cols-[1fr_auto] md:items-end md:gap-y-10">
           <!-- عنوان -->
-          <h2 class="text-2xl leading-tight md:col-start-1 md:row-start-1 md:mb-6 md:text-4xl">
+          <h2 class="text-[28px] leading-tight md:col-start-1 md:row-start-1 md:text-4xl">
             <span class="font-extrabold">پرطرفدارترین</span><br />
             <span class="font-light">محصولات تراک پارو</span>
           </h2>
 
           <!-- محتوای مقالات -->
           <div
-            class="order-1 flex flex-col justify-between gap-6 md:col-span-2 md:row-start-2 md:flex-row md:gap-0"
+            class="order-1 flex flex-col justify-between gap-6 md:col-span-2 md:row-start-2 md:flex-row md:gap-10"
           >
             <!-- مقاله اصلی -->
             <div class="w-full p-2 md:w-162.5">
               <img
-                class="h-44.25 w-full rounded-2xl object-cover md:h-79.5"
+                class="h-44.25 w-full rounded-[8.5px] object-cover md:h-79.5 md:rounded-2xl"
                 src="./assets/images/blog-image-1.png"
                 alt=""
               />
@@ -2774,11 +2828,13 @@
               <div class="pt-4 md:pt-6">
                 <span class="text-sm font-normal text-[#00000099] md:text-base"> راهنمایی </span>
 
-                <p class="truncate pt-1 text-xl font-semibold text-black md:pe-2">
+                <p class="truncate pt-1 text-base font-semibold text-black md:pe-2 md:text-xl">
                   چطور قطعه اصلی DAF و MAN رو تشخیص بدیم؟
                 </p>
 
-                <p class="text-muted truncate pt-3 text-sm font-normal md:pe-2 md:text-base">
+                <p
+                  class="text-muted truncate pt-3 text-sm leading-[100%] font-normal md:pe-2 md:text-base md:leading-6.75"
+                >
                   راهنمای بررسی بسته‌بندی، کد فنی و نشانه‌های مهم برای تشخیص قطعه اصلی از تقلبی.
                 </p>
               </div>
@@ -2789,13 +2845,15 @@
               <!-- مقاله اول -->
               <div class="flex items-center gap-4 md:p-2">
                 <img
-                  class="h-[84.5px] w-32.5 shrink-0 rounded-2xl object-cover md:h-32.5 md:w-50"
+                  class="h-[84.5px] w-32.5 shrink-0 rounded-xl object-cover md:h-32.5 md:w-50 md:rounded-2xl"
                   src="./assets/images/blog-image-2.png"
                   alt=""
                 />
 
                 <div class="min-w-0">
-                  <span class="text-[13px] font-normal text-[#00000099]"> راهنمایی </span>
+                  <span class="text-xs font-normal text-[#00000099] md:text-[13px]">
+                    راهنمایی
+                  </span>
 
                   <p class="truncate pt-1 text-sm font-medium md:text-base">
                     شماره OEM چیه و کجا پیداش کنیم؟
@@ -2812,13 +2870,15 @@
               <!-- مقاله دوم -->
               <div class="flex items-center gap-4 md:p-2">
                 <img
-                  class="h-[84.5px] w-32.5 shrink-0 rounded-2xl object-cover md:h-32.5 md:w-50"
+                  class="h-[84.5px] w-32.5 shrink-0 rounded-xl object-cover md:h-32.5 md:w-50 md:rounded-2xl"
                   src="./assets/images/blog-image-2.png"
                   alt=""
                 />
 
                 <div class="min-w-0">
-                  <span class="text-[13px] font-normal text-[#00000099]"> راهنمایی </span>
+                  <span class="text-xs font-normal text-[#00000099] md:text-[13px]">
+                    راهنمایی
+                  </span>
 
                   <p class="truncate pt-1 text-sm font-medium md:text-base">
                     شماره OEM چیه و کجا پیداش کنیم؟
@@ -2835,13 +2895,15 @@
               <!-- مقاله سوم -->
               <div class="flex items-center gap-4 md:p-2">
                 <img
-                  class="h-[84.5px] w-32.5 shrink-0 rounded-2xl object-cover md:h-32.5 md:w-50"
+                  class="h-[84.5px] w-32.5 shrink-0 rounded-xl object-cover md:h-32.5 md:w-50 md:rounded-2xl"
                   src="./assets/images/blog-image-2.png"
                   alt=""
                 />
 
                 <div class="min-w-0">
-                  <span class="text-[13px] font-normal text-[#00000099]"> راهنمایی </span>
+                  <span class="text-xs font-normal text-[#00000099] md:text-[13px]">
+                    راهنمایی
+                  </span>
 
                   <p class="truncate pt-1 text-sm font-medium md:text-base">
                     شماره OEM چیه و کجا پیداش کنیم؟
@@ -2859,7 +2921,7 @@
 
           <!-- دکمه مشاهده همه -->
           <a
-            class="bg-brand-700 hover:bg-brand-800 order-2 inline-flex w-fit items-center justify-center rounded-xl px-8 py-4 text-sm leading-[100%] text-white md:order-0 md:col-start-2 md:row-start-1 md:mb-6 md:leading-6.5 lg:text-lg"
+            class="bg-brand-700 hover:bg-brand-800 order-2 inline-flex w-fit items-center justify-center rounded-xl px-8 py-4 text-sm leading-[100%] text-white max-md:mt-1 md:order-0 md:col-start-2 md:row-start-1 md:leading-6.5 lg:text-lg"
             href="#"
           >
             مشاهده همه
@@ -2867,7 +2929,7 @@
         </div>
       </section>
       <!-- Q&A -->
-      <section class="px-5 pt-10 pb-15 md:px-0 md:pt-20 md:pb-40">
+      <section class="px-5 py-20 md:px-0 md:pt-0 md:pb-40">
         <div class="flex w-full flex-col items-center text-[28px] md:text-[44px]">
           <span class="font-bold text-[#121113]">سوالاتی که </span>
           <span class="font-medium text-[#121113]">بیشتر پرسیده می‌شوند</span>
@@ -2877,12 +2939,120 @@
           <div class="mx-auto flex w-full flex-col gap-3 md:max-w-210">
             <!-- Q&A item -->
             <details
+              class="group rounded-xl border border-[#DFDFDF] transition-all duration-300 ease-in-out open:border-0 open:bg-white md:rounded-[20px]"
+            >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
+                <span class="text-primary text-[15px] font-semibold md:text-lg">
+                  چگونه می‌توانم سفارش خود را ثبت کنم؟
+                </span>
+
+                <span
+                  class="flex size-6 shrink-0 items-center justify-center transition-transform duration-300 group-open:rotate-180"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 7.50004C15 7.50004 11.3176 12.5 9.99996 12.5C8.68237 12.5 5 7.5 5 7.5"
+                      stroke="#6E6E6F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="px-5 pb-5" dir="rtl">
+                <p class="text-sm leading-6 text-[#474647] md:text-base">
+                  مدل، سال ساخت یا شماره شاسی کامیونت رو وارد کن تا قطعات سازگار بهت نمایش داده بشن.
+                </p>
+              </div>
+            </details>
+
+            <!-- Q&A item -->
+            <details
               class="group rounded-2xl border border-[#DFDFDF] transition-all duration-300 ease-in-out open:border-0 open:bg-white"
             >
-              <summary
-                class="flex cursor-pointer list-none items-center justify-between gap-4 p-5"
-                dir="rtl"
-              >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
+                <span class="text-primary text-[15px] font-semibold md:text-lg">
+                  چگونه می‌توانم سفارش خود را ثبت کنم؟
+                </span>
+
+                <span
+                  class="flex size-6 shrink-0 items-center justify-center transition-transform duration-300 group-open:rotate-180"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 7.50004C15 7.50004 11.3176 12.5 9.99996 12.5C8.68237 12.5 5 7.5 5 7.5"
+                      stroke="#6E6E6F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="px-5 pb-5" dir="rtl">
+                <p class="text-sm leading-6 text-[#474647] md:text-base">
+                  مدل، سال ساخت یا شماره شاسی کامیونت رو وارد کن تا قطعات سازگار بهت نمایش داده بشن.
+                </p>
+              </div>
+            </details>
+
+            <!-- Q&A item -->
+            <details
+              class="group rounded-2xl border border-[#DFDFDF] transition-all duration-300 ease-in-out open:border-0 open:bg-white"
+            >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
+                <span class="text-primary text-[15px] font-semibold md:text-lg">
+                  چگونه می‌توانم سفارش خود را ثبت کنم؟
+                </span>
+
+                <span
+                  class="flex size-6 shrink-0 items-center justify-center transition-transform duration-300 group-open:rotate-180"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 7.50004C15 7.50004 11.3176 12.5 9.99996 12.5C8.68237 12.5 5 7.5 5 7.5"
+                      stroke="#6E6E6F"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="px-5 pb-5" dir="rtl">
+                <p class="text-sm leading-6 text-[#474647] md:text-base">
+                  مدل، سال ساخت یا شماره شاسی کامیونت رو وارد کن تا قطعات سازگار بهت نمایش داده بشن.
+                </p>
+              </div>
+            </details>
+
+            <!-- Q&A item -->
+            <details
+              class="group rounded-2xl border border-[#DFDFDF] transition-all duration-300 ease-in-out open:border-0 open:bg-white"
+            >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
                 <span class="text-primary text-[15px] font-semibold md:text-lg">
                   چگونه می‌توانم سفارش خود را ثبت کنم؟
                 </span>
@@ -2970,7 +3140,7 @@
                 loading="lazy"
               />
             </a>
-            <p class="text-base leading-5.5 md:text-sm md:leading-6.5">
+            <p class="text-sm leading-5.5 font-normal md:text-base md:leading-6.5">
               تراک پاور مرجع تخصصی فروش قطعات کامیون‌های DAF و MAN است؛ جایی که می‌تونی از قطعات
               مصرفی و کوچک تا مجموعه‌های سنگین و فنی را با اطلاعات دقیق، قیمت به‌روز و بررسی سازگاری
               پیدا کنی.
@@ -3092,30 +3262,16 @@
               />
             </summary>
             <address>
-              <a href="tel:02122147912">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 5.2 2 2 0 0 1 4.11 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 10.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"
-                  />
-                </svg>
+              <a class="text-sm md:text-base" href="tel:02122147912">
+                <img class="size-7" src="/assets/icons/phone-footer-icon.svg" alt="" />
                 <bdi dir="ltr">021-22147912</bdi>
               </a>
-              <p>
-                <img src="./assets/icons/clock.svg" width="24" height="24" alt="" />شنبه تا پنجشنبه
-                ۸ صبح تا ۷ ظهر
+              <p class="text-sm md:text-base">
+                <img class="size-7" src="./assets/icons/time-footer-icon.svg" alt="" />شنبه تا
+                پنجشنبه ۸ صبح تا ۷ ظهر
               </p>
-              <a class="homepage-footer__address" href="/pages/contact.html"
-                ><img src="./assets/icons/location-01.svg" width="24" height="24" alt="" />تهران
+              <a class="homepage-footer__address text-sm md:text-base" href="/pages/contact.html"
+                ><img class="size-7" src="./assets/icons/location-footer-icon.svg" alt="" />تهران
                 سعادت آباد میدان کاج پاساژ سروستان طبقه اول پلاک ۴۷</a
               >
             </address>
@@ -3216,6 +3372,6 @@
     </footer>
     <!-- swiper config js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./src/js/swiper-config.js"></script>
+    <script src="/src/js/swiper-config.js"></script>
   </body>
 </html>

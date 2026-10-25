@@ -17,12 +17,15 @@
     template.content.querySelectorAll('a:not([hreflang])').forEach((link) => {
       const url = new URL(link.href);
       const current = location.pathname.endsWith('/')
-        ? new URL('index.html', location.href).pathname : location.pathname;
+        ? new URL('index.html', location.href).pathname
+        : location.pathname;
       if (url.pathname === current && !url.hash) link.setAttribute('aria-current', 'page');
     });
     target.replaceWith(template.content);
   }
-  mount('[data-english-header]', `
+  mount(
+    '[data-english-header]',
+    `
     <header class="homepage-header text-primary" data-site-header>
       <div class="homepage-header__bar container-custom flex items-center justify-between">
         <div class="flex items-center">
@@ -188,7 +191,7 @@
             </nav>
           </div>
           <nav aria-label="Mobile navigation">
-            <ul class="homepage-drawer__links text-muted text-sm">
+            <ul class="">
               <li><a class="flex items-center" href="en/pages/all-products.html#products">Categories</a></li>
               <li><a class="flex items-center" href="en/pages/shopnig-card/cart.html" data-cart-link>Shopping cart</a></li>
               <li><a class="flex items-center" href="en/index.html">Home</a></li>
@@ -207,7 +210,7 @@
         </div>
         <div class="homepage-drawer__footer shrink-0">
           <a
-            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-xl text-sm font-medium"
+            class="homepage-drawer__login flex items-center justify-center gap-2 rounded-[10px] text-sm font-medium"
             href="en/pages/Login.html"
           >
             <img src="assets/icons/user.svg" width="24" height="24" alt="" />
@@ -216,8 +219,11 @@
         </div>
       </div>
     </dialog>
-  `);
-  mount('[data-english-footer]', `
+  `
+  );
+  mount(
+    '[data-english-footer]',
+    `
     <footer class="homepage-footer" aria-label="Trak Power footer">
       <div class="homepage-footer__inner container-custom">
         <div class="homepage-footer__layout">
@@ -479,5 +485,6 @@
         </div>
       </div>
     </footer>
-  `);
+  `
+  );
 })();
