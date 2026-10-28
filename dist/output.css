@@ -712,6 +712,10 @@
     width: calc(var(--spacing) * 10.5);
     height: calc(var(--spacing) * 10.5);
   }
+  .size-10\.75 {
+    width: calc(var(--spacing) * 10.75);
+    height: calc(var(--spacing) * 10.75);
+  }
   .size-11 {
     width: calc(var(--spacing) * 11);
     height: calc(var(--spacing) * 11);
@@ -751,6 +755,10 @@
   .size-20 {
     width: calc(var(--spacing) * 20);
     height: calc(var(--spacing) * 20);
+  }
+  .size-21 {
+    width: calc(var(--spacing) * 21);
+    height: calc(var(--spacing) * 21);
   }
   .size-21\.5 {
     width: calc(var(--spacing) * 21.5);
@@ -1878,6 +1886,9 @@
     --tw-gradient-position: to bottom right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .\[background-image\:repeating-linear-gradient\(to_right\,\#d6d6d6_0px\,\#d6d6d6_12px\,transparent_12px\,transparent_20px\)\,repeating-linear-gradient\(to_bottom\,\#d6d6d6_0px\,\#d6d6d6_12px\,transparent_12px\,transparent_20px\)\,repeating-linear-gradient\(to_left\,\#d6d6d6_0px\,\#d6d6d6_12px\,transparent_12px\,transparent_20px\)\,repeating-linear-gradient\(to_top\,\#d6d6d6_0px\,\#d6d6d6_12px\,transparent_12px\,transparent_20px\)\] {
+    background-image: repeating-linear-gradient(to right,#d6d6d6 0px,#d6d6d6 12px,transparent 12px,transparent 20px),repeating-linear-gradient(to bottom,#d6d6d6 0px,#d6d6d6 12px,transparent 12px,transparent 20px),repeating-linear-gradient(to left,#d6d6d6 0px,#d6d6d6 12px,transparent 12px,transparent 20px),repeating-linear-gradient(to top,#d6d6d6 0px,#d6d6d6 12px,transparent 12px,transparent 20px);
+  }
   .bg-\[linear-gradient\(180deg\,\#FF2825_0\%\,\#A70B0A_100\%\)\] {
     background-image: linear-gradient(180deg,#FF2825 0%,#A70B0A 100%);
   }
@@ -1908,6 +1919,15 @@
   .to-\[\#a30808\] {
     --tw-gradient-to: #a30808;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .\[background-size\:100\%_1px\,1px_100\%\,100\%_1px\,1px_100\%\] {
+    background-size: 100% 1px,1px 100%,100% 1px,1px 100%;
+  }
+  .\[background-position\:top\,left\,bottom\,right\] {
+    background-position: top,left,bottom,right;
+  }
+  .\[background-repeat\:no-repeat\] {
+    background-repeat: no-repeat;
   }
   .object-contain {
     object-fit: contain;
@@ -3469,6 +3489,14 @@
       width: calc(var(--spacing) * 13);
       height: calc(var(--spacing) * 13);
     }
+    .md\:size-13\.25 {
+      width: calc(var(--spacing) * 13.25);
+      height: calc(var(--spacing) * 13.25);
+    }
+    .md\:size-13\.25\! {
+      width: calc(var(--spacing) * 13.25) !important;
+      height: calc(var(--spacing) * 13.25) !important;
+    }
     .md\:size-16 {
       width: calc(var(--spacing) * 16);
       height: calc(var(--spacing) * 16);
@@ -3480,6 +3508,14 @@
     .md\:size-17\.5 {
       width: calc(var(--spacing) * 17.5);
       height: calc(var(--spacing) * 17.5);
+    }
+    .md\:size-22\.5 {
+      width: calc(var(--spacing) * 22.5);
+      height: calc(var(--spacing) * 22.5);
+    }
+    .md\:size-25 {
+      width: calc(var(--spacing) * 25);
+      height: calc(var(--spacing) * 25);
     }
     .md\:size-25\.5 {
       width: calc(var(--spacing) * 25.5);
