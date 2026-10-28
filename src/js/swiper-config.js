@@ -56,6 +56,31 @@ function setupPopularProductSlider() {
 setupPopularProductSlider();
 popularProductMq.addEventListener('change', setupPopularProductSlider);
 
+const relatedArticlesMq = window.matchMedia('(min-width: 768px)');
+let relatedArticlesSwiper = null;
+
+function setupRelatedArticlesSlider() {
+  const relatedArticlesSlider = document.querySelector('.related-articles .swiper');
+
+  if (relatedArticlesMq.matches && !relatedArticlesSwiper && relatedArticlesSlider) {
+    // دسکتاپ: Swiper فعال
+    relatedArticlesSwiper = new Swiper('.related-articles .swiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.related-articles-next',
+        prevEl: '.related-articles-prev',
+      },
+    });
+  } else if (!relatedArticlesMq.matches && relatedArticlesSwiper) {
+    relatedArticlesSwiper.destroy(true, true);
+    relatedArticlesSwiper = null;
+  }
+}
+
+setupRelatedArticlesSlider();
+relatedArticlesMq.addEventListener('change', setupRelatedArticlesSlider);
+
 // ---------- Swiper ----------
 const PEEK = 18; // مقدار بیرون‌زدگی لبه کارت‌های پشتی (px)
 const SCALE = 0.88; // باید با scale در CSS یکی باشد

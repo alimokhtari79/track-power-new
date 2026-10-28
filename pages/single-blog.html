@@ -11,7 +11,9 @@
   </head>
   <body class="bg-surface-bg">
     <header class="homepage-header text-primary" data-site-header>
-      <div class="homepage-header__bar container-custom flex items-center justify-between">
+      <div
+        class="homepage-header__bar container-custom flex items-center justify-between border-b border-gray-300"
+      >
         <div class="flex items-center">
           <a
             class="homepage-header__brand flex shrink-0 items-center font-extrabold"
@@ -291,10 +293,10 @@
       <!-- single blog title -->
       <div class="container-custom">
         <!-- title and blog header -->
-        <div class="mt-15 grid grid-cols-1 md:grid-cols-[1fr_auto] md:gap-y-5">
+        <div class="mt-10 grid grid-cols-1 md:mt-15 md:grid-cols-[1fr_auto] md:gap-y-5">
           <!-- title -->
           <h1
-            class="order-1 w-88.25 px-0 text-2xl font-semibold md:col-start-1 md:row-start-1 md:w-156.5 md:text-[36px]"
+            class="order-1 w-88.25 px-0 text-2xl leading-8.25 font-semibold md:col-start-1 md:row-start-1 md:w-156.5 md:text-[36px] md:leading-[100%]"
           >
             کمک فنر کامیون چیست؟ راهنمای انتخاب بدون خرید اشتباه
           </h1>
@@ -304,7 +306,7 @@
             class="order-3 flex gap-2 md:col-start-2 md:row-start-1 md:gap-3 md:self-end md:justify-self-end"
           >
             <button
-              class="text-primary flex w-1/2 cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#0000000A] px-4 py-3 sm:w-[unset] md:rounded-full md:p-3"
+              class="text-primary flex w-1/2 cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#0000000A] px-4 py-3 sm:h-12.5 sm:w-12.5 md:rounded-full md:p-0"
             >
               <!-- share icon -->
               <svg
@@ -339,7 +341,7 @@
             </button>
 
             <button
-              class="text-primary flex w-1/2 cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#0000000A] px-4 py-3 md:w-[unset] md:rounded-full md:p-3"
+              class="text-primary flex w-1/2 cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#0000000A] px-4 py-3 sm:h-12.5 sm:w-12.5 md:rounded-full md:p-0"
             >
               <!-- like icon -->
               <svg
@@ -374,13 +376,11 @@
               <span>محمد ترابی</span>
             </div>
 
-            <span class="inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+            <img class="size-1.5 md:size-2" src="/assets/icons/garay-circle.svg" alt="" />
             <span>۲۴ آذر ۱۴۰۲</span>
-
-            <span class="inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+            <img class="size-1.5 md:size-2" src="/assets/icons/garay-circle.svg" alt="" />
             <span>مجله آموزشی</span>
-
-            <span class="inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+            <img class="size-1.5 md:size-2" src="/assets/icons/garay-circle.svg" alt="" />
             <span>۴ نظر</span>
           </div>
         </div>
@@ -395,7 +395,7 @@
       </div>
 
       <section
-        class="container-custom my-20 grid grid-cols-1 md:mb-30 md:grid-cols-[minmax(0,1fr)_350px] md:items-start md:gap-20"
+        class="container-custom my-20 grid grid-cols-1 md:mb-30 md:grid-cols-[minmax(0,1fr)_350px] md:items-start md:gap-x-20 md:gap-y-6"
       >
         <!-- بخش بالایی سایدبار -->
         <aside class="order-1 md:col-start-2 md:row-start-1">
@@ -416,8 +416,26 @@
         <main class="order-2 min-w-0 md:col-start-1 md:row-span-2 md:row-start-1">
           <article>
             <div
-              class="text-primary my-10 space-y-5 text-sm leading-5.5 font-normal md:text-base md:leading-6"
+              class="text-primary my-10 space-y-10 text-sm leading-5.5 font-normal md:text-base md:leading-6"
             >
+              <div class="space-y-3 leading-5.5 md:leading-6">
+                <p>
+                  کامیون روی دست‌انداز چند بار بالا و پایین می‌شود، کابین بعد از ترمز تکان می‌خورد
+                  یا لاستیک‌ها به شکل نامنظم ساییده شده‌اند. اولین حدس معمولاً خرابی کمک فنر است؛
+                  اما همین نشانه‌ها می‌توانند از بوش، کیسه باد، تنظیم نبودن ارتفاع یا حتی ایراد
+                  لاستیک ناشی شوند.
+                </p>
+                <p>
+                  مشکل دوم هنگام خرید شروع می‌شود. دو کمک فنر ممکن است از بیرون تقریباً یکسان باشند،
+                  اما در طول باز و بسته، کورس، نوع بوش، قطر پیچ، مشخصات سوپاپ‌بندی و محل نصب تفاوت
+                  داشته باشند. تفاوتی که گاهی تازه بعد از نصب، با کوبش کابین یا آسیب به سیستم تعلیق
+                  خودش را نشان می‌دهد.
+                </p>
+                در این راهنما قرار نیست فقط انواع کمک فنر کامیون را نام ببریم. یاد می‌گیرید قطعه
+                درست را با چه اطلاعاتی پیدا کنید، نشتی واقعی را چگونه تشخیص دهید و پیش از پرداخت
+                هزینه، چه مشخصاتی را با فروشنده یا تعمیرکار تطبیق دهید.
+                <p></p>
+              </div>
               <div>
                 <!-- title -->
                 <h3
@@ -451,17 +469,17 @@
             />
             <div class="rounded-[20px] bg-white p-5 md:rounded-2xl md:p-6">
               <span
-                class="text-brand-700 rounded-full bg-[#BD0C0A1A] px-3 py-2 text-[13px] md:text-base"
+                class="text-brand-700 rounded-full bg-[#BD0C0A1A] px-3 py-2 text-[13px] font-medium md:text-base"
                 >نقل‌قول مهم</span
               >
-              <p class="py-4 text-[15px] leading-6 font-semibold md:text-[18px] md:leading-7.5">
+              <p class="py-4 text-[15px] leading-6 font-semibold md:text-lg md:leading-7.5">
                 کمک فنر معمولی وظیفه تحمل وزن کامیون را ندارد. وزن توسط فنر تخت، فنر لول یا کیسه باد
                 تحمل می‌شود و کمک فنر، حرکت آن‌ها را کنترل می‌کند. بنابراین نصب کمک فنر قوی‌تر به
                 تنهایی ظرفیت مجاز حمل بار را افزایش نمی‌دهد.
               </p>
               <div class="flex items-center justify-between">
                 <div class="text-primary flex flex-col font-normal">
-                  <span class="text-sm font-medium md:text-base"> راهنمای خرید کمک فنر </span>
+                  <span class="mb-1 text-sm font-medium md:text-base"> راهنمای خرید کمک فنر </span>
                   <span class="text-xs md:text-sm">از متن مقاله «کمک فنر کامیون چیست؟»</span>
                 </div>
                 <div
@@ -471,13 +489,31 @@
                 </div>
               </div>
             </div>
+            <div class="mt-10 space-y-3 leading-5.5 md:leading-6">
+              <p>
+                کامیون روی دست‌انداز چند بار بالا و پایین می‌شود، کابین بعد از ترمز تکان می‌خورد یا
+                لاستیک‌ها به شکل نامنظم ساییده شده‌اند. اولین حدس معمولاً خرابی کمک فنر است؛ اما
+                همین نشانه‌ها می‌توانند از بوش، کیسه باد، تنظیم نبودن ارتفاع یا حتی ایراد لاستیک
+                ناشی شوند.
+              </p>
+              <p>
+                مشکل دوم هنگام خرید شروع می‌شود. دو کمک فنر ممکن است از بیرون تقریباً یکسان باشند،
+                اما در طول باز و بسته، کورس، نوع بوش، قطر پیچ، مشخصات سوپاپ‌بندی و محل نصب تفاوت
+                داشته باشند. تفاوتی که گاهی تازه بعد از نصب، با کوبش کابین یا آسیب به سیستم تعلیق
+                خودش را نشان می‌دهد.
+              </p>
+              در این راهنما قرار نیست فقط انواع کمک فنر کامیون را نام ببریم. یاد می‌گیرید قطعه درست
+              را با چه اطلاعاتی پیدا کنید، نشتی واقعی را چگونه تشخیص دهید و پیش از پرداخت هزینه، چه
+              مشخصاتی را با فروشنده یا تعمیرکار تطبیق دهید.
+              <p></p>
+            </div>
             <hr class="my-10 hidden border-t border-[#E6E7E9] md:block" />
             <h3
-              class="text-primary mt-10 pb-5 text-lg leading-[135%] font-semibold md:mt-0 md:text-2xl md:leading-[100%]"
+              class="text-primary mt-10 pb-2 text-lg leading-[135%] font-semibold md:mt-0 md:text-2xl md:leading-[100%]"
             >
-              کمک فنر کامیون دقیقاً چه کاری انجام می‌دهد؟
+              جدول مقایسه کمک فنر
             </h3>
-            <p class="text-muted leading-6.5 md:leading-6">
+            <p class="text-muted text-base leading-6.5 md:leading-6">
               برای خرید درست، باید مشخصات فنی و محل نصب را با کامیون تطبیق داد. جدول زیر نکات مهم را
               خلاصه می‌کند.
             </p>
@@ -485,13 +521,19 @@
               <table
                 class="mt-4 mb-10 w-full table-fixed border-separate border-spacing-y-1 text-right"
               >
+                <colgroup>
+                  <col class="md:w-45" />
+                  <col class="md:w-45" />
+                  <col />
+                </colgroup>
+
                 <thead>
                   <tr
                     class="rounded-xl [&>th]:border-y [&>th]:border-[#0000001F] [&>th:first-child]:rounded-r-xl [&>th:first-child]:border-r [&>th:last-child]:rounded-l-xl [&>th:last-child]:border-l"
                   >
-                    <th class="px-4 py-3 font-medium md:w-45">نکته خرید</th>
-                    <th class="px-4 py-3 font-medium md:w-45">وظیفه</th>
-                    <th class="px-4 py-3 font-medium">مشخصه</th>
+                    <th class="py-3 ps-4 font-medium md:w-[180px]">نکته خرید</th>
+                    <th class="px-4 py-3 font-medium md:w-[180px]">وظیفه</th>
+                    <th class="py-3 pe-4 font-medium">مشخصه</th>
                   </tr>
                 </thead>
 
@@ -499,17 +541,17 @@
                   <tr
                     class="[&>td:nth-child(-n+2)]:text-muted bg-white [&>td:first-child]:rounded-r-xl [&>td:last-child]:rounded-l-xl"
                   >
-                    <td class="px-4 py-3.5">نمونه نکته خرید</td>
+                    <td class="py-3.5 ps-4">نمونه نکته خرید</td>
                     <td class="px-4 py-3.5">نمونه وظیفه</td>
-                    <td class="px-4 py-3.5">توضیحات مربوط به مشخصه محصول</td>
+                    <td class="py-3.5 pe-4">توضیحات مربوط به مشخصه محصول</td>
                   </tr>
 
                   <tr
                     class="[&>td:nth-child(-n+2)]:text-muted bg-white [&>td:first-child]:rounded-r-xl [&>td:last-child]:rounded-l-xl"
                   >
-                    <td class="px-4 py-3.5">وزن را با فنر تخت و کیسه باد اشتباه نکنید</td>
+                    <td class="py-3.5 ps-4">وزن را با فنر تخت و کیسه باد اشتباه نکنید</td>
                     <td class="px-4 py-3.5">نمونه وظیفه</td>
-                    <td class="px-4 py-3.5">توضیحات مربوط به مشخصه محصول</td>
+                    <td class="py-3.5 pe-4">توضیحات مربوط به مشخصه محصول</td>
                   </tr>
                 </tbody>
               </table>
@@ -525,12 +567,12 @@
                 اگر به دنبال قطعات مرتبط با سیستم تعلیق و کلاچ هستید، می‌توانید این پیشنهادها را
                 بررسی کنید.
               </p>
-              <div class="flex justify-between overflow-x-auto pt-4">
+              <div class="flex justify-between overflow-x-auto pt-4 max-md:gap-2">
                 <!-- single blog page recomended product -->
                 <div class="w-50! max-md:shrink-0 md:w-70.75!">
                   <a
                     href="#"
-                    class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:p-5 md:px-5"
+                    class="flex h-full flex-col rounded-2xl bg-white px-3 pt-2 pb-4 md:p-5 md:px-5"
                   >
                     <div class="flex h-6 items-center justify-between">
                       <img
@@ -550,8 +592,8 @@
                         alt=""
                       />
                     </div>
-                    <div class="px-0.5">
-                      <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                    <div>
+                      <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                       <div
                         class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                       >
@@ -561,8 +603,8 @@
                         <span class="text-xs md:text-[13px]">۴.۸</span>
                       </div>
                       <!-- product-cart__price -->
-                      <div class="pt-5">
-                        <div class="flex gap-2">
+                      <div class="pt-6 md:pt-5">
+                        <div class="flex gap-1.25">
                           <span
                             class="text-inactive text-xs font-normal line-through md:text-[13px]"
                             >۸۷۰,۰۰۰ تومان</span
@@ -577,7 +619,9 @@
                           </div>
                         </div>
                         <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                          <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                          <span class="text-success text-sm font-medium md:text-base"
+                            >۸۷۰,۰۰۰ تومان</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -587,7 +631,7 @@
                 <div class="w-50! max-md:shrink-0 md:w-70.75!">
                   <a
                     href="#"
-                    class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:p-5 md:px-5"
+                    class="flex h-full flex-col rounded-2xl bg-white px-3 pt-2 pb-4 md:p-5 md:px-5"
                   >
                     <div class="flex h-6 items-center justify-between">
                       <img
@@ -607,8 +651,8 @@
                         alt=""
                       />
                     </div>
-                    <div class="px-0.5">
-                      <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                    <div>
+                      <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                       <div
                         class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                       >
@@ -618,8 +662,8 @@
                         <span class="text-xs md:text-[13px]">۴.۸</span>
                       </div>
                       <!-- product-cart__price -->
-                      <div class="pt-5">
-                        <div class="flex gap-2">
+                      <div class="pt-6 md:pt-5">
+                        <div class="flex gap-1.25">
                           <span
                             class="text-inactive text-xs font-normal line-through md:text-[13px]"
                             >۸۷۰,۰۰۰ تومان</span
@@ -634,7 +678,9 @@
                           </div>
                         </div>
                         <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                          <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                          <span class="text-success text-sm font-medium md:text-base"
+                            >۸۷۰,۰۰۰ تومان</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -644,7 +690,7 @@
                 <div class="w-50! max-md:shrink-0 md:w-70.75!">
                   <a
                     href="#"
-                    class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:p-5 md:px-5"
+                    class="flex h-full flex-col rounded-2xl bg-white px-3 pt-2 pb-4 md:p-5 md:px-5"
                   >
                     <div class="flex h-6 items-center justify-between">
                       <img
@@ -664,8 +710,8 @@
                         alt=""
                       />
                     </div>
-                    <div class="px-0.5">
-                      <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                    <div>
+                      <h3 class="mt-5 text-sm font-medium md:mt-4 md:text-base">فنر محرک چرخ ها</h3>
                       <div
                         class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]"
                       >
@@ -675,8 +721,8 @@
                         <span class="text-xs md:text-[13px]">۴.۸</span>
                       </div>
                       <!-- product-cart__price -->
-                      <div class="pt-5">
-                        <div class="flex gap-2">
+                      <div class="pt-6 md:pt-5">
+                        <div class="flex gap-1.25">
                           <span
                             class="text-inactive text-xs font-normal line-through md:text-[13px]"
                             >۸۷۰,۰۰۰ تومان</span
@@ -691,7 +737,9 @@
                           </div>
                         </div>
                         <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                          <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                          <span class="text-success text-sm font-medium md:text-base"
+                            >۸۷۰,۰۰۰ تومان</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -704,7 +752,19 @@
               class="mb-20 flex flex-col justify-between gap-4 md:mb-0 md:flex-row md:items-center"
             >
               <p class="text-lg font-semibold md:text-xl">تگ ها</p>
-              <div class="space-x-2">
+              <div class="flex max-w-2xl items-center gap-2 overflow-x-auto whitespace-nowrap">
+                <span
+                  class="text-muted rounded-lg border border-[#19161614] px-3 py-2 md:p-3 md:text-sm"
+                  >کامیون</span
+                >
+                <span
+                  class="text-muted rounded-lg border border-[#19161614] px-3 py-2 md:p-3 md:text-sm"
+                  >قطعات کامیون</span
+                >
+                <span
+                  class="text-muted rounded-lg border border-[#19161614] px-3 py-2 md:p-3 md:text-sm"
+                  >آموزش</span
+                >
                 <span
                   class="text-muted rounded-lg border border-[#19161614] px-3 py-2 md:p-3 md:text-sm"
                   >کامیون</span
@@ -747,9 +807,225 @@
           </div>
         </aside>
       </section>
+      <section
+        class="related-articles container-custom md:[&amp;&gt;.swiper]:col-span-full md:[&amp;&gt;.swiper]:row-start-2 md:[&amp;&gt;.swiper]:w-full md:[&amp;&gt;.swiper]:min-w-0 mx-auto px-0 md:grid md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-3 md:py-10"
+      >
+        <!-- هدر (در دسکتاپ contents: عنوان و فلش‌ها مستقیم آیتم گرید سکشن می‌شوند) -->
+        <div class="mb-5 flex items-start justify-between gap-4 px-5 md:contents">
+          <h2
+            class="text-[24px] font-semibold md:col-start-1 md:row-start-1 md:mb-10 md:self-end md:text-[32px]"
+          >
+            مقالات مرتبط
+          </h2>
+
+          <!-- فقط فلش‌ها (دکمه به انتهای سکشن رفت) -->
+          <div
+            class="hidden items-center gap-3 md:col-start-2 md:row-start-1 md:mb-10 md:flex md:self-end"
+          >
+            <!-- در RTL: prev فلش راست، next فلش چپ -->
+            <button
+              class="related-articles-prev swiper-button-disabled hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              aria-label="Previous slide"
+              disabled=""
+              tabindex="-1"
+              aria-controls="swiper-wrapper-a045c9c610d66443a"
+              aria-disabled="true"
+            >
+              <img src="/assets/icons/arrow-right.svg" alt="" />
+            </button>
+            <button
+              class="related-articles-next hidden size-14.5 place-items-center rounded-lg bg-neutral-300/60 transition hover:bg-neutral-300 md:grid"
+              aria-label="Next slide"
+              tabindex="0"
+              aria-controls="swiper-wrapper-a045c9c610d66443a"
+              aria-disabled="false"
+            >
+              <img class="size-6" src="/assets/icons/arrow-left.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="swiper max-md:[&amp;::-webkit-scrollbar]:hidden swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden px-4 max-md:[scrollbar-width:none] max-md:overflow-x-auto! md:px-0"
+          dir="rtl"
+        >
+          <div
+            class="swiper-wrapper h-83 px-5 max-md:w-max! max-md:gap-3 md:h-93.25! md:px-0"
+            id="swiper-wrapper-a045c9c610d66443a"
+            aria-live="polite"
+          >
+            <!-- blog slide -->
+            <div
+              class="swiper-slide h-79 w-65.75 min-w-0 shrink-0 overflow-hidden rounded-xl bg-white md:h-93.25 md:w-full md:rounded-2xl"
+            >
+              <div class="relative w-full">
+                <img
+                  class="h-37.5 w-full object-cover md:h-45"
+                  src="../assets/images/blog-image-1.png"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"
+                ></div>
+              </div>
+              <div class="p-4 pb-5 md:p-5 md:pb-6">
+                <div class="text-muted flex items-center text-[11px] font-normal md:text-[13px]">
+                  <span>مقاله آموزشی جدید</span>
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <span>مقاله آموزشی جدید</span>
+                </div>
+                <p
+                  class="line-clamp-2 pt-1 text-sm leading-5 font-medium text-[#101828] md:text-base md:leading-6"
+                >
+                  کدام قطعات کامیون باید به طور مرتب چک شوند؟
+                </p>
+                <p
+                  class="line-clamp-3 pt-3 text-xs leading-5 font-normal text-[#716F6F] md:pt-3.5 md:text-sm md:leading-5.5"
+                >
+                  معرفی قطعات کلیدی که بررسی منظم آن‌ها از خرابی ناگهانی کامیون، توقف در مسیر و
+                  هزینه‌های سنگین جلوگیری می‌کند.
+                </p>
+              </div>
+            </div>
+            <!-- blog slide -->
+            <div
+              class="swiper-slide h-79 w-65.75 min-w-0 shrink-0 overflow-hidden rounded-xl bg-white md:h-93.25 md:w-full md:rounded-2xl"
+            >
+              <div class="relative w-full">
+                <img
+                  class="h-37.5 w-full object-cover md:h-45"
+                  src="../assets/images/blog-image-1.png"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"
+                ></div>
+              </div>
+              <div class="p-4 pb-5 md:p-5 md:pb-6">
+                <div class="text-muted flex items-center text-[11px] font-normal md:text-[13px]">
+                  <span>مقاله آموزشی جدید</span>
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <span>مقاله آموزشی جدید</span>
+                </div>
+                <p
+                  class="line-clamp-2 pt-1 text-sm leading-5 font-medium text-[#101828] md:text-base md:leading-6"
+                >
+                  کدام قطعات کامیون باید به طور مرتب چک شوند؟
+                </p>
+                <p
+                  class="line-clamp-3 pt-3 text-xs leading-5 font-normal text-[#716F6F] md:pt-3.5 md:text-sm md:leading-5.5"
+                >
+                  معرفی قطعات کلیدی که بررسی منظم آن‌ها از خرابی ناگهانی کامیون، توقف در مسیر و
+                  هزینه‌های سنگین جلوگیری می‌کند.
+                </p>
+              </div>
+            </div>
+            <!-- blog slide -->
+            <div
+              class="swiper-slide h-79 w-65.75 min-w-0 shrink-0 overflow-hidden rounded-xl bg-white md:h-93.25 md:w-full md:rounded-2xl"
+            >
+              <div class="relative w-full">
+                <img
+                  class="h-37.5 w-full object-cover md:h-45"
+                  src="../assets/images/blog-image-1.png"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"
+                ></div>
+              </div>
+              <div class="p-4 pb-5 md:p-5 md:pb-6">
+                <div class="text-muted flex items-center text-[11px] font-normal md:text-[13px]">
+                  <span>مقاله آموزشی جدید</span>
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <span>مقاله آموزشی جدید</span>
+                </div>
+                <p
+                  class="line-clamp-2 pt-1 text-sm leading-5 font-medium text-[#101828] md:text-base md:leading-6"
+                >
+                  کدام قطعات کامیون باید به طور مرتب چک شوند؟
+                </p>
+                <p
+                  class="line-clamp-3 pt-3 text-xs leading-5 font-normal text-[#716F6F] md:pt-3.5 md:text-sm md:leading-5.5"
+                >
+                  معرفی قطعات کلیدی که بررسی منظم آن‌ها از خرابی ناگهانی کامیون، توقف در مسیر و
+                  هزینه‌های سنگین جلوگیری می‌کند.
+                </p>
+              </div>
+            </div>
+            <!-- blog slide -->
+            <div
+              class="swiper-slide h-79 w-65.75 min-w-0 shrink-0 overflow-hidden rounded-xl bg-white md:h-93.25 md:w-full md:rounded-2xl"
+            >
+              <div class="relative w-full">
+                <img
+                  class="h-37.5 w-full object-cover md:h-45"
+                  src="../assets/images/blog-image-1.png"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"
+                ></div>
+              </div>
+              <div class="p-4 pb-5 md:p-5 md:pb-6">
+                <div class="text-muted flex items-center text-[11px] font-normal md:text-[13px]">
+                  <span>مقاله آموزشی جدید</span>
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <span>مقاله آموزشی جدید</span>
+                </div>
+                <p
+                  class="line-clamp-2 pt-1 text-sm leading-5 font-medium text-[#101828] md:text-base md:leading-6"
+                >
+                  کدام قطعات کامیون باید به طور مرتب چک شوند؟
+                </p>
+                <p
+                  class="line-clamp-3 pt-3 text-xs leading-5 font-normal text-[#716F6F] md:pt-3.5 md:text-sm md:leading-5.5"
+                >
+                  معرفی قطعات کلیدی که بررسی منظم آن‌ها از خرابی ناگهانی کامیون، توقف در مسیر و
+                  هزینه‌های سنگین جلوگیری می‌کند.
+                </p>
+              </div>
+            </div>
+            <!-- blog slide -->
+            <div
+              class="swiper-slide h-79 w-65.75 min-w-0 shrink-0 overflow-hidden rounded-xl bg-white md:h-93.25 md:w-full md:rounded-2xl"
+            >
+              <div class="relative w-full">
+                <img
+                  class="h-37.5 w-full object-cover md:h-45"
+                  src="../assets/images/blog-image-1.png"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"
+                ></div>
+              </div>
+              <div class="p-4 pb-5 md:p-5 md:pb-6">
+                <div class="text-muted flex items-center text-[11px] font-normal md:text-[13px]">
+                  <span>مقاله آموزشی جدید</span>
+                  <span class="mx-2 inline-block size-1.25 rounded-full bg-[#D9D9D9]"></span>
+                  <span>مقاله آموزشی جدید</span>
+                </div>
+                <p
+                  class="line-clamp-2 pt-1 text-sm leading-5 font-medium text-[#101828] md:text-base md:leading-6"
+                >
+                  کدام قطعات کامیون باید به طور مرتب چک شوند؟
+                </p>
+                <p
+                  class="line-clamp-3 pt-3 text-xs leading-5 font-normal text-[#716F6F] md:pt-3.5 md:text-sm md:leading-5.5"
+                >
+                  معرفی قطعات کلیدی که بررسی منظم آن‌ها از خرابی ناگهانی کامیون، توقف در مسیر و
+                  هزینه‌های سنگین جلوگیری می‌کند.
+                </p>
+              </div>
+            </div>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </section>
       <!-- user comments -->
       <section
-        class="container-custom my-20 grid grid-cols-1 md:mb-30 md:grid-cols-[minmax(0,1fr)_350px] md:items-start md:gap-20"
+        class="container-custom my-20 grid grid-cols-1 md:my-30 md:mb-30 md:grid-cols-[minmax(0,1fr)_350px] md:items-start md:gap-20"
       >
         <div class="order-2 md:order-1">
           <p class="pb-8 text-2xl font-semibold text-black md:pb-10 md:text-[32px]">
@@ -960,6 +1236,256 @@
         </div>
       </section>
     </main>
+
+    <footer class="homepage-footer" aria-label="پاورقی تراک پاور">
+      <div class="homepage-footer__inner container-custom">
+        <div class="homepage-footer__layout">
+          <div class="homepage-footer__brand">
+            <!-- Temporary logo, using the same truck asset as the current homepage header. -->
+            <a
+              class="homepage-footer__logo"
+              href="/"
+              aria-label="تراک پاور، صفحه اصلی"
+              title="جایگاه لوگوی تراک پاور"
+            >
+              <img
+                src="/assets/icons/header-logo.svg"
+                width="80"
+                height="70"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <p class="text-sm leading-5.5 font-normal md:text-base md:leading-6.5">
+              تراک پاور مرجع تخصصی فروش قطعات کامیون‌های DAF و MAN است؛ جایی که می‌تونی از قطعات
+              مصرفی و کوچک تا مجموعه‌های سنگین و فنی را با اطلاعات دقیق، قیمت به‌روز و بررسی سازگاری
+              پیدا کنی.
+            </p>
+            <!-- Explicit placeholders, not certification claims or verification links. -->
+            <ul
+              class="homepage-footer__badges"
+              aria-label="جایگاه نشان‌ها؛ تصاویر و تأییدیه‌ها هنوز اضافه نشده‌اند"
+            >
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۱</span>
+              </li>
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۲</span>
+              </li>
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۳</span>
+              </li>
+            </ul>
+          </div>
+          <nav class="homepage-footer__navigation" aria-label="لینک‌های پاورقی">
+            <details class="homepage-footer__section" data-footer-section data-mobile-open open>
+              <summary>
+                لینک‌های کاربردی<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/pages/blog.html">بلاگ</a></li>
+                <li><a href="/pages/about-us.html">درباره ما</a></li>
+                <li><a href="/pages/contact.html">تماس با ما</a></li>
+                <li><a href="/pages/FandQ.html">سوالات متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ شرایط و قوانین هنوز موجود نیست"
+                    >شرایط و قوانین</span
+                  >
+                </li>
+              </ul>
+            </details>
+            <details class="homepage-footer__section" data-footer-section open>
+              <summary>
+                خدمات مشتریان<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                    >رویه‌های بازگرداندن کالا</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                    >شرایط استفاده</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                    >حریم خصوصی</span
+                  >
+                </li>
+                <li><a href="/pages/contact.html">گزارش باگ</a></li>
+              </ul>
+            </details>
+            <details class="homepage-footer__section" data-footer-section open>
+              <summary>
+                خدمات مشتریان<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                    >رویه‌های بازگرداندن کالا</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                    >شرایط استفاده</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                    >حریم خصوصی</span
+                  >
+                </li>
+                <li><a href="/pages/contact.html">گزارش باگ</a></li>
+              </ul>
+            </details>
+          </nav>
+          <details
+            class="homepage-footer__section homepage-footer__contact"
+            data-footer-section
+            open
+          >
+            <summary>
+              راه‌های ارتباطی<img
+                src="/assets/icons/arrow-down-01-round.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+            </summary>
+            <address>
+              <a class="text-sm md:text-base" href="tel:02122147912">
+                <img class="size-7" src="/assets/icons/phone-footer-icon.svg" alt="" />
+                <bdi dir="ltr">021-22147912</bdi>
+              </a>
+              <p class="text-sm md:text-base">
+                <img class="size-7" src="/assets/icons/time-footer-icon.svg" alt="" />شنبه تا
+                پنجشنبه ۸ صبح تا ۷ ظهر
+              </p>
+              <a class="homepage-footer__address text-sm md:text-base" href="/pages/contact.html"
+                ><img class="size-7" src="/assets/icons/location-footer-icon.svg" alt="" />تهران
+                سعادت آباد میدان کاج پاساژ سروستان طبقه اول پلاک ۴۷</a
+              >
+            </address>
+          </details>
+        </div>
+        <div class="homepage-footer__bottom">
+          <p>
+            تمام حقوق این سایت محفوظ است.<span class="homepage-footer__credit">
+              طراحی شده توسط
+              <span class="homepage-footer__pending" title="نام طراح هنوز مشخص نشده است"
+                >—</span
+              ></span
+            >
+          </p>
+          <!-- Social accounts are pending: these are non-interactive placeholders. -->
+          <ul
+            class="homepage-footer__social"
+            aria-label="جایگاه شبکه‌های اجتماعی؛ نشانی حساب‌ها هنوز تنظیم نشده است"
+          >
+            <li class="flex size-10 items-center justify-center md:size-10.5">
+              <span role="img" aria-label="جایگاه فیس‌بوک" title="نشانی فیس‌بوک هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5Z"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                  <path
+                    d="M17 8H16C14.1144 8 13.1716 8 12.5858 8.58579C12 9.17157 12 10.1144 12 12V14M12 14V21.5M12 14H10M12 14H15"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+            <li>
+              <span
+                class="flex size-10 items-center justify-center md:size-10.5"
+                role="img"
+                aria-label="جایگاه تلگرام"
+                title="نشانی تلگرام هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+            <li>
+              <span
+                class="flex size-10 items-center justify-center md:size-10.5"
+                role="img"
+                aria-label="جایگاه یوتیوب"
+                title="نشانی یوتیوب هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.1534 19.9934C15.5451 20.3212 13.8097 20.5 12 20.5C10.1903 20.5 8.45489 20.3212 6.84656 19.9934C4.83766 19.5839 3.83321 19.3791 2.9166 18.2006C2 17.0221 2 15.6693 2 12.9635V11.0365C2 8.33073 2 6.97787 2.9166 5.79937C3.83321 4.62088 4.83766 4.41613 6.84656 4.00662C8.45489 3.67877 10.1903 3.5 12 3.5C13.8097 3.5 15.5451 3.67877 17.1534 4.00662C19.1623 4.41613 20.1668 4.62088 21.0834 5.79937C22 6.97787 22 8.33073 22 11.0365V12.9635C22 15.6693 22 17.0221 21.0834 18.2006C20.1668 19.3791 19.1623 19.5839 17.1534 19.9934Z"
+                    stroke-width="1.5"
+                    stroke="#141B34"
+                  />
+                  <path
+                    d="M13.4449 14.2241C15.0241 13.3538 15.8137 12.9187 15.9621 12.3129C16.0126 12.1067 16.0126 11.8933 15.9621 11.6871C15.8137 11.0813 15.0241 10.6462 13.4449 9.77593C11.7272 8.82945 10.8684 8.35621 10.1728 8.53854C9.9372 8.60029 9.7202 8.70886 9.53799 8.85618C9 9.29112 9 10.1941 9 12C9 13.8059 9 14.7089 9.53799 15.1438C9.7202 15.2911 9.9372 15.3997 10.1728 15.4615C10.8684 15.6438 11.7272 15.1705 13.4449 14.2241Z"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- swiper config js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../src/js/swiper-config.js"></script>

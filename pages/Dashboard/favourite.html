@@ -240,393 +240,817 @@
         </div>
       </div>
     </dialog>
-    <main class="container-custom mx-auto my-5 flex flex-col items-start gap-8 md:flex-row">
-      <aside
-        class="order-2 flex w-full flex-col gap-1.5 self-start rounded-2xl border border-[#0000001f] p-4 md:order-1 md:w-56"
-      >
-        <a href="#" class="text-primary flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    <main>
+      <div class="container-custom mx-auto my-5 flex flex-col items-start gap-8 md:flex-row">
+        <!-- aside -->
+        <aside
+          class="order-2 flex w-full flex-col gap-2.5 rounded-2xl md:order-1 md:w-60 md:border md:border-[#0000001F] md:p-4 md:ps-3.5"
+        >
+          <!-- Dashboard: Active -->
+          <a
+            href="#"
+            aria-current="page"
+            class="group text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
           >
-            <path
-              d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></path>
-            <path
-              d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></path>
-            <path
-              d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></path>
-            <path
-              d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></path>
-          </svg>
-          <span>داشبورد</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            ></path>
-            <path
-              d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            ></path>
-            <path
-              d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5"></circle>
-            <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5"></circle>
-          </svg>
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 hidden h-10 w-1.25 -translate-y-1/2 rounded-tl-full rounded-bl-full md:inline"
+            ></span>
 
-          <span>سفارش‌ها</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-            <circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-            <path
-              d="M11 17H15M13.5 7H14.4429C15.7533 7 16.4086 7 16.9641 7.31452C17.5196 7.62904 17.89 8.20972 18.6308 9.37107C19.1502 10.1854 19.6955 10.7765 20.4622 11.3024C21.2341 11.8318 21.6012 12.0906 21.8049 12.506C22 12.9038 22 13.375 22 14.3173C22 15.5596 22 16.1808 21.651 16.5755C21.636 16.5925 21.6207 16.609 21.6049 16.625C21.2375 17 20.6594 17 19.503 17H19"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M13 7L13.9942 9.48556C14.4813 10.7034 14.7249 11.3123 15.2328 11.6561C15.7407 12 16.3965 12 17.7081 12H21"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M4.86957 17C3.51684 17 2.84048 17 2.42024 16.5607C2 16.1213 2 15.4142 2 14V7C2 5.58579 2 4.87868 2.42024 4.43934C2.84048 4 3.51684 4 4.86957 4H10.1304C11.4832 4 12.1595 4 12.5798 4.43934C13 4.87868 13 5.58579 13 7V17H8.69565"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-
-          <span>کامیون‌ها</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.91872 4.43926C5.46116 3.73152 5.73238 3.37764 6.10315 3.18882C6.47393 3 6.89759 3 7.74491 3H10.1606C11.0277 3 11.4612 3 11.7306 3.29289C12 3.58579 12 4.05719 12 5V9H7.74491C6.89759 9 6.47393 9 6.10315 8.81118C5.73238 8.62236 5.46116 8.26848 4.91872 7.56074L4.70383 7.28037C4.23461 6.66816 4 6.36205 4 6C4 5.63795 4.23461 5.33184 4.70383 4.71963L4.91872 4.43926Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M19.0813 9.43926C18.5388 8.73152 18.2676 8.37764 17.8968 8.18882C17.5261 8 17.1024 8 16.2551 8H12V14H16.2551C17.1024 14 17.5261 14 17.8968 13.8112C18.2676 13.6224 18.5388 13.2685 19.0813 12.5607L19.2962 12.2804C19.7654 11.6682 20 11.362 20 11C20 10.638 19.7654 10.3318 19.2962 9.71963L19.0813 9.43926Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M12 21L12 4"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M9 21H15"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-
-          <span>آدرس‌ها</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68997C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68997C22 15.69 15.52 19.82 12.62 20.81Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-
-          <span>علاقه‌مندی‌ها</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19.7085 7.65037C19.8657 7.49323 20.1365 7.47721 20.2957 7.65093C21.2284 8.66824 21.7446 9.42151 21.9146 10.2557C22.0124 10.7357 22.0263 11.2242 21.9557 11.6994C21.7649 12.9836 20.7244 14.0241 18.6434 16.1051L16.1051 18.6434C14.0241 20.7244 12.9836 21.7649 11.6994 21.9557C11.2242 22.0263 10.7357 22.0124 10.2557 21.9146C9.4216 21.7446 8.66841 21.2285 7.65127 20.296C7.47734 20.1366 7.49342 19.8655 7.65074 19.7082C8.52693 18.832 8.48529 17.3698 7.55776 16.4422C6.63022 15.5147 5.16802 15.4731 4.29183 16.3493C4.13451 16.5066 3.86341 16.5227 3.70395 16.3487C2.77146 15.3316 2.25536 14.5784 2.08539 13.7443C1.98759 13.2643 1.97368 12.7758 2.04429 12.3006C2.23513 11.0164 3.27561 9.97588 5.35657 7.89492L7.89492 5.35657C9.97588 3.27561 11.0164 2.23513 12.3006 2.04428C12.7758 1.97368 13.2643 1.98759 13.7443 2.08539C14.5785 2.25538 15.3318 2.77157 16.3491 3.70427C16.5228 3.86355 16.5068 4.13432 16.3496 4.29147C15.4734 5.16765 15.5151 6.62985 16.4426 7.55739C17.3701 8.48493 18.8324 8.52656 19.7085 7.65037Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M19 15L9 5"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-
-          <span>تیکت‌ها</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-        <a href="#" class="text-muted flex items-center gap-2 p-3">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            ></path>
-          </svg>
-
-          <span>اطلاعات حساب</span>
-          <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
-        </a>
-      </aside>
-      <section class="order-1 min-w-0 flex-1 md:order-2">
-        <header class="mb-6 flex items-center justify-between max-md:my-[18px] max-md:mb-5">
-          <h1 class="md:text-6 m-0 flex items-center text-lg font-bold">
-            <span class="me-5 inline-block text-[26px] md:hidden" aria-hidden="true">
-              <img src="../../assets/icons/arrow-right-02-round.svg" alt="" />
-            </span>
-            علاقه‌مندی‌ها
-          </h1>
-        </header>
-        <section class="grid grid-cols-2 gap-2.25 md:grid-cols-4">
-          <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
-            <a
-              href="#"
-              class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div class="flex h-6 items-center justify-between">
-                <img
-                  class="size-8.75 object-cover"
-                  src="../../assets/images/product-item-band-image.png"
-                  alt=""
-                />
-                <span
-                  class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
-                  >سازگار</span
-                >
-              </div>
-              <div class="mx-auto my-2">
-                <img
-                  class="mx-auto aspect-square size-33.25 md:size-44.75"
-                  src="../../assets/images/Wheel-drive-spring-image.png"
-                  alt=""
-                />
-              </div>
-              <div class="px-0.5">
-                <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
-                <div class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]">
-                  <span>قطعات موتور</span>
-                  <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
-                  <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
-                  <span class="text-xs md:text-[13px]">۴.۸</span>
+              <path
+                d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6896 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6896 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.3107 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.3107 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+
+            <span>داشبورد</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Orders -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+
+            <span>سفارش‌ها</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Trucks -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M11 17H15M13.5 7H14.4429C15.7533 7 16.4086 7 16.9641 7.31452C17.5196 7.62904 17.89 8.20972 18.6308 9.37107C19.1502 10.1854 19.6955 10.7765 20.4622 11.3024C21.2341 11.8318 21.6012 12.0906 21.8049 12.506C22 12.9038 22 13.375 22 14.3173C22 15.5596 22 16.1808 21.651 16.5755C21.636 16.5925 21.6207 16.609 21.6049 16.625C21.2375 17 20.6594 17 19.503 17H19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13 7L13.9942 9.48556C14.4813 10.7034 14.7249 11.3123 15.2328 11.6561C15.7407 12 16.3965 12 17.7081 12H21"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.86957 17C3.51684 17 2.84048 17 2.42024 16.5607C2 16.1213 2 15.4142 2 14V7C2 5.58579 2 4.87868 2.42024 4.43934C2.84048 4 3.51684 4 4.86957 4H10.1304C11.4832 4 12.1595 4 12.5798 4.43934C13 4.87868 13 5.58579 13 7V17H8.69565"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <span>کامیون‌ها</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Addresses -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.91872 4.43926C5.46116 3.73152 5.73238 3.37764 6.10315 3.18882C6.47393 3 6.89759 3 7.74491 3H10.1606C11.0277 3 11.4612 3 11.7306 3.29289C12 3.58579 12 4.05719 12 5V9H7.74491C6.89759 9 6.47393 9 6.10315 8.81118C5.73238 8.62236 5.46116 8.26848 4.91872 7.56074L4.70383 7.28037C4.23461 6.66816 4 6.36205 4 6C4 5.63795 4.23461 5.33184 4.70383 4.71963L4.91872 4.43926Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19.0813 9.43926C18.5388 8.73152 18.2676 8.37764 17.8968 8.18882C17.5261 8 17.1024 8 16.2551 8H12V14H16.2551C17.1024 14 17.5261 14 17.8968 13.8112C18.2676 13.6229 18.5388 13.2685 19.0813 12.5607L19.2962 12.2804C19.7654 11.6682 20 11.362 20 11C20 10.638 19.7654 10.3318 19.2962 9.71963L19.0813 9.43926Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 21L12 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 21H15"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <span>آدرس‌ها</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Favorites -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68997C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68997C22 15.69 15.52 19.82 12.62 20.81Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <span>علاقه‌مندی‌ها</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Tickets -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7085 7.65037C19.8657 7.49323 20.1365 7.47721 20.2957 7.65093C21.2284 8.66824 21.7446 9.42151 21.9146 10.2557C22.0124 10.7357 22.0263 11.2242 21.9557 11.6994C21.7649 12.9836 20.7244 14.0241 18.6434 16.1051L16.1051 18.6434C14.0241 20.7244 12.9836 21.7649 11.6994 21.9557C11.2242 22.0263 10.7357 22.0124 10.2557 21.9146C9.4216 21.7446 8.66841 21.2285 7.65127 20.296C7.47734 20.1366 7.49342 19.8655 7.65074 19.7082C8.52693 18.832 8.48529 17.3698 7.55776 16.4422C6.63022 15.5147 5.16802 15.4731 4.29183 16.3493C4.13451 16.5066 3.86341 16.5227 3.70395 16.3487C2.77146 15.3316 2.25536 14.578 2.08539 13.7443C1.98759 13.2643 1.97368 12.7758 2.04429 12.3006C2.23513 11.0164 3.27561 9.97588 5.35657 7.89492L7.89492 5.35657C9.97588 3.27561 11.0168 3.27561 12.3006 2.04428C12.7758 2.08539 14.5785 2.77157 15.3318 3.70427C16.3491 3.86355 16.5228 4.13432 16.3496 4.29147C15.4734 5.16765 15.5151 6.62985 16.4426 7.55739C17.3701 8.48493 18.8324 8.52656 19.7085 7.65037Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 15L9 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <span>تیکت‌ها</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+
+          <!-- Account -->
+          <a
+            href="#"
+            class="group text-muted hover:text-primary relative flex items-center gap-2 py-2 md:p-3 md:ps-4"
+          >
+            <span
+              aria-hidden="true"
+              class="bg-brand-700 absolute top-1/2 -right-3.5 h-10 w-1.25 -translate-y-1/2 scale-y-0 rounded-tl-full rounded-bl-full opacity-0 transition-[transform,opacity] duration-300 ease-in-out group-hover:scale-y-100 group-hover:opacity-100"
+            ></span>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+
+            <span>اطلاعات حساب</span>
+            <img class="ms-auto md:hidden" src="../../assets/icons/arrow-left.svg" alt="" />
+          </a>
+        </aside>
+        <section class="order-1 min-w-0 flex-1 md:order-2">
+          <header class="mb-6 flex items-center justify-between max-md:mb-10">
+            <h1 class="m-0 flex items-center text-lg font-semibold md:text-2xl">
+              <span class="me-5 inline-block text-[26px] md:hidden" aria-hidden="true">
+                <img src="../../assets/icons/arrow-right-02-round.svg" alt="" />
+              </span>
+              علاقه‌مندی‌ها
+            </h1>
+          </header>
+          <section class="grid grid-cols-2 gap-2.25 md:grid-cols-4">
+            <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
+              <a
+                href="#"
+                class="flex h-full flex-col rounded-xl bg-white px-4 pt-2 pb-4 md:rounded-2xl md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-6.75 object-cover md:size-8.75"
+                    src="../../assets/images/product-item-band-image.png"
+                    alt=""
+                  />
+                  <span
+                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
+                    >سازگار</span
+                  >
                 </div>
-                <!-- product-cart__price -->
-                <div class="pt-5 md:pt-8">
-                  <div class="flex gap-2">
-                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
-                      >۸۷۰,۰۰۰ تومان</span
-                    >
-                    <div
-                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
-                    >
-                      <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
-                        >۲۸٪</span
+                <div class="mx-auto my-2">
+                  <img
+                    class="mx-auto aspect-square size-33.25 md:size-44.75"
+                    src="../../assets/images/Wheel-drive-spring-image.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-0.5">
+                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                  <div
+                    class="mt-2 flex items-center gap-[5.5px] text-xs text-neutral-500 md:gap-1.5 md:text-[13px]"
+                  >
+                    <span>قطعات موتور</span>
+                    <img src="/assets/icons/garay-circle.svg" alt="" />
+                    <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="pt-5 md:pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۸۷۰,۰۰۰ تومان</span
                       >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۲۸٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
                     </div>
                   </div>
-                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
+              <a
+                href="#"
+                class="flex h-full flex-col rounded-xl bg-white px-4 pt-2 pb-4 md:rounded-2xl md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-6.75 object-cover md:size-8.75"
+                    src="../../assets/images/product-item-band-image.png"
+                    alt=""
+                  />
+                  <span
+                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
+                    >سازگار</span
+                  >
+                </div>
+                <div class="mx-auto my-2">
+                  <img
+                    class="mx-auto aspect-square size-33.25 md:size-44.75"
+                    src="../../assets/images/Wheel-drive-spring-image.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-0.5">
+                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                  <div
+                    class="mt-2 flex items-center gap-[5.5px] text-xs text-neutral-500 md:gap-1.5 md:text-[13px]"
+                  >
+                    <span>قطعات موتور</span>
+                    <img src="/assets/icons/garay-circle.svg" alt="" />
+                    <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
-            <a
-              href="#"
-              class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
-            >
-              <div class="flex h-6 items-center justify-between">
-                <img
-                  class="size-8.75 object-cover"
-                  src="../../assets/images/product-item-band-image.png"
-                  alt=""
-                />
-                <span
-                  class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
-                  >سازگار</span
-                >
-              </div>
-              <div class="mx-auto my-2">
-                <img
-                  class="mx-auto aspect-square size-33.25 md:size-44.75"
-                  src="../../assets/images/Wheel-drive-spring-image.png"
-                  alt=""
-                />
-              </div>
-              <div class="px-0.5">
-                <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
-                <div class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]">
-                  <span>قطعات موتور</span>
-                  <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
-                  <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
-                  <span class="text-xs md:text-[13px]">۴.۸</span>
-                </div>
-                <!-- product-cart__price -->
-                <div class="pt-5 md:pt-8">
-                  <div class="flex gap-2">
-                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
-                      >۸۷۰,۰۰۰ تومان</span
-                    >
-                    <div
-                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
-                    >
-                      <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
-                        >۲۸٪</span
+                  <!-- product-cart__price -->
+                  <div class="pt-5 md:pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۸۷۰,۰۰۰ تومان</span
                       >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۲۸٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
                     </div>
                   </div>
-                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
+              <a
+                href="#"
+                class="flex h-full flex-col rounded-xl bg-white px-4 pt-2 pb-4 md:rounded-2xl md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-6.75 object-cover md:size-8.75"
+                    src="../../assets/images/product-item-band-image.png"
+                    alt=""
+                  />
+                  <span
+                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
+                    >سازگار</span
+                  >
+                </div>
+                <div class="mx-auto my-2">
+                  <img
+                    class="mx-auto aspect-square size-33.25 md:size-44.75"
+                    src="../../assets/images/Wheel-drive-spring-image.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-0.5">
+                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                  <div
+                    class="mt-2 flex items-center gap-[5.5px] text-xs text-neutral-500 md:gap-1.5 md:text-[13px]"
+                  >
+                    <span>قطعات موتور</span>
+                    <img src="/assets/icons/garay-circle.svg" alt="" />
+                    <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
                   </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
-            <a
-              href="#"
-              class="flex h-full flex-col rounded-2xl bg-white px-4 pt-2 pb-4 md:px-5 md:pt-3 md:pb-5"
-            >
-              <div class="flex h-6 items-center justify-between">
-                <img
-                  class="size-8.75 object-cover"
-                  src="../../assets/images/product-item-band-image.png"
-                  alt=""
-                />
-                <span
-                  class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
-                  >سازگار</span
-                >
-              </div>
-              <div class="mx-auto my-2">
-                <img
-                  class="mx-auto aspect-square size-33.25 md:size-44.75"
-                  src="../../assets/images/Wheel-drive-spring-image.png"
-                  alt=""
-                />
-              </div>
-              <div class="px-0.5">
-                <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
-                <div class="mt-2 flex items-center gap-1.5 text-xs text-neutral-500 md:text-[13px]">
-                  <span>قطعات موتور</span>
-                  <span class="h-1.25 w-1.25 rounded-full bg-[#D9D9D9]"></span>
-                  <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
-                  <span class="text-xs md:text-[13px]">۴.۸</span>
-                </div>
-                <!-- product-cart__price -->
-                <div class="pt-5 md:pt-8">
-                  <div class="flex gap-2">
-                    <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
-                      >۸۷۰,۰۰۰ تومان</span
-                    >
-                    <div
-                      class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
-                    >
-                      <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
-                        >۲۸٪</span
+                  <!-- product-cart__price -->
+                  <div class="pt-5 md:pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۸۷۰,۰۰۰ تومان</span
                       >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۲۸٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
                     </div>
                   </div>
-                  <div class="mt-1 flex gap-1 text-[14px] md:text-base">
-                    <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-43! max-md:shrink-0 md:w-64!" role="group" aria-label="5 / 7">
+              <a
+                href="#"
+                class="flex h-full flex-col rounded-xl bg-white px-4 pt-2 pb-4 md:rounded-2xl md:px-5 md:pt-3 md:pb-5"
+              >
+                <div class="flex h-6 items-center justify-between">
+                  <img
+                    class="size-6.75 object-cover md:size-8.75"
+                    src="../../assets/images/product-item-band-image.png"
+                    alt=""
+                  />
+                  <span
+                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-[11px] text-green-600 md:text-[13px]"
+                    >سازگار</span
+                  >
+                </div>
+                <div class="mx-auto my-2">
+                  <img
+                    class="mx-auto aspect-square size-33.25 md:size-44.75"
+                    src="../../assets/images/Wheel-drive-spring-image.png"
+                    alt=""
+                  />
+                </div>
+                <div class="px-0.5">
+                  <h3 class="mt-4 text-sm font-medium md:text-base">فنر محرک چرخ ها</h3>
+                  <div
+                    class="mt-2 flex items-center gap-[5.5px] text-xs text-neutral-500 md:gap-1.5 md:text-[13px]"
+                  >
+                    <span>قطعات موتور</span>
+                    <img src="/assets/icons/garay-circle.svg" alt="" />
+                    <img class="size-4" src="../../assets/icons/Star.svg" alt="" />
+                    <span class="text-xs md:text-[13px]">۴.۸</span>
+                  </div>
+                  <!-- product-cart__price -->
+                  <div class="pt-5 md:pt-8">
+                    <div class="flex gap-2">
+                      <span class="text-inactive text-xs font-normal line-through md:text-[13px]"
+                        >۸۷۰,۰۰۰ تومان</span
+                      >
+                      <div
+                        class="flex h-4.5 items-center justify-center rounded-full bg-[#BD0C0A1A] px-1.75"
+                      >
+                        <span class="text-brand-700 text-xs leading-0 font-semibold md:text-[13px]"
+                          >۲۸٪</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-[14px] md:text-base">
+                      <span class="text-success font-medium">۸۷۰,۰۰۰ تومان</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          </section>
         </section>
+      </div>
+      <!-- Newsletter Subscription -->
+      <section class="container-custom mt-24 md:mt-85">
+        <div
+          class="bg-primary flex flex-col items-center justify-between rounded-[20px] p-5 md:flex-row md:p-10"
+        >
+          <div
+            class="flex w-full max-w-137.5 flex-col items-center justify-between gap-3.25 text-center text-white md:flex-row md:gap-[unset] md:text-start"
+          >
+            <div class="text-2xl md:text-[28px]">
+              <span class="font-extrabold">عضویت در</span><br />
+              <span class="font-medium">خبرنامه ایمیلی</span>
+            </div>
+            <p class="text-sm leading-6.25 md:w-83 md:text-base">
+              با عضویت در خبرنامه، از جدیدترین محصولات، تخفیف‌های ویژه و پیشنهادهای تراک پاور باخبر
+              شوید.
+            </p>
+          </div>
+          <div
+            class="mt-8 flex h-15 w-full max-w-100.5 rounded-xl border border-[#FFFFFF1F] bg-white py-1 ps-4 pe-1 md:mt-0"
+          >
+            <input
+              id="home-newsletter-email"
+              placeholder="ایمیل خود را وارد کنید..."
+              class="text-muted placeholder-muted flex flex-1 text-sm outline-0"
+              type="text"
+              aria-label="ایمیل عضویت در خبرنامه"
+            />
+            <button class="bg-brand-700 h-full rounded-lg px-5 text-white" type="submit">
+              عضویت
+            </button>
+          </div>
+        </div>
       </section>
+
+      <footer class="homepage-footer" aria-label="پاورقی تراک پاور">
+        <div class="homepage-footer__inner container-custom">
+          <div class="homepage-footer__layout">
+            <div class="homepage-footer__brand">
+              <!-- Temporary logo, using the same truck asset as the current homepage header. -->
+              <a
+                class="homepage-footer__logo"
+                href="/"
+                aria-label="تراک پاور، صفحه اصلی"
+                title="جایگاه لوگوی تراک پاور"
+              >
+                <img
+                  src="/assets/icons/header-logo.svg"
+                  width="80"
+                  height="70"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              <p class="text-sm leading-5.5 font-normal md:text-base md:leading-6.5">
+                تراک پاور مرجع تخصصی فروش قطعات کامیون‌های DAF و MAN است؛ جایی که می‌تونی از قطعات
+                مصرفی و کوچک تا مجموعه‌های سنگین و فنی را با اطلاعات دقیق، قیمت به‌روز و بررسی
+                سازگاری پیدا کنی.
+              </p>
+              <!-- Explicit placeholders, not certification claims or verification links. -->
+              <ul
+                class="homepage-footer__badges"
+                aria-label="جایگاه نشان‌ها؛ تصاویر و تأییدیه‌ها هنوز اضافه نشده‌اند"
+              >
+                <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                  <span aria-hidden="true">◇</span><span>جایگاه نشان ۱</span>
+                </li>
+                <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                  <span aria-hidden="true">◇</span><span>جایگاه نشان ۲</span>
+                </li>
+                <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                  <span aria-hidden="true">◇</span><span>جایگاه نشان ۳</span>
+                </li>
+              </ul>
+            </div>
+            <nav class="homepage-footer__navigation" aria-label="لینک‌های پاورقی">
+              <details class="homepage-footer__section" data-footer-section data-mobile-open open>
+                <summary>
+                  لینک‌های کاربردی<img
+                    src="/assets/icons/arrow-down-01-round.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </summary>
+                <ul class="text-muted text-sm font-normal md:text-base">
+                  <li><a href="/pages/blog.html">بلاگ</a></li>
+                  <li><a href="/pages/about-us.html">درباره ما</a></li>
+                  <li><a href="/pages/contact.html">تماس با ما</a></li>
+                  <li><a href="/pages/FandQ.html">سوالات متداول</a></li>
+                  <li>
+                    <span
+                      class="homepage-footer__pending"
+                      title="صفحهٔ شرایط و قوانین هنوز موجود نیست"
+                      >شرایط و قوانین</span
+                    >
+                  </li>
+                </ul>
+              </details>
+              <details class="homepage-footer__section" data-footer-section open>
+                <summary>
+                  خدمات مشتریان<img
+                    src="/assets/icons/arrow-down-01-round.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </summary>
+                <ul class="text-muted text-sm font-normal md:text-base">
+                  <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                  <li>
+                    <span
+                      class="homepage-footer__pending"
+                      title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                      >رویه‌های بازگرداندن کالا</span
+                    >
+                  </li>
+                  <li>
+                    <span
+                      class="homepage-footer__pending"
+                      title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                      >شرایط استفاده</span
+                    >
+                  </li>
+                  <li>
+                    <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                      >حریم خصوصی</span
+                    >
+                  </li>
+                  <li><a href="/pages/contact.html">گزارش باگ</a></li>
+                </ul>
+              </details>
+              <details class="homepage-footer__section" data-footer-section open>
+                <summary>
+                  خدمات مشتریان<img
+                    src="/assets/icons/arrow-down-01-round.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </summary>
+                <ul class="text-muted text-sm font-normal md:text-base">
+                  <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                  <li>
+                    <span
+                      class="homepage-footer__pending"
+                      title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                      >رویه‌های بازگرداندن کالا</span
+                    >
+                  </li>
+                  <li>
+                    <span
+                      class="homepage-footer__pending"
+                      title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                      >شرایط استفاده</span
+                    >
+                  </li>
+                  <li>
+                    <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                      >حریم خصوصی</span
+                    >
+                  </li>
+                  <li><a href="/pages/contact.html">گزارش باگ</a></li>
+                </ul>
+              </details>
+            </nav>
+            <details
+              class="homepage-footer__section homepage-footer__contact"
+              data-footer-section
+              open
+            >
+              <summary>
+                راه‌های ارتباطی<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <address>
+                <a class="text-sm md:text-base" href="tel:02122147912">
+                  <img class="size-7" src="/assets/icons/phone-footer-icon.svg" alt="" />
+                  <bdi dir="ltr">021-22147912</bdi>
+                </a>
+                <p class="text-sm md:text-base">
+                  <img class="size-7" src="/assets/icons/time-footer-icon.svg" alt="" />شنبه تا
+                  پنجشنبه ۸ صبح تا ۷ ظهر
+                </p>
+                <a class="homepage-footer__address text-sm md:text-base" href="/pages/contact.html"
+                  ><img class="size-7" src="/assets/icons/location-footer-icon.svg" alt="" />تهران
+                  سعادت آباد میدان کاج پاساژ سروستان طبقه اول پلاک ۴۷</a
+                >
+              </address>
+            </details>
+          </div>
+          <div class="homepage-footer__bottom">
+            <p>
+              تمام حقوق این سایت محفوظ است.<span class="homepage-footer__credit">
+                طراحی شده توسط
+                <span class="homepage-footer__pending" title="نام طراح هنوز مشخص نشده است"
+                  >—</span
+                ></span
+              >
+            </p>
+            <!-- Social accounts are pending: these are non-interactive placeholders. -->
+            <ul
+              class="homepage-footer__social"
+              aria-label="جایگاه شبکه‌های اجتماعی؛ نشانی حساب‌ها هنوز تنظیم نشده است"
+            >
+              <li class="flex size-10 items-center justify-center md:size-10.5">
+                <span
+                  role="img"
+                  aria-label="جایگاه فیس‌بوک"
+                  title="نشانی فیس‌بوک هنوز تنظیم نشده است"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5Z"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                      stroke="#141B34"
+                    />
+                    <path
+                      d="M17 8H16C14.1144 8 13.1716 8 12.5858 8.58579C12 9.17157 12 10.1144 12 12V14M12 14V21.5M12 14H10M12 14H15"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="#141B34"
+                    />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex size-10 items-center justify-center md:size-10.5"
+                  role="img"
+                  aria-label="جایگاه تلگرام"
+                  title="نشانی تلگرام هنوز تنظیم نشده است"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="#141B34"
+                    />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex size-10 items-center justify-center md:size-10.5"
+                  role="img"
+                  aria-label="جایگاه یوتیوب"
+                  title="نشانی یوتیوب هنوز تنظیم نشده است"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.1534 19.9934C15.5451 20.3212 13.8097 20.5 12 20.5C10.1903 20.5 8.45489 20.3212 6.84656 19.9934C4.83766 19.5839 3.83321 19.3791 2.9166 18.2006C2 17.0221 2 15.6693 2 12.9635V11.0365C2 8.33073 2 6.97787 2.9166 5.79937C3.83321 4.62088 4.83766 4.41613 6.84656 4.00662C8.45489 3.67877 10.1903 3.5 12 3.5C13.8097 3.5 15.5451 3.67877 17.1534 4.00662C19.1623 4.41613 20.1668 4.62088 21.0834 5.79937C22 6.97787 22 8.33073 22 11.0365V12.9635C22 15.6693 22 17.0221 21.0834 18.2006C20.1668 19.3791 19.1623 19.5839 17.1534 19.9934Z"
+                      stroke-width="1.5"
+                      stroke="#141B34"
+                    />
+                    <path
+                      d="M13.4449 14.2241C15.0241 13.3538 15.8137 12.9187 15.9621 12.3129C16.0126 12.1067 16.0126 11.8933 15.9621 11.6871C15.8137 11.0813 15.0241 10.6462 13.4449 9.77593C11.7272 8.82945 10.8684 8.35621 10.1728 8.53854C9.9372 8.60029 9.7202 8.70886 9.53799 8.85618C9 9.29112 9 10.1941 9 12C9 13.8059 9 14.7089 9.53799 15.1438C9.7202 15.2911 9.9372 15.3997 10.1728 15.4615C10.8684 15.6438 11.7272 15.1705 13.4449 14.2241Z"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                      stroke="#141B34"
+                    />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

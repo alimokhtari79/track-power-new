@@ -11,7 +11,9 @@
   </head>
   <body>
     <header class="homepage-header text-primary" data-site-header>
-      <div class="homepage-header__bar container-custom flex items-center justify-between">
+      <div
+        class="homepage-header__bar container-custom flex items-center justify-between border-b border-gray-300"
+      >
         <div class="flex items-center">
           <a
             class="homepage-header__brand flex shrink-0 items-center font-extrabold"
@@ -265,12 +267,12 @@
         <span class="text-primary">درباره ما</span>
       </nav>
       <section class="container-custom">
-        <div class="flex flex-col items-center justify-center gap-5 text-center">
-          <h2 class="text-center text-2xl leading-tight md:text-4xl">
+        <div class="flex flex-col items-center justify-center gap-3 text-center md:gap-5">
+          <h2 class="text-center text-2xl leading-tight md:text-[44px]">
             <span class="font-extrabold">پشت سرِ یک</span><br />
             <span class="font-medium">پشتیبان فنیِ مطمئن ایستاده است.</span>
           </h2>
-          <p class="text-muted w-full max-w-200">
+          <p class="text-muted w-full max-w-200 text-sm leading-5.5 md:text-base md:leading-6.25">
             تراک پاور پایگاه تخصصی قطعات MAN و DAF است. ما آمدیم تا دغدغه قطعه فیک، شماره فنی اشتباه
             و خوابیدن ماشین را تمام کنیم؛ با بررسی دقیق سازگاری و ضمانت اصالت، قطعه درست را بدون
             واسطه دستت می‌رسانیم.
@@ -305,9 +307,9 @@
               چرا می‌تونی روی ما حساب کنی؟
             </p>
           </div>
-          <div class="grid w-full grid-cols-2 gap-5 md:grid-cols-4 md:gap-8 lg:w-225">
+          <div class="grid w-full grid-cols-2 gap-5 max-md:mt-5 md:grid-cols-4 md:gap-8 lg:w-225">
             <div
-              class="order-4 flex flex-col items-center justify-center md:order-1 md:justify-start"
+              class="order-4 flex flex-col justify-center max-md:items-center md:order-1 md:justify-start"
             >
               <span class="text-primary text-2xl font-semibold">
                 ۵۰۰۰
@@ -316,7 +318,7 @@
               <span class="pt-1 text-base text-[#191616B2] md:pt-2">سفارش موفق</span>
             </div>
             <div
-              class="order-3 flex flex-col items-center justify-center md:order-2 md:justify-start"
+              class="order-3 flex flex-col justify-center max-md:items-center md:order-2 md:justify-start"
             >
               <span class="text-primary text-2xl font-semibold">
                 ۵۰۰۰
@@ -325,7 +327,7 @@
               <span class="pt-1 text-base text-[#191616B2] md:pt-2">سفارش موفق</span>
             </div>
             <div
-              class="order-1 flex flex-col items-center justify-center md:order-3 md:justify-start"
+              class="order-1 flex flex-col justify-center max-md:items-center md:order-3 md:justify-start"
             >
               <span class="text-primary text-2xl font-semibold">
                 ۳۰۰۰
@@ -334,7 +336,7 @@
               <span class="pt-1 text-base text-[#191616B2] md:pt-2">سفارش موفق</span>
             </div>
             <div
-              class="order-2 flex flex-col items-center justify-center md:order-4 md:justify-start"
+              class="order-2 flex flex-col justify-center max-md:items-center md:order-4 md:justify-start"
             >
               <span class="text-primary text-2xl font-semibold">
                 <span class="text-brand-700">٪</span>
@@ -346,9 +348,13 @@
         </div>
       </section>
 
-      <section class="bg-[#EBEBEB] pt-20 pb-42 md:py-30">
+      <section class="relative overflow-hidden bg-[#EBEBEB] pt-15 pb-42 md:py-30 md:pt-20">
         <div class="container-custom flex flex-col items-start justify-between gap-6 md:flex-row">
-          <span class="w-full text-base md:w-27 md:text-[20px]">درباره ما بیشتر بخوانید</span>
+          <span class="w-full text-base font-semibold md:text-[20px]"
+            >درباره ما
+            <br class="max-md:hidden" />
+            بیشتر بخوانید</span
+          >
           <p
             class="text-muted text-[22px] leading-[155%] md:w-212.5 md:text-[28px] md:leading-10.5"
           >
@@ -359,15 +365,22 @@
             بدون واسطه دستت می‌رسانیم.
           </p>
         </div>
+        <img
+          class="absolute -bottom-12 -left-12 size-45 max-md:-scale-x-100 md:-right-15 md:size-62"
+          src="/assets/images/sprint-about-us.png"
+          alt=""
+        />
       </section>
 
       <section class="container-custom flex flex-col justify-between py-20 md:flex-row md:py-30">
-        <div class="h-112.5 w-full overflow-hidden rounded-[20px] object-cover md:w-162.5">
+        <div
+          class="h-60.5 w-full overflow-hidden rounded-[20px] object-cover md:h-112.5 md:w-162.5"
+        >
           <img src="../assets/images/Our-Vision-image.png" alt="" />
         </div>
-        <div class="my-auto w-147.5">
+        <div class="my-auto max-md:mt-8 md:w-147.5">
           <span
-            class="text-2xl leading-tight font-extrabold md:col-start-1 md:row-start-1 md:mb-6 md:text-4xl"
+            class="text-[28px] leading-tight font-extrabold md:col-start-1 md:row-start-1 md:mb-6 md:text-4xl"
             >چشم انداز
             <br class="hidden md:inline" />
             <span class="font-medium"> ما در تراک پاور </span>
@@ -416,6 +429,256 @@
         </div>
       </section>
     </main>
+
+    <footer class="homepage-footer" aria-label="پاورقی تراک پاور">
+      <div class="homepage-footer__inner container-custom">
+        <div class="homepage-footer__layout">
+          <div class="homepage-footer__brand">
+            <!-- Temporary logo, using the same truck asset as the current homepage header. -->
+            <a
+              class="homepage-footer__logo"
+              href="/"
+              aria-label="تراک پاور، صفحه اصلی"
+              title="جایگاه لوگوی تراک پاور"
+            >
+              <img
+                src="/assets/icons/header-logo.svg"
+                width="80"
+                height="70"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <p class="text-sm leading-5.5 font-normal md:text-base md:leading-6.5">
+              تراک پاور مرجع تخصصی فروش قطعات کامیون‌های DAF و MAN است؛ جایی که می‌تونی از قطعات
+              مصرفی و کوچک تا مجموعه‌های سنگین و فنی را با اطلاعات دقیق، قیمت به‌روز و بررسی سازگاری
+              پیدا کنی.
+            </p>
+            <!-- Explicit placeholders, not certification claims or verification links. -->
+            <ul
+              class="homepage-footer__badges"
+              aria-label="جایگاه نشان‌ها؛ تصاویر و تأییدیه‌ها هنوز اضافه نشده‌اند"
+            >
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۱</span>
+              </li>
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۲</span>
+              </li>
+              <li class="homepage-footer__badge" title="جایگاه نشان؛ تصویر و تأییدیه موجود نیست">
+                <span aria-hidden="true">◇</span><span>جایگاه نشان ۳</span>
+              </li>
+            </ul>
+          </div>
+          <nav class="homepage-footer__navigation" aria-label="لینک‌های پاورقی">
+            <details class="homepage-footer__section" data-footer-section data-mobile-open open>
+              <summary>
+                لینک‌های کاربردی<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/pages/blog.html">بلاگ</a></li>
+                <li><a href="/pages/about-us.html">درباره ما</a></li>
+                <li><a href="/pages/contact.html">تماس با ما</a></li>
+                <li><a href="/pages/FandQ.html">سوالات متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ شرایط و قوانین هنوز موجود نیست"
+                    >شرایط و قوانین</span
+                  >
+                </li>
+              </ul>
+            </details>
+            <details class="homepage-footer__section" data-footer-section open>
+              <summary>
+                خدمات مشتریان<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                    >رویه‌های بازگرداندن کالا</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                    >شرایط استفاده</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                    >حریم خصوصی</span
+                  >
+                </li>
+                <li><a href="/pages/contact.html">گزارش باگ</a></li>
+              </ul>
+            </details>
+            <details class="homepage-footer__section" data-footer-section open>
+              <summary>
+                خدمات مشتریان<img
+                  src="/assets/icons/arrow-down-01-round.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />
+              </summary>
+              <ul class="text-muted text-sm font-normal md:text-base">
+                <li><a href="/FandQ.html">پاسخ به پرسش‌های متداول</a></li>
+                <li>
+                  <span
+                    class="homepage-footer__pending"
+                    title="صفحهٔ رویه‌های بازگرداندن کالا هنوز موجود نیست"
+                    >رویه‌های بازگرداندن کالا</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ شرایط استفاده هنوز موجود نیست"
+                    >شرایط استفاده</span
+                  >
+                </li>
+                <li>
+                  <span class="homepage-footer__pending" title="صفحهٔ حریم خصوصی هنوز موجود نیست"
+                    >حریم خصوصی</span
+                  >
+                </li>
+                <li><a href="/pages/contact.html">گزارش باگ</a></li>
+              </ul>
+            </details>
+          </nav>
+          <details
+            class="homepage-footer__section homepage-footer__contact"
+            data-footer-section
+            open
+          >
+            <summary>
+              راه‌های ارتباطی<img
+                src="/assets/icons/arrow-down-01-round.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+            </summary>
+            <address>
+              <a class="text-sm md:text-base" href="tel:02122147912">
+                <img class="size-7" src="/assets/icons/phone-footer-icon.svg" alt="" />
+                <bdi dir="ltr">021-22147912</bdi>
+              </a>
+              <p class="text-sm md:text-base">
+                <img class="size-7" src="/assets/icons/time-footer-icon.svg" alt="" />شنبه تا
+                پنجشنبه ۸ صبح تا ۷ ظهر
+              </p>
+              <a class="homepage-footer__address text-sm md:text-base" href="/pages/contact.html"
+                ><img class="size-7" src="/assets/icons/location-footer-icon.svg" alt="" />تهران
+                سعادت آباد میدان کاج پاساژ سروستان طبقه اول پلاک ۴۷</a
+              >
+            </address>
+          </details>
+        </div>
+        <div class="homepage-footer__bottom">
+          <p>
+            تمام حقوق این سایت محفوظ است.<span class="homepage-footer__credit">
+              طراحی شده توسط
+              <span class="homepage-footer__pending" title="نام طراح هنوز مشخص نشده است"
+                >—</span
+              ></span
+            >
+          </p>
+          <!-- Social accounts are pending: these are non-interactive placeholders. -->
+          <ul
+            class="homepage-footer__social"
+            aria-label="جایگاه شبکه‌های اجتماعی؛ نشانی حساب‌ها هنوز تنظیم نشده است"
+          >
+            <li class="flex size-10 items-center justify-center md:size-10.5">
+              <span role="img" aria-label="جایگاه فیس‌بوک" title="نشانی فیس‌بوک هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5Z"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                  <path
+                    d="M17 8H16C14.1144 8 13.1716 8 12.5858 8.58579C12 9.17157 12 10.1144 12 12V14M12 14V21.5M12 14H10M12 14H15"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+            <li>
+              <span
+                class="flex size-10 items-center justify-center md:size-10.5"
+                role="img"
+                aria-label="جایگاه تلگرام"
+                title="نشانی تلگرام هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.9854 15.4083L15.2268 19.0936C16.4277 20.4589 17.0282 21.1416 17.6567 20.9754C18.2852 20.8092 18.5008 19.9108 18.9318 18.1138L21.3229 8.1459C21.9868 5.37832 22.3187 3.99454 21.5808 3.312C20.843 2.62947 19.564 3.13725 17.0061 4.15282L5.13876 8.86449C3.09293 9.67674 2.07001 10.0829 2.00507 10.7808C1.99842 10.8522 1.99831 10.9241 2.00474 10.9955C2.06754 11.6937 3.08921 12.1033 5.13255 12.9223C6.05838 13.2934 6.5213 13.479 6.8532 13.8344C6.89052 13.8743 6.9264 13.9157 6.96078 13.9584C7.26658 14.3384 7.39709 14.8371 7.65808 15.8344L8.14653 17.701C8.4005 18.6715 8.52749 19.1568 8.86008 19.223C9.19267 19.2891 9.48225 18.8867 10.0614 18.0819L11.9854 15.4083ZM11.9854 15.4083L11.6676 15.0771C11.3059 14.7001 11.1251 14.5117 11.1251 14.2775C11.1251 14.0433 11.3059 13.8548 11.6676 13.4778L15.2406 9.75409"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+            <li>
+              <span
+                class="flex size-10 items-center justify-center md:size-10.5"
+                role="img"
+                aria-label="جایگاه یوتیوب"
+                title="نشانی یوتیوب هنوز تنظیم نشده است"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.1534 19.9934C15.5451 20.3212 13.8097 20.5 12 20.5C10.1903 20.5 8.45489 20.3212 6.84656 19.9934C4.83766 19.5839 3.83321 19.3791 2.9166 18.2006C2 17.0221 2 15.6693 2 12.9635V11.0365C2 8.33073 2 6.97787 2.9166 5.79937C3.83321 4.62088 4.83766 4.41613 6.84656 4.00662C8.45489 3.67877 10.1903 3.5 12 3.5C13.8097 3.5 15.5451 3.67877 17.1534 4.00662C19.1623 4.41613 20.1668 4.62088 21.0834 5.79937C22 6.97787 22 8.33073 22 11.0365V12.9635C22 15.6693 22 17.0221 21.0834 18.2006C20.1668 19.3791 19.1623 19.5839 17.1534 19.9934Z"
+                    stroke-width="1.5"
+                    stroke="#141B34"
+                  />
+                  <path
+                    d="M13.4449 14.2241C15.0241 13.3538 15.8137 12.9187 15.9621 12.3129C16.0126 12.1067 16.0126 11.8933 15.9621 11.6871C15.8137 11.0813 15.0241 10.6462 13.4449 9.77593C11.7272 8.82945 10.8684 8.35621 10.1728 8.53854C9.9372 8.60029 9.7202 8.70886 9.53799 8.85618C9 9.29112 9 10.1941 9 12C9 13.8059 9 14.7089 9.53799 15.1438C9.7202 15.2911 9.9372 15.3997 10.1728 15.4615C10.8684 15.6438 11.7272 15.1705 13.4449 14.2241Z"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke="#141B34"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- swiper config js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../src/js/swiper-config.js"></script>
